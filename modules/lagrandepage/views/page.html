@@ -1,0 +1,119 @@
+{# This is an example home page template. It inherits and extends a layout
+template that lives in the top-level views/ folder for convenience #} {% extends
+"layout.html" %} {% block main %}
+<div>
+{% if data.page.section2title %}
+  <div class="lgv-section lgv-colors-2 d-flex flex-column justify-content-center" id="section2">
+    <div class="container">
+    {% if data.page.section2title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section2title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section2content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section2content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% if data.page.section3title %}
+  <div class="lgv-section lgv-colors-3 d-flex flex-column justify-content-center" id="section3">
+    <div class="container">
+    {% if data.page.section3title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section3title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section3content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section3content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% if data.page.section4title %}
+  <div class="lgv-section lgv-colors-4 d-flex flex-column justify-content-center" id="section4">
+    <div class="container">
+    {% if data.page.section4title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section4title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section4content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section4content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% if data.page.section5title %}
+  <div class="lgv-section lgv-colors-5 d-flex flex-column justify-content-center" id="section5">
+    <div class="container">
+    {% if data.page.section5title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section5title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section5content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section5content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% if data.page.section6title %}
+  <div class="lgv-section lgv-colors-6 d-flex flex-column justify-content-center" id="section6">
+    <div class="container">
+    {% if data.page.section6title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section6title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section6content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section6content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% if data.page.section7title %}
+  <div class="lgv-section lgv-colors-7 d-flex flex-column justify-content-center" id="section7">
+    <div class="container">
+    {% if data.page.section7title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section7title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section7content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section7content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% if data.page.section8title %}
+  <div class="lgv-section lgv-colors-8 d-flex flex-column justify-content-center" id="section8">
+    <div class="container">
+    {% if data.page.section8title %}
+      <div class="section-title">
+        <h2 style="font-weight: 800;">{{ data.page.section8title }}</h2>
+      </div>
+    {% endif %}
+    {% if data.page.section8content %}
+    <div class="px-4 py-5 my-5">
+    {% area data.page, 'section8content' %}
+    </div>
+    {% endif %}
+  </div>
+  </div>
+{% endif %}
+{% endblock %}
+  </div>
+</div>
