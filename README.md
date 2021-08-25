@@ -29,6 +29,8 @@ I would like to personalize the rich-text widget with a wrapper module. This wra
 
 Implement a guide from [apostrophecms/apostrophe-guides](https://github.com/apostrophecms/apostrophe-guides) specific to this module / page type. 
 
+My i18n is hacked and I am sure there is a more harmonious way of doing it in Apostrophe. I also have lang="en" on the main page when the actual language is "fr" in my case. I need to figure out how to configure the current page language.
+
 ## Please Contribute if You Use
 
 If you are able to improve things, or would just be so kind as to share your use of this template (even if intranet), I am appreciative. This is AGPL, so we try to share our improvements. 

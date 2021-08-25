@@ -5,8 +5,40 @@ module.exports = {
   },
   fields: {
     add: {
+      decription: {
+        label: 'Description of this page (for SEO)',
+        type: 'string'
+      },
+      imageUrl: {
+        label: 'URL of an image of this page (for SEO)',
+        type: 'string'
+      },
+      url: {
+        label: 'URL of this page (for SEO)',
+        type: 'string'
+      },
       langcode1: {
-        label: 'Alternative Language Code (2-Letters)',
+        label: 'Alternative Language Code 1 (2-Letters)',
+        type: 'string'
+      },
+      langcode2: {
+        label: 'Alternative Language Code 2 (2-Letters)',
+        type: 'string'
+      },
+      langcode3: {
+        label: 'Alternative Language Code 3 (2-Letters)',
+        type: 'string'
+      },
+      langcode4: {
+        label: 'Alternative Language Code 4 (2-Letters)',
+        type: 'string'
+      },
+      langcode5: {
+        label: 'Alternative Language Code 5 (2-Letters)',
+        type: 'string'
+      },
+      langcode6: {
+        label: 'Alternative Language Code 6 (2-Letters)',
         type: 'string'
       },
       section1title: {
@@ -204,7 +236,6 @@ module.exports = {
         label: 'Header',
         fields: [
           'title',
-          'langcode1',
           'section1title',
           'section1shorttitle',
           'section1content'
@@ -242,6 +273,25 @@ module.exports = {
           'section9title',
           'section9shorttitle',
           'section9content'
+        ]
+      },
+      languages: {
+        label: "Languages",
+        fields: [
+          'langcode1',
+          'langcode2',
+          'langcode3',
+          'langcode4',
+          'langcode5',
+          'langcode6'
+        ]
+      },
+      seo: {
+        label: "SEO",
+        fields: [
+          'description',
+          'url',
+          'imageUrl'
         ]
       }
     }

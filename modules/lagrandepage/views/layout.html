@@ -10,13 +10,27 @@ does not have access to an Apostrophe page or piece.') }}
 {% endif %} 
 {% endblock %} 
 {% block extraHead %} 
+{% if data.page.description %}
+<meta name="description" content="{{ data.page.description }}">
+<meta name="og:description" content="{{ data.page.description }}">
+{% else %}
 <meta name="description" content="Les Grands Voisins sont nés à l’hôpital Saint-Vincent-de-Paul dans le 14e arrondissement à Paris, entre Port royal et les Catacombes. Nous sommes issus des failles dans le béton et dans les politiques publiques. Nous sommes ouverts, inclusifs, incluants et au service de l’accueil de tous. Nous croyons dans des ponts entre l’utopie et la réalité.">
+<meta name="og:description" content="Les Grands Voisins sont nés à l’hôpital Saint-Vincent-de-Paul dans le 14e arrondissement à Paris, entre Port royal et les Catacombes. Nous sommes issus des failles dans le béton et dans les politiques publiques. Nous sommes ouverts, inclusifs, incluants et au service de l’accueil de tous. Nous croyons dans des ponts entre l’utopie et la réalité.">
+{% endif %} 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta property="og:title" content="Les Grands Voisins">
+<meta property="og:title" content="{{ data.page.title }}">
 <meta property="og:type" content="website">
+{% if data.page.url %}
+<meta name="og:url" content="{{ data.page.url }}">
+{% else %}
 <meta property="og:url" content="https://www.lesgrandsvoisins.com">
-<meta property="og:image" content="/public/images/screenshot">
+{% endif %} 
+{% if data.page.imageUrl %}
+<meta property="og:image" content="{{ data.page.imageUrl }}">
+{% else %}
+<meta property="og:image" content="https://www.lesgrandsvoisins.com/images/screenshot.jpg">
+{% endif %} 
 
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="icon.png">
