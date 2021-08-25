@@ -137,8 +137,8 @@ does not have access to an Apostrophe page or piece.') }}
 
 {% block afterMain %}
   </main>
-  {% if data.page.section9title or data.page.section9content %}
   <footer class="py-5 section text-align-left lgv-colors-9">
+  {% if data.page.section9title or data.page.section9content %}
   <div class="lgv-section lgv-colors-9 d-flex flex-column justify-content-center text-center" id="section9">
     <div class="container">
     {% if data.page.section9title %}
@@ -153,8 +153,11 @@ does not have access to an Apostrophe page or piece.') }}
     {% endif %}
   </div>
   </div>
-  </footer>
   {% endif %}
+  <div class="lgv-section lgv-colors-2 d-flex flex-column justify-content-center text-right" id="colophon">
+    Template <a href="https://github.com/lesgrandsvoisins/apostrophe-landing">Apostrophe Landing</a> by <a href="https://www.lesgrandsvoisins.com">Les Grands Voisins</a>.
+  </div>
+  </footer>
 {# Close .bp-wrapper #} 
 {% endblock %} 
 
