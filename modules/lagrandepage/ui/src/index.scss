@@ -34,7 +34,6 @@ div.two_col__column div.apos-area div.bp-rich-text {
 }
 main {
   background: #777;
-  max-width: unset !important;
 }
 h2 {
     text-transform: uppercase;
@@ -143,7 +142,7 @@ hr {
     background-color: #e5e5e5;
     color: black;
 }
-.lgv-colors-4 {
+.lgv-colors-4, .lgv-colors-4 a {
   color: white;
   background: linear-gradient(90deg, #6372ff, #5ca9fb );
 }
