@@ -21,6 +21,14 @@ Follow installation instructions for ApostropheCMS and then plop the contents fo
 
 This code creates a page type called "La Grande Page." La Grande Page is the landing page. Sections will only appear if the title is present (eg. section 5 will be visible if section5title has some text). The "Short Titles" are only used for the menu. The alternative languages provide links to page names that are the two-letter codes indicated.
 
+## To Do
+
+I would like to put the libraries in modules, such as modules/bootstrap and modules/protonjs. These modules would bring just the library assets for the front end.
+
+I would like to personalize the rich-text widget with a wrapper module. This wrapper module could be modules/custom-rich-text-widget. The idea would be to put the custom code there rather than @apostrophe/rich-text-widget. Just more elegant maybe.
+
+Implement a guide from [apostrophecms/apostrophe-guides](https://github.com/apostrophecms/apostrophe-guides) specific to this module / page type. 
+
 ## Please Contribute if You Use
 
 If you are able to improve things, or would just be so kind as to share your use of this template (even if intranet), I am appreciative. This is AGPL, so we try to share our improvements. 
