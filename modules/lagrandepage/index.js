@@ -5,7 +5,7 @@ module.exports = {
   },
   fields: {
     add: {
-      decription: {
+      description: {
         label: 'Description of this page (for SEO)',
         type: 'string'
       },
@@ -15,6 +15,10 @@ module.exports = {
       },
       url: {
         label: 'URL of this page (for SEO)',
+        type: 'string'
+      },
+      extracss: {
+        label: 'Extra CSS Code for this Page',
         type: 'string'
       },
       langcode1: {
@@ -238,8 +242,7 @@ module.exports = {
           'title',
           'section1title',
           'section1shorttitle',
-          'section1content'
-        ]
+          'section1content'        ]
       },
       sections: {
         label: 'Sections',
@@ -287,11 +290,12 @@ module.exports = {
         ]
       },
       seo: {
-        label: "SEO",
+        label: "SEO and CSS",
         fields: [
           'description',
           'url',
-          'imageUrl'
+          'imageUrl',
+          'extracss'
         ]
       }
     }
