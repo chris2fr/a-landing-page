@@ -21,6 +21,10 @@ module.exports = {
         label: 'Extra CSS Code for this Page',
         type: 'string'
       },
+      headJavascript: {
+        label: 'Javascript at end of Header (GAnalytics or Plausible.io)',
+        type: 'string'
+      },
       langcode1: {
         label: 'Alternative Language Code 1 (2-Letters)',
         type: 'string'
@@ -295,7 +299,8 @@ module.exports = {
           'description',
           'url',
           'imageUrl',
-          'extracss'
+          'extracss',
+          'headJavascript'
         ]
       }
     }
