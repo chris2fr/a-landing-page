@@ -28,6 +28,7 @@ require('apostrophe')({
     },
     '@apostrophecms/html-widget': {},
     'two-column-widget': {},
+    'three-column-widget': {},
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.

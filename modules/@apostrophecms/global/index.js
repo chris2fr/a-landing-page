@@ -9,7 +9,7 @@ module.exports = {
     group: {
       basics: {
         label: 'Basics',
-        fields: ['sitename']
+        fields: ['siteName']
       }
     }
   }

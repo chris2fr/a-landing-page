@@ -5,6 +5,10 @@ module.exports = {
   },
   fields: {
     add: {
+      siteTitle: {
+        label: 'Title of this website',
+        type: 'string'
+      },
       description: {
         label: 'Description of this page (for SEO)',
         type: 'string'
@@ -23,30 +27,6 @@ module.exports = {
       },
       headJavascript: {
         label: 'Javascript at end of Header (GAnalytics or Plausible.io)',
-        type: 'string'
-      },
-      langcode1: {
-        label: 'Alternative Language Code 1 (2-Letters)',
-        type: 'string'
-      },
-      langcode2: {
-        label: 'Alternative Language Code 2 (2-Letters)',
-        type: 'string'
-      },
-      langcode3: {
-        label: 'Alternative Language Code 3 (2-Letters)',
-        type: 'string'
-      },
-      langcode4: {
-        label: 'Alternative Language Code 4 (2-Letters)',
-        type: 'string'
-      },
-      langcode5: {
-        label: 'Alternative Language Code 5 (2-Letters)',
-        type: 'string'
-      },
-      langcode6: {
-        label: 'Alternative Language Code 6 (2-Letters)',
         type: 'string'
       },
       section1title: {
@@ -243,6 +223,7 @@ module.exports = {
       basics: {
         label: 'Header',
         fields: [
+          'siteTitle',
           'title',
           'section1title',
           'section1shorttitle',
@@ -280,17 +261,6 @@ module.exports = {
           'section9title',
           'section9shorttitle',
           'section9content'
-        ]
-      },
-      languages: {
-        label: "Languages",
-        fields: [
-          'langcode1',
-          'langcode2',
-          'langcode3',
-          'langcode4',
-          'langcode5',
-          'langcode6'
         ]
       },
       seo: {
