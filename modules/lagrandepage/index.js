@@ -46,6 +46,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -67,6 +68,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -88,6 +90,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -109,6 +112,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -130,6 +134,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -151,6 +156,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -172,6 +178,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -193,6 +200,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
@@ -214,6 +222,7 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
             'two-column': {},
+            'three-column': {},
             '@apostrophecms/html': {}
           }
         }
