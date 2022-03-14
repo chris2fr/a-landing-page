@@ -26,10 +26,11 @@ body {
 
 .breadcrumb ul li{
   display: inline;
+  padding-right: 1ex;
 }
 
 .breadcrumb ul li::before {
-  content: "&gt;";
+  content: ">";
 }
 
 .breadcrumb_arrow li::before {
