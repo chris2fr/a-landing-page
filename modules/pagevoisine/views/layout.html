@@ -38,10 +38,9 @@
             </li>
             {% endfor %}
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="downswitch" data-bs-toggle="dropdown"
-                aria-expanded="false">{{ data.page.title }}</a>
+              <a class="nav-link dropdown-toggle" href="#" id="downswitch">{{ data.page.title }}</a>
               {% if data.page._children|length()%}
-                <ul class="dropdown-menu" aria-labelledby="downswitch">
+                <ul class="dropdown-menu">
                 {# 👇 Referencing `data.page._children` and looping over them. #}
                 {% for downpage in data.page._children %}
                 <li>
@@ -53,7 +52,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="langswitch" data-bs-toggle="dropdown"
-                aria-expanded="false"><svg style="max-height:2em;" aria-hidden="true" focusable="false" data-prefix="fas"
+                aria-expanded="true"><svg style="max-height:2em;" aria-hidden="false" focusable="false" data-prefix="fas"
                   data-icon="language" class="svg-inline--fa fa-language fa-w-20" role="img"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                   <path fill="currentColor"
