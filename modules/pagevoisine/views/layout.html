@@ -26,8 +26,8 @@
         </ul>
       </li>
       <li>Breadcrumbs: <ul>
-        {# 👇 Referencing `data._ancestors._children` and looping over them. #}
-        {% for page in data._ancestors %}
+        {# 👇 Referencing `data.page._ancestors._children` and looping over them. #}
+        {% for page in data.page._ancestors %}
           <li>
             <a href="{{ page._url }}">{{ page.title }}</a>
           </li>
