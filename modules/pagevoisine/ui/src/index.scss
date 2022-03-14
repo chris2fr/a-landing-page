@@ -40,15 +40,15 @@ p.subtitle {
 }
 
 
-.breadcrumb_arrow li::before {
+.breadcrumb_arrow li:not(:first-child)::before {
   content: "→";
 }
 
-.breadcrumb_slash li::before {
+.breadcrumb_slash li:not(:first-child)::before {
   content: "/";
 }
 
-.breadcrumb_pipe li::before {
+.breadcrumb_pipe li:not(:first-child)::before {
   content: "|";
 }
   
