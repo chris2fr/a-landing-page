@@ -15,7 +15,7 @@ module.exports = {
       },
       main: {
         type: 'area',
-        label: 'Section (Header) Content',
+        label: 'Section Content',
         options: {
           widgets: {
             '@apostrophecms/video': {},
