@@ -15,20 +15,36 @@ body {
 
 /* Breadcrumb */
 
-nav.breadcrumb {
+.breadcrumb {
   display: flex;
   justify-content: space-between;
 }
 
-nav.breadcrumb ul {
+.breadcrumb ul {
   display: flex;
 }
-  
-nav.breadcrumb ul li::before {
+
+.breadcrumb ul li{
+  display: inline;
+}
+
+.breadcrum ul li::before {
+  content: "&gt;";
+}
+
+.breadcrum_arrow ul li::before {
   content: "→";
 }
+
+.breadcrum_slash ul li::before {
+  content: "/";
+}
+
+.breadcrum_pipe ul li::before {
+  content: "|";
+}
   
-nav.breadcrumb ul li:first-child::before {
+.breadcrumb ul li:first-child::before {
   content: "";
 }
 
