@@ -1,17 +1,9 @@
-{# This is an example home page template. It inherits and extends a layout
-template that lives in the top-level views/ folder for convenience #} {% extends
-"layout.html" %} {% block main %}
-<div>
-{% if data.page.title %}
-  <div class="lgv-section lgv-colors-2 d-flex flex-column justify-content-center" id="section2">
-    <div class="container-fluid">
-      <div class="section-title">
-        <h2 style="font-weight: 800;">{{ data.page.title }}</h2>
-      </div>
-    <div class="px-4 py-5 my-5">
-    {% area data.page, 'content' %}
-    </div>
-  </div>
-  </div>
-{% endif %}
+{% block main %}
+<header>
+  <h1>{{ data.page.title }}</h1>
+  {% if data.page.subtitle %}
+    <p>{{ data.page.subtitle }}</p>
+  {% endif %}
+</header>
+{% area data.page, 'main' %}
 {% endblock %}
