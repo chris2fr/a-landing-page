@@ -16,7 +16,8 @@
         <p>{{ data.page.subtitle }}</p>
       {% endif %}
     </header>
-    <nav class="container-fluid d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom position-sticky navbar navbar-expand-md navbar-light bg-light">
+    <div class="d-flex flex-wrap justify-content-between min-vh-100 clearfix flex-column">
+    <div class="container-fluid d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom position-sticky navbar navbar-expand-md navbar-light bg-light">
       <div> <a href="{{ data.home._url }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none navbar-brand">
 
         <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
@@ -57,7 +58,8 @@
     </ul>
       </ul>
     </div>
-    </nav>
+     </div>
+     </div>
     <main>
   {% endblock %} 
 
