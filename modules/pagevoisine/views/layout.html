@@ -30,17 +30,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-          <div class="collapse navbar-collapse flex-row-reverse" id="navbarLesGrandsVoisins">
+          <div class="collapse flex-row-reverse">
           <ul class="nav nav-pills">
             {% for uppage in data.page._ancestors %}
             <li class="nav-item">
               <a href="{{ uppage._url }}">{{ uppage.title }}</a>
             </li>
             {% endfor %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="downswitch">{{ data.page.title }}</a>
+            <li class="nav-item">
+             {{ data.page.title }}
               {% if data.page._children|length()%}
-                <ul class="dropdown-menu">
+                <ul>
                 {# 👇 Referencing `data.page._children` and looping over them. #}
                 {% for downpage in data.page._children %}
                 <li>
