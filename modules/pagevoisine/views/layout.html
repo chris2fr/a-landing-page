@@ -1,12 +1,9 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations
 #} 
 {% extends data.outerLayout %} 
-{% set title = data.piece.title or data.page.title %} 
-{% block title %} 
-{{ title }} 
-{% endblock %} 
 {% block startHead %} 
 {{ super() }}
+<style>{{ data.page.extracss }}</style>
 {% endblock %} 
 
 {% block beforeMain %}
@@ -48,7 +45,6 @@
     </ul>
       </ul>
     </nav>
-    <main>
   {% endblock %} 
 
 {% block main %} {# Usually, your page templates in the
@@ -57,8 +53,7 @@
 {% endblock %} 
 
 {% block afterMain %}
-  </main>
   <footer>
-
+Footer here.
   </footer>
 {% endblock %} 
