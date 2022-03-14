@@ -41,7 +41,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="downswitch" data-bs-toggle="dropdown"
                 aria-expanded="false">{{ data.page.title }}</a>
               {% if data.page._children|length()%}
-                < class="dropdown-menu" aria-labelledby="downswitch">
+                <ul class="dropdown-menu" aria-labelledby="downswitch">
                 {# 👇 Referencing `data.page._children` and looping over them. #}
                 {% for downpage in data.page._children %}
                 <li>
