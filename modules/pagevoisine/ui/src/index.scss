@@ -15,15 +15,20 @@ body {
 
 /* Breadcrumb */
 
-.breadcrumb ul {
+nav.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav.breadcrumb ul {
   display: flex;
 }
   
-.breadcrumb li::before {
+nav.breadcrumb ul li::before {
   content: "→";
 }
   
-.breadcrumb li:first-child::before {
+nav.breadcrumb ul li:first-child::before {
   content: "";
 }
 

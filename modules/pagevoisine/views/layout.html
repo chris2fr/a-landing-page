@@ -16,8 +16,8 @@
       <p>{{ data.page.subtitle }}</p>
       {% endif %}
     </header>
-    <nav>
-          <ul class="breadcrumb">
+    <nav class="breadcrumb">
+          <ul>
             {% for uppage in data.page._ancestors %}
             <li>
               <a href="{{ uppage._url }}">{{ uppage.title }}</a>
@@ -26,7 +26,7 @@
             <li>
              {{ data.page.title }}
               {% if data.page._children|length()%}
-                <ul class="breadcrumb">
+                <ul>
                 {# 👇 Referencing `data.page._children` and looping over them. #}
                 {% for downpage in data.page._children %}
                 <li>
@@ -37,11 +37,11 @@
               {% endif %}
             </li>
           </ul>
-              <ul class="breadcrumb">
+              <ul>
                 {% for locale in data.localizations %}
                 <li><a class="dropdown-item" href="{{ locale._url }}">{{ locale.label }}</a></li>
                 {% endfor %}
-              </ul>
+          </ul>
     </nav>
 
   {% endblock %} 
