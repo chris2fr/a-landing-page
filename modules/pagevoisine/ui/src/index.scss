@@ -28,19 +28,19 @@ body {
   display: inline;
 }
 
-.breadcrum ul li::before {
+.breadcrumb ul li::before {
   content: "&gt;";
 }
 
-.breadcrum_arrow ul li::before {
+.breadcrumb_arrow li::before {
   content: "→";
 }
 
-.breadcrum_slash ul li::before {
+.breadcrumb_slash li::before {
   content: "/";
 }
 
-.breadcrum_pipe ul li::before {
+.breadcrumb_pipe li::before {
   content: "|";
 }
   
