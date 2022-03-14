@@ -35,7 +35,7 @@
     
       <ul class="breadcrumb_pipe">
         {% for locale in data.localizations %}
-        <li><a class="dropdown-item" href="{{ locale._url }}">{{ locale.label }}</a></li>
+        <li><a href="{{ locale._url }}">{{ locale.label }}</a></li>
         {% endfor %}
       </ul>
     </nav>
