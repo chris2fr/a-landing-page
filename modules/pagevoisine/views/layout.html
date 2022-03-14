@@ -21,7 +21,7 @@
         </li>
       {% endfor %}
       <li>
-        {{ page.data.title }}
+        {{ data.page.title }}
       {% if data.page._children|length()%}
           <ul>
           {# 👇 Referencing `data.page._children` and looping over them. #}
