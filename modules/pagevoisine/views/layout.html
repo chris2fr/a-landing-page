@@ -15,7 +15,7 @@
     </header>
     <nav>
       <ul>
-        <li><a href="./">..</a></li>
+        <li>Enclosed Pages:<a href="./">..</a></li>
         <li><ul>
           {# 👇 Referencing `data.page._children` and looping over them. #}
           {% for page in data.page._children %}
@@ -25,9 +25,9 @@
           {% endfor %}
         </ul>
       </li>
-      <li><ul>
+      <li>Breadcrumbs: <ul>
         {# 👇 Referencing `data._ancestors._children` and looping over them. #}
-        {% for page in data._ancestors._children %}
+        {% for page in data._ancestors %}
           <li>
             <a href="{{ page._url }}">{{ page.title }}</a>
           </li>
