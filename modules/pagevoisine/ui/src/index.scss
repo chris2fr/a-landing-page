@@ -1,0 +1,55 @@
+body, html {
+  font-family: 'Open Sans', sans-serif;
+   text-rendering: optimizeLegibility !important;
+   -webkit-font-smoothing: antialiased !important;
+   font-weight: 400;
+   width: 100% !important;
+   height: 100% !important;
+}
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale; margin: 0;
+}
+
+div.two_col__column div.apos-area div.bp-rich-text {
+  text-align: left;
+}
+main {
+  /* background: #777; */
+  max-width: unset;
+}
+h2 {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  font-weight: 800;
+  font-size: 36px;
+}
+h3 {
+font-size: 20px;
+font-weight: 600;
+}
+h4 {
+font-size: 18px;
+font-weight: 600;
+}
+h5 {
+text-transform: uppercase;
+font-weight: 700;
+line-height: 20px;
+}
+p {
+font-size: 15px;
+}
+h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+}
+hr {
+height: 2px;
+width: 70px;
+text-align: center;
+position: relative;
+background: #1E7A46;
+margin-bottom: 20px;
+border: 0;
+}
