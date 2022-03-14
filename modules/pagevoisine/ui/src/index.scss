@@ -39,20 +39,17 @@ p.subtitle {
   padding-right: 1ex;
 }
 
-.breadcrumb ul li::before {
-  content: ">";
-}
 
 .breadcrumb_arrow li::before {
-  content: "→" !important;
+  content: "→";
 }
 
 .breadcrumb_slash li::before {
-  content: "/" !important;
+  content: "/";
 }
 
 .breadcrumb_pipe li::before {
-  content: "|" !important;
+  content: "|";
 }
   
 .breadcrumb ul li:first-child::before {
