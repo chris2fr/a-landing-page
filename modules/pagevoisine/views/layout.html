@@ -15,7 +15,7 @@
     </header>
     <nav>
       <ul>
-      {% if data.page._children %}
+      {% if data.page._children.length() > 0 %}
         <li>Enclosed Pages:<a href="./">..</a></li>
         <li><ul>
           {# 👇 Referencing `data.page._children` and looping over them. #}
@@ -27,7 +27,7 @@
         </ul>
       </li>
       {% endif %}
-      {% if data.page._ancestors %}
+      {% if data.page._ancestors && data.page._ancestors.length() > 0 %}
       <li>Breadcrumbs: <ul>
         {# 👇 Referencing `data.page._ancestors._children` and looping over them. #}
         {% for uppage in data.page._ancestors %}
