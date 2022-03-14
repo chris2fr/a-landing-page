@@ -15,61 +15,16 @@ body {
 
 /* Breadcrumb */
 
-.breadcrumb {
-  font-size: 1em;
-
-  > li {
-    display: inline-block;
-    padding: $base-spacing/2 0;
-
-    &:after {
-      content: "/";
-      display: inline-block;
-      margin: 0 $base-spacing/2 0 $base-spacing/4;
-      color: lighten($base-accent-color, 20%);
-      font-weight: 300;
-    }
-  }
-
-  > li > a {
-    color: lighten($base-accent-color, 35%);
-  }
-
-  @media only screen and (min-width: 40em) {
-    font-size: 0.825em;
-  }
+.breadcrumb ul {
+  display: flex;
 }
-
-// Set Indicator state to read media queries with Javascript
-.breadcrumb:after {
-  display: none;
-
-  @media (hover) {
-    content: 'hover';
-  }
+  
+.breadcrumb li::before {
+  content: "→";
 }
-
-.breadcrumb > li:hover > a {
-  color: white;
-}
-
-.breadcrumb li {
-  position: relative;
-
-  ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    left: -9999px;
-    z-index: 2;
-    background-color: white;
-
-    a {
-      display: block;
-      white-space: nowrap;
-      padding: $base-spacing/2 $base-spacing;
-    }
-  }
+  
+.breadcrumb li:first-child::before {
+  content: "";
 }
 
 /* Breadcrumbs */
