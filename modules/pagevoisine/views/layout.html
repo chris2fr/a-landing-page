@@ -3,6 +3,9 @@
 {% extends data.outerLayout %} 
 {% block startHead %} 
 {{ super() }}
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/fonts/fa/all.min.css">
+
 <style>{{ data.page.extracss }}</style>
 {% endblock %} 
 
@@ -45,6 +48,7 @@
     </ul>
       </ul>
     </nav>
+    <main>
   {% endblock %} 
 
 {% block main %} {# Usually, your page templates in the
@@ -53,7 +57,8 @@
 {% endblock %} 
 
 {% block afterMain %}
+</main>
   <footer>
-Footer here.
+    {% area data.page, 'footer' %}
   </footer>
 {% endblock %} 

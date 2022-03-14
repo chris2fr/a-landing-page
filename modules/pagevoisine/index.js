@@ -26,6 +26,20 @@ module.exports = {
             '@apostrophecms/html': {}
           }
         }
+      },
+      footer: {
+        type: 'area',
+        label: 'Footer / Pied de page Content',
+        options: {
+          widgets: {
+            '@apostrophecms/video': {},
+            '@apostrophecms/image': {},
+            '@apostrophecms/rich-text': {},
+            'two-column': {},
+            'three-column': {},
+            '@apostrophecms/html': {}
+          }
+        }
       }
     },
     group: {
@@ -34,7 +48,8 @@ module.exports = {
         fields: [
           'title',
           'subtitle',
-          'main'
+          'main',
+          'footer'
         ]
       }
       
