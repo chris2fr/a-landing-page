@@ -11,14 +11,17 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale; margin: 0;
 }
+h1 {
+  margin-block-end: 0.3em;
+}
 
 p.subtitle {
   text-align: center;
   font-size: large;
   font-weight: bold;
   font-style: italic;
+  margin-block-end: 0.3ex;
 }
-
 
 /* Breadcrumb */
 
@@ -41,15 +44,15 @@ p.subtitle {
 }
 
 .breadcrumb_arrow li::before {
-  content: "→";
+  content: "→" !important;
 }
 
 .breadcrumb_slash li::before {
-  content: "/";
+  content: "/" !important;
 }
 
 .breadcrumb_pipe li::before {
-  content: "|";
+  content: "|" !important;
 }
   
 .breadcrumb ul li:first-child::before {
