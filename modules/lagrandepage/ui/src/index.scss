@@ -280,17 +280,17 @@ a:focus,
   margin: 0;
   gap: 1rem;
 }
-@media (min-width: 10rem) {
+@media (min-width: 7rem) {
   .down-nav {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 20rem) {
+@media (min-width: 14rem) {
   .down-nav {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 30rem) {
+@media (min-width: 21rem) {
   .down-nav {
     grid-template-columns: repeat(4, 1fr);
   }
