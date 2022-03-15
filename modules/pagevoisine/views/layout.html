@@ -49,8 +49,8 @@
     
       <ul class="breadcrumb breadcrumb_pipe">
         {% for locale in data.localizations %}
-        {% if data.page.locale == locale %}
-        <li><strong>{{ locale.label }}</strong></li>
+        {% if data.locale == locale.locale %}
+        <li>{{ locale.label }}</li>
         {% else %}
         <li><a href="{{ locale._url }}">{{ locale.label }}</a></li>
         {% endif %}
