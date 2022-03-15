@@ -1,0 +1,86 @@
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "layout.html" %}
+{% block main %} 
+<div>
+  <div id="tsparticles"></div>
+    <div class="particular-info">
+                <h1>
+                  {{ data.page.title }}
+                </h1>
+                 {% area data.page, 'main' %}
+                <a
+                  href='#features'
+                  class='btn btn-custom btn-lg page-scroll'
+                >
+                  Venez !
+                </a>
+</div>
+ 
+
+    <div id='features' class='text-center'>
+      <div class='container'>
+        <div class='col-md-10 col-md-offset-1 section-title'>
+          <h2>La liste de diffusion ?</h2>
+        </div>
+        <div class='col-md-10 col-md-offset-1'>
+ <form method='post' action='https://list.lesgrandsvoisins.com/subscription/form' class='listmonk-form' target='_new'>
+      <input type='text' name='email' id='mailinglistemailfield'  class='form-control' placeholder='Email'/>
+      <input type='text' class='form-control' name='name' placeholder='Nom (facultatif)'/>
+      <input id='b7b3c' type='hidden' name='l' value='b7b3c33f-3301-48c0-a3ab-15f8102f8cfa'/><br/>
+      <input type='submit' class='btn btn-custom btn-lg page-scroll' value='Je m`y inscris !'/>
+    </form></div>
+    </div>
+    </div>
+
+
+    <div id='about'>
+      <div class='container'>
+          <!--
+            <div class='col-xs-12 col-md-6'>
+            <img src='img/about.jpg' class='img-responsive' alt='' />
+          </div>
+          -->
+            <div class='about-text'>
+              <h2>Déclaration d'interdépendance</h2>
+              {% area data.page, 'about' %}
+            </div>
+          </div>
+        </div>
+
+
+      <div id='contact'>
+        <div class='container'>
+           <h2>Prendre contact</h2>
+            <div class='contact-item'>
+              <h3>Contact Info</h3>
+              <p>
+                <span>
+                  <i class='fa fa-map-marker'></i> Address
+                </span><br/>
+              {% area data.page, 'address' %}
+              </p>
+            </div>
+            <div class='contact-item'>
+              <p>
+                <span>
+                  <i class='fa fa-phone'></i> Phone
+                </span>
+                  {{ data.page.phone }}
+              </p>
+            </div>
+            <div class='contact-item'>
+              <p>
+                <span>
+                  <i class='fa fa-envelope'></i> Email
+                </span>
+                  {{ data.page.email }}
+              </p>
+            </div>
+          </div>
+        </div>
+</div>
+{% endblock %}
