@@ -271,3 +271,29 @@ a:focus,
   outline: none;
   outline-offset: none;
 }
+/* Down Nav */
+.down-nav {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+@media (min-width: 80rem) {
+  .down-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 120rem) {
+  .down-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+ul.down-nav li {
+  background: white;
+  border-radius: 0.5rem;
+}

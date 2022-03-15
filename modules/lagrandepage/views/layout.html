@@ -163,7 +163,7 @@ does not have access to an Apostrophe page or piece.') }}
           {% endif %}
           {% if data.page._children|length()%}
           <div class="px-4 py-5 my-5">
-          <ul class="breadcrumb breadcrumb_pipe homenav">
+          <ul class="down-nav">
             {# 👇 Referencing `data.page._children` and looping over them. #}
             {% for downpage in data.page._children %}
             <li>
