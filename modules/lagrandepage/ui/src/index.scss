@@ -61,14 +61,14 @@ h2 {
   text-transform: uppercase;
   margin: 0 0 20px 0;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 2.5rem;
 }
 h3 {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
 }
 h4 {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 h5 {
@@ -110,8 +110,8 @@ hr {
 #section1 {
   color: map.get($lgvcolors, 1);
   text-align: center;
-  width: 70%;
-  margin-left: 15%;
+  // width: 70%;
+  // margin-left: 15%;
 }
 #section1 p {
   color: map.get($lgvcolors, 1);
@@ -123,7 +123,7 @@ hr {
 }
 #section1 h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 82px;
+  font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;

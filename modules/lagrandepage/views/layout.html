@@ -62,7 +62,7 @@ does not have access to an Apostrophe page or piece.') }}
       <div id="protonContainer">
         <canvas id="protonCanvas"></canvas>
       </div>
-      <div class="d-flex flex-wrap justify-content-between min-vh-100 clearfix flex-column">
+      <div class="d-flex flex-wrap justify-content-between min-vh-100 clearfix flex-column align-items-center">
         <div
           class="container-fluid d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom position-sticky navbar navbar-expand-md navbar-light bg-light">
           <div>
@@ -148,9 +148,9 @@ does not have access to an Apostrophe page or piece.') }}
             </ul>
           </div>
         </div>
-        <div class="px-4 py-5 my-5 text-center">
+        <div style="max-width: 80rem;" notclass="px-4 py-5 my-5 text-center">
           {% if true or data.page.section1title or data.page.section1content %}
-          <div id="section1">
+          <div id="section1" >
             <div id="page-top" class="contanier particular-info lgv-intro-text">
               {% if data.page.section1title %}
               <h1 class="display-1">{{ data.page.section1title }}</h1>
