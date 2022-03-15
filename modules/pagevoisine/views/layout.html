@@ -12,19 +12,24 @@
 <style> {{ data.page.extracss }} </style>
 {% endblock %} 
 
+
 {% block beforeMain %}
-    <nav class="breadcrumb">
+    <nav class="breadcrumb nav">
       <ul class="breadcrumb breadcrumb_arrow">
-        {% set nottop = true %}
+        {# Hard break at homeNav #}
+        {% set start0 = 0 %}
         {% for uppage in data.page._ancestors %}
-        {% if nottop %}
-        {% if data.page.type == "lagrandepage" %}
-        {% set nottop = false %}
-        {% endif %}
-        <li>
-          <a href="{{ uppage._url }}">{{ uppage.title }}</a>
-        </li>
-        {% endif %}
+          {% if uppage.homeNav %}
+            {% set start0 = loop.index0 %}
+          {% endif %}
+        {% endfor %}
+
+        {% for uppage in data.page._ancestors %}
+          {% if loop.index0 >= start0 %}
+            <li>
+              <a href="{{ uppage._url }}">{{ uppage.title }}</a>
+            </li>
+          {% endif %}
         {% endfor %}
         <li>
           <strong>{{ data.page.title }}</strong>

@@ -29,7 +29,7 @@ does not have access to an Apostrophe page or piece.') }}
 {% endif %} 
 {% if data.page.imageUrl %}
 <meta property="og:image" content="{{ data.page.imageUrl }}">
-{% else %}
+{% else %} 
 <meta property="og:image" content="https://www.lesgrandsvoisins.com/images/screenshot.jpg">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1050">
@@ -66,12 +66,27 @@ does not have access to an Apostrophe page or piece.') }}
         <div
           class="container-fluid d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom position-sticky navbar navbar-expand-md navbar-light bg-light">
           <div>
-            <a href="{{ data.home._url }}"
-              class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none navbar-brand">
-    
-              <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
-              <span class="fs-4">{{ data.page.siteTitle }}</span>
-            </a>
+            {# Hard break at homeNav #}
+            {% if data.page.homeNav %}
+              {% set homePage = data.page %}
+            {% else %}
+              {% set homePage = data.home %}
+              {% for uppage in data.page._ancestors %}
+                {% if uppage.homeNav %}
+                  {% set homePage = uppage %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+              <a href="{{ homePage._url }}"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none navbar-brand">
+                <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+                <span class="fs-4">{% if homePage.siteTitle %} 
+                  {{ homePage.siteTitle }}
+                {% else %}
+                  {{ homePage.title }}
+              {% endif %}
+                 </span>
+              </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLesGrandsVoisins"
               aria-controls="navbarLesGrandsVoisins" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

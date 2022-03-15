@@ -29,6 +29,10 @@ module.exports = {
         label: 'Javascript at end of Header (GAnalytics or Plausible.io)',
         type: 'string'
       },
+      homeNav: {
+        label: 'top of breadcrumbs / navigation ',
+        type: 'boolean'
+      },
       section1title: {
         label: 'Section 1 (Header) Title',
         type: 'string'
@@ -236,7 +240,8 @@ module.exports = {
           'title',
           'section1title',
           'section1shorttitle',
-          'section1content'        ]
+          'section1content',
+        'homeNav'      ]
       },
       sections: {
         label: 'Sections',
