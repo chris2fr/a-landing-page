@@ -45,9 +45,9 @@ does not have access to an Apostrophe page or piece.') }}
 <link rel="stylesheet" href="/css/bootstrap.css">
 <link rel="stylesheet" href="/fonts/fa/all.min.css">
 
-{% if data.isDev %} {# For live reload #}
-<link href="http://localhost:9002/wp/site.css" rel="stylesheet" />
-{% endif %} 
+{# {% if data.isDev %} #} {# For live reload #}
+{# <link href="http://localhost:9002/wp/site.css" rel="stylesheet" /> #}
+{# {% endif %} #}
 <style>{{ data.page.extracss }}</style>
 {% endblock %} 
 
@@ -146,10 +146,21 @@ does not have access to an Apostrophe page or piece.') }}
             </div>
           </div>
           {% endif %}
+          {% if data.page._children|length()%}
+          <div class="px-4 py-5 my-5">
+          <ul class="breadcrumb breadcrumb_pipe homenav">
+            {# 👇 Referencing `data.page._children` and looping over them. #}
+            {% for downpage in data.page._children %}
+            <li>
+              <a href="{{ downpage._url }}">{{ downpage.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+          {% endif %}
         </div>
       </div>
     </header>
-    <main style="max-width:unset;">
 {% endblock %} 
     
     
@@ -159,7 +170,6 @@ does not have access to an Apostrophe page or piece.') }}
 {% endblock %} 
 
 {% block afterMain %}
-  </main>
   <footer class="py-5 section text-align-left lgv-colors-9">
   {% if data.page.section9title or data.page.section9content %}
   <div class="lgv-section lgv-colors-9 d-flex flex-column justify-content-center text-center" id="section9">

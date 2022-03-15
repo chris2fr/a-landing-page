@@ -1,6 +1,7 @@
 {# This is an example home page template. It inherits and extends a layout
 template that lives in the top-level views/ folder for convenience #} {% extends
 "layout.html" %} {% block main %}
+<main class="lgvlanding">
 <div>
 {% if data.page.section2title %}
   <div class="lgv-section lgv-colors-2 d-flex flex-column justify-content-center" id="section2">
@@ -114,4 +115,5 @@ template that lives in the top-level views/ folder for convenience #} {% extends
   </div>
   </div>
 {% endif %}
+</main>
 {% endblock %}

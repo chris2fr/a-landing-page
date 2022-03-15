@@ -1,21 +1,30 @@
-{# Automatically extends the right outer layout and also handles AJAX siutations
+{# Automatically extends the right outer layout and also handles AJAX situations
 #} 
 {% extends data.outerLayout %} 
 {% block startHead %} 
 {{ super() }}
-<link rel="stylesheet" href="/css/bootstrap.css">
+<!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
 <link rel="stylesheet" href="/fonts/fa/all.min.css">
 
-<style>{{ data.page.extracss }}</style>
+{# {%  if data.isDev %} #}  {# For live reload #} 
+{# <link href="http://localhost:9002/wp/site.css" rel="stylesheet" /> #}
+{# {% endif %} #} 
+<style> {{ data.page.extracss }} </style>
 {% endblock %} 
 
 {% block beforeMain %}
     <nav class="breadcrumb">
-      <ul class="breadcrumb_arrow">
+      <ul class="breadcrumb breadcrumb_arrow">
+        {% set nottop = true %}
         {% for uppage in data.page._ancestors %}
+        {% if nottop %}
+        {% if data.page.type == "lagrandepage" %}
+        {% set nottop = false %}
+        {% endif %}
         <li>
           <a href="{{ uppage._url }}">{{ uppage.title }}</a>
         </li>
+        {% endif %}
         {% endfor %}
         <li>
           <strong>{{ data.page.title }}</strong>
@@ -23,7 +32,7 @@
       </ul>
     
       {% if data.page._children|length()%}
-      <ul class="breadcrumb_slash">
+      <ul class="breadcrumb breadcrumb_pipe">
         {# 👇 Referencing `data.page._children` and looping over them. #}
         {% for downpage in data.page._children %}
         <li>
@@ -33,7 +42,7 @@
       </ul>
       {% endif %}
     
-      <ul class="breadcrumb_pipe">
+      <ul class="breadcrumb breadcrumb_pipe">
         {% for locale in data.localizations %}
         {% if data.page.locale == locale %}
         <li><strong>{{ locale.label }}</strong></li>
@@ -43,8 +52,8 @@
         {% endfor %}
       </ul>
     </nav>
-    <header>
-      <h1>{{ data.page.title }}</h1>
+    <header class="header">
+      <h1 class="h1">{{ data.page.title }}</h1>
       {% if data.page.subtitle %}
       <p class="subtitle">{{ data.page.subtitle}}</p>
       {% endif %}
@@ -59,7 +68,7 @@
 
 {% block afterMain %}
 </main>
-  <footer>
+  <footer class="footer">
     {% area data.page, 'footer' %}
   </footer>
 {% endblock %} 
