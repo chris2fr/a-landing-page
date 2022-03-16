@@ -40,10 +40,11 @@ does not have access to an Apostrophe page or piece.') }}
 <!-- Place favicon.ico in the root directory -->
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
-<link rel="stylesheet" href="/css/bootstrap.css">
-<link rel="stylesheet" href="/fonts/fa/all.min.css">
+<link rel="stylesheet" href="{{ apos.asset.url('/modules/lagrandepage/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ apos.asset.url('/modules/lagrandepage/fonts/fa/all.min.css') }}">
 
 {# {% if data.isDev %} #} {# For live reload #}
 {# <link href="http://localhost:9002/wp/site.css" rel="stylesheet" /> #}
@@ -141,19 +142,26 @@ does not have access to an Apostrophe page or piece.') }}
                   </svg></a>
                 <ul class="dropdown-menu" aria-labelledby="langswitch">
                   {% for locale in data.localizations %}
-                  <li><a class="dropdown-item" href="{{ locale._url }}">{{ locale.label }}</a></li>
+                    {% if data.locale == locale.locale %}
+                      <li>{{ locale.label }}</li>
+                    {% else %}
+                      <li><a class="dropdown-item" href="{{ locale._url }}">{{ locale.label }}</a></li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
               </li>
             </ul>
           </div>
         </div>
-        <div style="max-width: 80rem;" notclass="px-4 py-5 my-5 text-center">
+        <div style="max-width: 80rem;" notclass="px-4 py-5 5 text-center">
           {% if true or data.page.section1title or data.page.section1content %}
           <div id="section1" >
             <div id="page-top" class="contanier particular-info lgv-intro-text">
               {% if data.page.section1title %}
-              <h1 class="display-1">{{ data.page.section1title }}</h1>
+                <h1 class="landing-h1">{{ data.page.section1title }}</h1>
+              {% endif %}
+              {% if data.page.section1subtitle %}
+              <p class="landing-subtitle">{{ data.page.section1subtitle }}</p>
               {% endif %}
               {% if data.page.section1content %}
               {% area data.page, 'section1content' %}
@@ -162,7 +170,7 @@ does not have access to an Apostrophe page or piece.') }}
           </div>
           {% endif %}
           {% if data.page._children|length()%}
-          <div class="px-4 py-5 my-5">
+          <div class="px-4 py-5 5">
           <ul class="down-nav">
             {# 👇 Referencing `data.page._children` and looping over them. #}
             {% for downpage in data.page._children %}
@@ -195,7 +203,7 @@ does not have access to an Apostrophe page or piece.') }}
       </div>
     {% endif %}
     {% if data.page.section9content %}
-    <div class="px-4 py-5 my-5">
+    <div class="px-4 py-5 5">
     {% area data.page, 'section9content' %}
     </div>
     {% endif %}
@@ -218,9 +226,9 @@ does not have access to an Apostrophe page or piece.') }}
 {% endif %}
 <!--
    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.32.0/tsparticles.min.js"></script>
-<script src="/js/particular.js" defer></script>
+<script src="/modules/lagrandepage/js/particular.js" defer></script>
   -->
-<script type="text/javascript" src="/js/bootstrap.js"></script>
-<script type="text/javascript" src="/js/proton.js"></script>
-<script src="/js/lgvprotonbg.js" defer></script>
+<script type="text/javascript" src="{{ apos.asset.url('/modules/lagrandepage/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ apos.asset.url('/modules/lagrandepage/js/proton.js') }}"></script>
+<script src="{{ apos.asset.url('/modules/lagrandepage/js/lgvprotonbg.js') }}" defer></script>
 {% endblock %}
