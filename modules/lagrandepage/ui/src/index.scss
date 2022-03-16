@@ -130,6 +130,9 @@ div.landing-navmenu {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
 }
+ul.landing-navmenu {
+  gap: 0.5rem;
+}
 div.landing-roadsign {
   max-width: 80rem;
   padding-top: 3rem;
