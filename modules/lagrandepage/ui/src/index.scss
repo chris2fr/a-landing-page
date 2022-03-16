@@ -90,6 +90,79 @@ hr {
   border: 0;
 }
 /*  */
+div.landing-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+div.landing-top {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dee2e6;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+a.landing-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity));
+  text-decoration: none;
+}
+div.landing-navmenu {
+  flex-direction: row-reverse;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+}
+div.landing-roadsign {
+  max-width: 80rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.landing-footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: left;
+}
+div.landing-section-9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+div.landing-colophon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  ;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
 .landing-h1 {
   margin-block-end: 0.3em;
   font-size: clamp(3.5rem, 1rem + 6vw, 6rem);
@@ -164,14 +237,25 @@ p.landing-subtitle {
   margin-left: -30px;
   left: 50%;
 }
-.lgv-section {
+.landing-section {
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.lgv-colors-1 {
+.landing-section-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.landing-colors-1 {
   background: map.get($lgvbgcolors, 1);
   color: map.get($lgvcolors, 1);
 }
-.lgv-colors-2 {
+.landing-colors-2 {
   background-image: initial;
   background-position-x: initial;
   background-position-y: initial;
@@ -184,33 +268,33 @@ p.landing-subtitle {
   background: map.get($lgvbgcolors, 2);
   color: map.get($lgvcolors, 2);
 }
-.lgv-colors-3 {
+.landing-colors-3 {
   background: map.get($lgvbgcolors, 3);
   color: map.get($lgvcolors, 3);
 }
-.lgv-colors-4,
-.lgv-colors-4 a {
+.landing-colors-4,
+.landing-colors-4 a {
   background: map.get($lgvbgcolors, 4);
   color: map.get($lgvcolors, 4);
 }
-.lgv-colors-5 {
+.landing-colors-5 {
   background: map.get($lgvbgcolors, 5);
   color: map.get($lgvcolors, 5);
 }
-.lgv-colors-6 {
+.landing-colors-6 {
   /* background: transparent; */
   background: map.get($lgvbgcolors, 6);
   color: map.get($lgvcolors, 6);
 }
-.lgv-colors-7 {
+.landing-colors-7 {
   background: map.get($lgvbgcolors, 7);
   color: map.get($lgvcolors, 7);
 }
-.lgv-colors-8 {
+.landing-colors-8 {
   background: map.get($lgvbgcolors, 8);
   color: map.get($lgvcolors, 8);
 }
-.lgv-colors-9 {
+.landing-colors-9 {
   /* background: transparent; */
   background: map.get($lgvbgcolors, 9);
   color: map.get($lgvcolors, 9);
