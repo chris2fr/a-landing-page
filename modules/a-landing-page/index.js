@@ -21,6 +21,10 @@ module.exports = {
         label: 'Is this the top of the local navigation (breadcrumbs) ? ',
         type: 'boolean'
       },
+      menuTitle: {
+        label: 'A Short title for Menus',
+        type: 'string'
+      },
       header: {
         type: 'area',
         label: 'Header Content',
@@ -72,6 +76,7 @@ module.exports = {
         fields: [
           'siteTitle',
           'header',
+          'menuTitle',
           'breadcrumbIsRoot'
         ]
       },
@@ -92,7 +97,7 @@ module.exports = {
         label: "Scripts",
         fields: [
           'cssExtra',
-          'javascriptExtraHead'
+          'javascriptHeadExtra'
         ]
       }
     }

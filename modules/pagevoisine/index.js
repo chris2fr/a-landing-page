@@ -13,6 +13,10 @@ module.exports = {
         label: 'Subtitle of this website',
         type: 'string'
       },
+      menuTitle: {
+        label: 'A Short title for Menus',
+        type: 'string'
+      },
       main: {
         type: 'area',
         label: 'Section Content',
@@ -48,11 +52,11 @@ module.exports = {
         fields: [
           'title',
           'subtitle',
+          'menuTitle',
           'main',
           'footer'
         ]
       }
-      
     }
   }
 };

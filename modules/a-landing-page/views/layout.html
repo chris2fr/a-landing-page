@@ -39,19 +39,22 @@
         </a>
         <div class="landing-navmenu">
         <ul class="landing-navmenu nav nav-pills">
-          {% if data.page.header.navHeading %}
-          <li class="nav-item"><a href="#{{data.page.header.identifier}}" class="nav-link active" aria-current="page">{{
-            data.page.header.navHeading }}</a></li>
+          {% if data.page.header.items[0].navHeading %}
+          <li class="nav-item"><a href="#{{data.page.header.items[0].identifier}}" class="nav-link active" aria-current="page">{{
+            data.page.header.items[0].navHeading }}</a></li>
           {% endif %}
-          {% for section in data.page.sections %}
+          {% for section in data.page.sections.items %}
             {% if section.navHeading %}
               <li class="nav-item"><a href="#{{section.identifier}}" class="nav-link">{{ section.navHeading }}</a></li>
             {% endif %}
           {% endfor %}
-          {% if data.page.footer.navHeading %}
-          <li class="nav-item"><a href="#{{data.page.footer.identifier}}" class="nav-link active" aria-current="page">{{
-            data.page.footer.navHeading }}</a></li>
-          {% endif %}
+          {% for downpage in data.page._children %}
+            {% if downpage.menuTitle %}
+            <li class="nav-item">
+              <a  class="nav-link" href="{{ downpage._url }}">{{ downpage.menuTitle }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
           {% if not data.user %}
           <li class="nav-item">
             <a href="/login" class="nav-link"> Login </a>
