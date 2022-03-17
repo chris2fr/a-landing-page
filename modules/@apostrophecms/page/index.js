@@ -19,7 +19,11 @@ module.exports = {
       {
         name: 'pagevoisine',
         label: 'Page Voisine'
+      },
+      {
+        name: 'a-landing-page',
+        label: 'A Landing Page'
       }
     ]
   }
-};
+}

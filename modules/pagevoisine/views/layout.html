@@ -14,7 +14,7 @@
 
 
 {% block beforeMain %}
-    <nav class="breadcrumb nav">
+    <nav class="breadcrumb nav page-voisine">
       <ul class="breadcrumb breadcrumb_arrow">
         {# Hard break at homeNav #}
         {% set start0 = 0 %}
@@ -57,7 +57,7 @@
         {% endfor %}
       </ul>
     </nav>
-    <header class="header">
+    <header class="header page-voisine">
       <h1 class="h1">{{ data.page.title }}</h1>
       {% if data.page.subtitle %}
       <p class="subtitle">{{ data.page.subtitle}}</p>
@@ -72,7 +72,7 @@
 {% endblock %} 
 
 {% block afterMain %}
-  <footer class="footer">
+  <footer class="footer page-voisine">
     {% area data.page, 'footer' %}
   </footer>
 {% endblock %} 

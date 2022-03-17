@@ -1,6 +1,5 @@
 require('apostrophe')({
   shortName: 'lesgrandsvoisins',
-  nestedModuleSubdirs: true,
   modules: {
     // Apostrophe module configuration
     // *******************************
@@ -35,8 +34,6 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
     'lagrandepage': {},
-    'pagevoisine': {},
-    'la-grands-page': {},
-    'a-landing-page':{}
+    'pagevoisine': {}
   }
 });
