@@ -11,17 +11,15 @@
 {% endblock %}
 
 {% block beforeMain %}
-<div id="protonContainer">
-  <canvas id="protonCanvas"></canvas>
-</div>
+
 <nav class="landing-top">
-  {# Hard break at homeNav #}
-{% if data.page.homeNav %}
+{# Hard break at breadcrumbIsRoot #}
+{% if data.page.breadcrumbIsRoot %}
   {% set homePage = data.page %}
 {% else %}
   {% set homePage = data.home %}
   {% for uppage in data.page._ancestors %}
-    {% if uppage.homeNav %}
+    {% if uppage.breadcrumbIsRoot %}
       {% set homePage = uppage %}
     {% endif %}
   {% endfor %}
@@ -37,10 +35,20 @@
 </a>
 <div class="landing-navmenu">
 <ul class="landing-navmenu nav nav-pills">
-  {% if data.page.header.items[0].navHeading %}
-  <li class="nav-item"><a href="#{{data.page.header.items[0].identifier}}" class="nav-link active" aria-current="page">{{
-    data.page.header.items[0].navHeading }}</a></li>
-  {% endif %}
+          {# Hard break at homeNav #}
+          {% set start0 = 0 %}
+          {% for uppage in data.page._ancestors %}
+            {% if uppage.breadcrumbIsRoot %}
+              {% set start0 = loop.index0 %}
+            {% endif %}
+          {% endfor %}
+  {% for uppage in data.page._ancestors %}
+          {% if loop.index0 >= start0 %}
+            <li class="nav-item">
+              <a  class="nav-link" href="{{ uppage._url }}">{% if uppage.menuTitle %}{{ uppage.menuTitle }}{% else %}{{ uppage.title }}{% endif %}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
   {% for section in data.page.sections.items %}
     {% if section.navHeading %}
       <li class="nav-item"><a href="#{{section.identifier}}" class="nav-link">{{ section.navHeading }}</a></li>
@@ -80,10 +88,17 @@
 {% endblock %}
 
 {% block afterMain %}
-<footer class="landing-footer landing-section landing-section-footer landing-colors-8">
-  {% area data.page, 'footer' %}
-</footer>
-{# Close .bp-wrapper #}
+  {% set homePage = data.home %}
+  {% for uppage in data.page._ancestors %}
+    {% if uppage.homeNav %}
+      {% set homePage = uppage %}
+    {% endif %}
+  {% endfor %}
+  <footer class="landing-footer landing-section landing-section-footer landing-colors-8">
+    {% if homePage and homePage.footer %}
+      {% area homePage, 'footer' %}
+    {% endif %}
+  </footer>
 {% endblock %}
 
 {% block afterAposScripts %}

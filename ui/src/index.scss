@@ -118,7 +118,7 @@ hr {
   border: 0;
 }
 /*  */
-div.landing-page {
+.landing-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -126,8 +126,7 @@ div.landing-page {
   flex-direction: column;
   align-items: center;
 }
-div.landing-top {
-
+.landing-top {
   background-color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -162,7 +161,7 @@ div.landing-navmenu {
 ul.landing-navmenu {
   gap: 0.5rem;
 }
-div.landing-roadsign {
+div.landing-hero {
   // max-width: 80rem;
   // padding-top: 3rem;
   // padding-bottom: 3rem;

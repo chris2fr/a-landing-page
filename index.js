@@ -31,7 +31,7 @@ module.exports = {
         options: {
           max: 1,
           widgets: {
-            'a-landing-page-section': {}
+            'a-landing-section': {}
           }
         }
       },
@@ -41,7 +41,7 @@ module.exports = {
         options: {
           max: 7,
           widgets: {
-            'a-landing-page-section': {}
+            'a-landing-section': {}
           }
         }
       },
@@ -51,7 +51,7 @@ module.exports = {
         options: {
           max: 1,
           widgets: {
-            'a-landing-page-section': {}
+            'a-landing-section': {}
           }
         }
       },
@@ -63,8 +63,8 @@ module.exports = {
             '@apostrophecms/video': {},
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
-            'a-landing-page-colx2': {},
-            'a-landing-page-colx3': {},
+            'a-landing-colx2': {},
+            'a-landing-colx3': {},
             '@apostrophecms/html': {}
           }
         }

@@ -1,9 +1,9 @@
-// Moudle Exports for a-landing-page
+// Moudle Exports for a-landing
 
 module.exports = {
   'a-landing-page': {},
-  'a-landing-page-section-widget': {},
-  'a-landing-page-colx2-widget': {},
-  'a-landing-page-colx3-widget': {},
-  'a-landing-page-inside-page': {}
+  'a-landing-section-widget': {},
+  'a-landing-colx2-widget': {},
+  'a-landing-colx3-widget': {},
+  'a-landing-inside-page': {}
 };
