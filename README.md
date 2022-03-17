@@ -17,6 +17,27 @@ See [lesgrandsvoisins.com](https://www.lesgrandsvoisins.com) for a working demo.
 
 Follow installation instructions for ApostropheCMS and then plop the contents for this repository into the modules folder.
 
+Add the following to `@apostrophe/page/index.js`:
+
+```js
+module.exports = {
+  options: {
+    types: [
+      [...]
+      {
+        name: 'apostrophe-landing',
+        label: 'Apostrophe Landing Page'
+      },
+      {
+        name: 'apostrophe-landing-inside-page',
+        label: 'Apostrophe Landing / Inside Page'
+      }
+    ]
+  }
+}
+```
+
+
 This code creates a page type called "A Landing Page." La Grande Page is the landing page. Sections will only appear if the title is present (eg. section 5 will be visible if section5title has some text). The "Short Titles" are only used for the menu. The alternative languages provide links to page names that are the two-letter codes indicated.
 
 
