@@ -59,7 +59,7 @@ canvas {
   height: 200vh;
 }
 
-main.apostrophe-landing {
+main.a-landing-page {
   background: $herocolor;
   max-width: unset;
   width: 100%;
@@ -494,7 +494,7 @@ a:focus,
   outline-offset: none;
 }
 /* Down Nav */
-.apostrophe-landing-down-nav {
+.a-landing-page-down-nav {
   display: grid;
   list-style-type: none;
   grid-template-columns: repeat(1, 1fr);
@@ -503,21 +503,21 @@ a:focus,
   gap: 1rem;
 }
 @media (min-width: 40rem) {
-  .apostrophe-landing-down-nav {
+  .a-landing-page-down-nav {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 80rem) {
-  .apostrophe-landing-down-nav {
+  .a-landing-page-down-nav {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 120rem) {
-  .apostrophe-landing-down-nav {
+  .a-landing-page-down-nav {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-ul.apostrophe-landing-down-nav li {
+ul.a-landing-page-down-nav li {
   background: white;
   border-radius: 0.5rem;
   text-align: center;

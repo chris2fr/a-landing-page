@@ -35,8 +35,8 @@ module.exports = {
             '@apostrophecms/video': {},
             '@apostrophecms/image': {},
             '@apostrophecms/rich-text': {},
-            'apostrophe-landing-colx2': {},
-            'apostrophe-landing-colx3': {},
+            'a-landing-page-colx2': {},
+            'a-landing-page-colx3': {},
             '@apostrophecms/html': {}
           }
         }

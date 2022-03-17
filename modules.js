@@ -1,9 +1,9 @@
-// Moudle Exports for Apostrophe-Landing
+// Moudle Exports for a-landing-page
 
 module.exports = {
-  'apostrophe-landing': {},
-  'apostrophe-landing-section-widget': {},
-  'apostrophe-landing-colx2-widget': {},
-  'apostrophe-landing-colx3-widget': {},
-  'apostrophe-landing-inside-page': {}
+  'a-landing-page': {},
+  'a-landing-page-section-widget': {},
+  'a-landing-page-colx2-widget': {},
+  'a-landing-page-colx3-widget': {},
+  'a-landing-page-inside-page': {}
 };

@@ -1,6 +1,36 @@
 {% extends "layout.html" %} 
 {% block main %}
-  <main class="apostrophe-landing sections">
+  <header>
+    <div class="landing-page clearfix landing-roadsign">
+      {% if true or data.page.header.title or data.page.header %}
+      <div id="section-header" class="header-heading">
+        <div id="page-top" class="contanier particular-info landing-intro-text">
+          {% if data.page.header.title %}
+            <h1 class="landing-h1">{{ data.page.header.title }}</h1>
+          {% endif %}
+          {% if data.page.header.subtitle %}
+            <p class="landing-subtitle">{{ data.page.header.subtitle }}</p>
+          {% endif %}
+          {% if data.page.header %}
+            {% area data.page, 'header' %}
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% if data.page._children|length()%}
+      <div style="margin: 1.5rem; padding:1.5rem;">
+        <ul class="a-landing-page-down-nav">
+          {% for downpage in data.page._children %}
+            <li>
+              <a href="{{ downpage._url }}">{{ downpage.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  <main class="a-landing-page sections">
     {% area data.page, 'sections' %}
   </main>
 {% endblock %}
