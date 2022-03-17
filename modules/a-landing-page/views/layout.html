@@ -98,7 +98,7 @@
       {% endif %}
       {% if data.page._children|length()%}
       <div style="margin: 1.5rem; padding:1.5rem;">
-        <ul class="down-nav">
+        <ul class="a-landing-page-down-nav">
           {% for downpage in data.page._children %}
             <li>
               <a href="{{ downpage._url }}">{{ downpage.title }}</a>
@@ -113,7 +113,7 @@
 {% endblock %}
 
 {% block afterMain %}
-<footer class="landing-footer landing-section landing-colors-9">
+<footer class="landing-footer landing-section landing-section-footer landing-colors-8">
   {% area data.page, 'footer' %}
 </footer>
 {# Close .bp-wrapper #}

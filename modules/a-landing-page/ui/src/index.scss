@@ -42,6 +42,7 @@ html {
   font-weight: 400;
   width: 100%;
   height: 100%;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -61,12 +62,32 @@ canvas {
 main.a-landing-page {
   background: $herocolor;
   max-width: unset;
+  width: 100%;
+  // max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+  display: block;
+  box-sizing: border-box;
 }
 .sections * h2 {
+  text-align: center;
   text-transform: uppercase;
   margin: 0 0 20px 0;
   font-weight: 800;
   font-size: 2.5rem;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  line-height: 1.2;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+
 }
 .sections * h3 {
   font-size: 2rem;
@@ -81,8 +102,11 @@ main.a-landing-page {
   font-weight: 700;
   line-height: 20px;
 }
-p {
-  font-size: 15px;
+.header-heading * .landing-section-content p {
+  font-size: x-large;
+}
+.sections * .landing-section-content p {
+  font-size: larger;
 }
 hr {
   height: 2px;
@@ -127,6 +151,8 @@ a.landing-logo {
   margin-bottom: 1rem;
   color: black;
   text-decoration: none;
+  font-size: calc(1.275rem + 0.3vw);
+  box-sizing: border-box;
 }
 div.landing-navmenu {
   flex-direction: row-reverse;
@@ -137,26 +163,28 @@ ul.landing-navmenu {
   gap: 0.5rem;
 }
 div.landing-roadsign {
-  max-width: 80rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  box-sizing: border-box;
+  // max-width: 80rem;
+  // padding-top: 3rem;
+  // padding-bottom: 3rem;
+  // padding-right: 1.5rem;
+  // padding-left: 1.5rem;
+  // margin-top: 3rem;
+  // margin-bottom: 3rem;
+  // box-sizing: border-box;
   text-align: center;
 }
 .landing-footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: left;
+  padding: 1em;
 }
-div.landing-section-9 {
+div.landing-section-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 1em;
 }
 div.landing-colophon {
   display: flex;
@@ -169,20 +197,38 @@ div.landing-colophon {
   clear: both;
   content: "";
 }
-.landing-h1 {
-  margin-block-end: 0.3em;
-  font-size: clamp(3.5rem, 1rem + 6vw, 6rem);
+ .header-heading * .section-title h2 {
+  -webkit-margin-after: .3em;
+  margin-block-end: .3em;
+  font-size: clamp(3.5rem,1rem + 6vw,6rem);
   font-weight: bold;
+  font-family: "Raleway",sans-serif;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0.67em 0;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0.67em 0;
 }
 p.landing-subtitle {
   text-align: center;
-  font-size: clamp(1.5rem, 1rem + 0.5vw, 2.5rem);
   font-weight: bold;
   font-style: italic;
   margin-block-end: 0.3ex;
 }
-landing-top * p.landing-subtitle {
-  font-size: clamp(2.5rem, 1rem + 3.5vw, 3.5rem);
+.sections * p.landing-subtitle {
+  font-size: clamp(1.5rem, 1rem + 0.5vw, 2.5rem);
+}
+
+.landing-top * p.landing-subtitle {
+  font-size: clamp(2rem, 1rem + 2vw, 3rem);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .homenav {
@@ -244,15 +290,16 @@ landing-top * p.landing-subtitle {
   left: 0;
   z-index: -1;
 }
-#section-header {
+.sections * #section-header {
   color: map.get($lgvcolors, 1);
   text-align: center;
   // width: 70%;
   // margin-left: 15%;
 }
-#section-header p {
+.sections * #section-header p {
   color: map.get($lgvcolors, 1);
-  font-size: 22px;
+  // font-size: 22px;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 30px;
   margin: 0 auto;
@@ -268,15 +315,30 @@ landing-top * p.landing-subtitle {
 // }
 */
 .sections * .section-title * h2 {
+  text-align:center;
   position: relative;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  font-weight: 800;
+  line-height: 1.2;
+  display: block;
+  // font-size: 1.5em;
+  // margin-block-start: 0.83em;
+  // margin-block-end: 0.83em;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+}
+.sections * div.section-title {
+  display: block;
 }
 .sections * .section-title {
   margin-bottom: 70px;
 }
 .sections * .section-title h2::after,
+.sections * .section-title h2::before,
 .sections * .section-title h3::after,
 .sections * .section-title h4::after {
   position: absolute;
@@ -289,23 +351,33 @@ landing-top * p.landing-subtitle {
   left: 50%;
 }
 .landing-section {
-  padding: 100px 0;
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.landing-section-content {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.landing-section-content * p {
+  // padding-top: 3rem;
+  // padding-bottom: 3rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  display: block;
 }
-.landing-colors-header {
+.landing-colors-0 {
   background: map.get($lgvbgcolors, 1);
   color: map.get($lgvcolors, 1);
 }
+
 .landing-colors-1 {
   background-image: initial;
   background-position-x: initial;
@@ -345,7 +417,7 @@ landing-top * p.landing-subtitle {
   background: map.get($lgvbgcolors, 8);
   color: map.get($lgvcolors, 8);
 }
-.landing-colors-footer {
+.landing-colors-8 {
   /* background: transparent; */
   background: map.get($lgvbgcolors, 9);
   color: map.get($lgvcolors, 9);
@@ -366,7 +438,7 @@ div.two_col__column div.apos-area div.bp-rich-text {
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
-  font-size: 15px;
+  // font-size: 15px;
   font-weight: 500;
   border-radius: 25px;
   transition: all 0.5s linear;
@@ -422,38 +494,41 @@ a:focus,
   outline-offset: none;
 }
 /* Down Nav */
-.down-nav {
+.a-landing-page-down-nav {
   display: grid;
   list-style-type: none;
-  // grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding: 0;
   margin: 0;
   gap: 1rem;
 }
-@media (min-width: 7em) {
-  .down-nav {
+@media (min-width: 40rem) {
+  .a-landing-page-down-nav {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 14em) {
-  .down-nav {
+@media (min-width: 80rem) {
+  .a-landing-page-down-nav {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 21em) {
-  .down-nav {
+@media (min-width: 120rem) {
+  .a-landing-page-down-nav {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-ul.down-nav li {
+ul.a-landing-page-down-nav li {
   background: white;
   border-radius: 0.5rem;
   text-align: center;
   padding: 0.5rem;
 }
-.header-heading * .section-title {
-  -webkit-margin-after: .3em;
-  margin-block-end: .3em;
-  font-size: clamp(3.5rem,1rem + 6vw,6rem);
-  font-weight: bold;
+// .header-heading * .section-title {
+//   -webkit-margin-after: .3em;
+//   margin-block-end: .3em;
+//   font-size: clamp(3.5rem,1rem + 6vw,6rem);
+//   font-weight: bold;
+// }
+.header-heading {
+  color: white;
 }
