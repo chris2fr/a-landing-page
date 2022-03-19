@@ -128,7 +128,6 @@ hr {
   grid-template-columns: auto auto;
   align-items: center;
   padding: 0.5rem; // TODO render variable
-  gap: 0.5rem;
   background-color: white;
   // position: -webkit-sticky;
   // position: sticky;
@@ -149,6 +148,7 @@ a.a-landing-logo {
 }
 ul.a-landing-navmenu {
   gap: 0.5rem;
+  justify-self: end;
 }
 div.a-landing-hero {
   text-align: center;
@@ -248,6 +248,7 @@ p.a-landing-subtitle {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  gap: 0.5rem;
 }
 .a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
   color: #fff;

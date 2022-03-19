@@ -47,13 +47,13 @@
   {% for uppage in data.page._ancestors %}
     {% if loop.index0 >= start0 %}
       <li class="a-nav-item">
-        <a  class="a-nav-link" href="{{ uppage._url }}">{% if uppage.menuTitle %}{{ uppage.menuTitle }}{% else %}{{ uppage.title }}{% endif %} &gt;</a>
+        <a  class="a-nav-link" href="{{ uppage._url }}">{% if uppage.menuTitle %}{{ uppage.menuTitle }}{% else %}{{ uppage.title }}{% endif %}</a>
       </li>
     {% endif %}
   {% endfor %}
   {% if data.page.menuTitle %}
     <li class="a-nav-item">
-      <a class="a-nav-link a-inactive" href="#">{{ data.page.menuTitle }}</a>
+      <a class="a-nav-link active" href="#">{{ data.page.menuTitle }}</a>
     </li>
   {% endif %}
   {% if data.page.header.items[0].navHeading %}
@@ -69,7 +69,7 @@
   {% for downpage in data.page._children %}
     {% if downpage.menuTitle %}
     <li class="a-nav-item">
-      <a  class="a-nav-link" href="{{ downpage._url }}"> | {{ downpage.menuTitle }}</a>
+      <a  class="a-nav-link" href="{{ downpage._url }}">{{ downpage.menuTitle }}</a>
     </li>
     {% endif %}
   {% endfor %}
