@@ -14,52 +14,72 @@
 <div id="protonContainer">
   <canvas id="protonCanvas"></canvas>
 </div>
-<nav class="landing-top">
+<nav class="a-landing-top">
+  {# Hard break at breadcrumbIsRoot #}
+  {% if data.page.breadcrumbIsRoot %}
+    {% set homePage = data.page %}
+  {% else %}
+    {% set homePage = data.home %}
+    {% for uppage in data.page._ancestors %}
+      {% if uppage.breadcrumbIsRoot %}
+        {% set homePage = uppage %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  <a href="{{ homePage._url }}" class="a-landing-logo a-navbar-brand">
+    <span style="font-size: calc(1.275rem + 0.3vw);">
+      {% if homePage.siteTitle %}
+        {{ homePage.siteTitle }}
+      {% else %}
+        {{ homePage.title }}
+      {% endif %}
+    </span>
+  </a>
+  <div class="a-landing-navmenu">
+  <ul class="a-nav a-nav-pills">
   {# Hard break at homeNav #}
-{% if data.page.homeNav %}
-  {% set homePage = data.page %}
-{% else %}
-  {% set homePage = data.home %}
+  {% set start0 = 0 %}
   {% for uppage in data.page._ancestors %}
-    {% if uppage.homeNav %}
-      {% set homePage = uppage %}
+    {% if uppage.breadcrumbIsRoot %}
+      {% set start0 = loop.index0 %}
     {% endif %}
   {% endfor %}
-{% endif %}
-<a href="{{ homePage._url }}" class="landing-logo navbar-brand">
-  <span style="font-size: calc(1.275rem + 0.3vw);">
-    {% if homePage.siteTitle %}
-      {{ homePage.siteTitle }}
-    {% else %}
-      {{ homePage.title }}
+  {% for uppage in data.page._ancestors %}
+    {% if loop.index0 >= start0 %}
+      <li class="a-nav-item">
+        <a  class="a-nav-link" href="{{ uppage._url }}">{% if uppage.menuTitle %}{{ uppage.menuTitle }}{% else %}{{ uppage.title }}{% endif %} &gt;</a>
+      </li>
     {% endif %}
-  </span>
-</a>
-<div class="landing-navmenu">
-<ul class="landing-navmenu nav nav-pills">
+  {% endfor %}
+  {% if data.page.menuTitle %}
+    <li class="a-nav-item">
+      <a class="a-nav-link a-inactive" href="#">{{ data.page.menuTitle }}</a>
+    </li>
+  {% endif %}
   {% if data.page.header.items[0].navHeading %}
-  <li class="nav-item"><a href="#{{data.page.header.items[0].identifier}}" class="nav-link active" aria-current="page">{{
-    data.page.header.items[0].navHeading }}</a></li>
+    <li class="a-nav-item"><a href="#{{data.page.header.items[0].identifier}}" 
+      class="a-nav-link" aria-current="page">({{data.page.header.items[0].navHeading }})</a></li>
   {% endif %}
   {% for section in data.page.sections.items %}
     {% if section.navHeading %}
-      <li class="nav-item"><a href="#{{section.identifier}}" class="nav-link">{{ section.navHeading }}</a></li>
+      <li class="a-nav-item"><a href="#{{section.identifier}}" 
+        class="a-nav-link">({{ section.navHeading }})</a></li>
     {% endif %}
   {% endfor %}
   {% for downpage in data.page._children %}
     {% if downpage.menuTitle %}
-    <li class="nav-item">
-      <a  class="nav-link" href="{{ downpage._url }}">{{ downpage.menuTitle }}</a>
+    <li class="a-nav-item">
+      <a  class="a-nav-link" href="{{ downpage._url }}"> | {{ downpage.menuTitle }}</a>
     </li>
     {% endif %}
   {% endfor %}
   {% if not data.user %}
-  <li class="nav-item">
-    <a href="/login" class="nav-link"> Login </a>
+  <li class="a-nav-item">
+    <a href="/login" class="a-nav-link"> [ Login ] </a>
   </li>
   {% endif %}
-  <!-- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="langswitch" data-bs-toggle="dropdown"
+  <!-- <li class="a-nav-item dropdown">
+    <a class="a-nav-link dropdown-toggle" href="#" id="langswitch" data-bs-toggle="dropdown"
       aria-expanded="false"><svg style="max-height:2em;" aria-hidden="true" focusable="false" data-prefix="fas"
         data-icon="language" class="svg-inline--fa fa-language fa-w-20" role="img"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
@@ -70,9 +90,9 @@
     <ul class="dropdown-menu" aria-labelledby="langswitch"> -->
       {% for locale in data.localizations %}
         {% if data.locale == locale.locale %}
-          <li class="nav-item" ><a class="nav-link active" href="{{ locale._url }}">{{ locale.label }}</a></li>
+          <li class="a-nav-item" ><a class="a-nav-link active" href="{{ locale._url }}">{{ locale.label }}</a></li>
         {% else %}
-          <li class="nav-item" ><a class="nav-link" href="{{ locale._url }}">{{ locale.label }}</a></li>
+          <li class="a-nav-item" ><a class="a-nav-link" href="{{ locale._url }}">{{ locale.label }}</a></li>
         {% endif %}
       {% endfor %}
 </ul>
@@ -80,7 +100,7 @@
 {% endblock %}
 
 {% block afterMain %}
-<footer class="landing-footer landing-section landing-section-footer landing-colors-8">
+<footer class="a-landing-footer a-landing-section a-landing-section-footer landing-colors-8">
   {% area data.page, 'footer' %}
 </footer>
 {# Close .bp-wrapper #}

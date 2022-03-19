@@ -18,7 +18,7 @@ module.exports = {
         type: 'string'
       },
       style: {
-        label: 'Style (0, 1, 2, 3 ,4 5, 6, 7, 8)',
+        label: 'Style (0, 1, 2, 3 ,4, 5, 6, 7, 8)',
         type: 'integer',
         min: 0,
         max: 8
