@@ -119,7 +119,8 @@ hr {
   align-items: center;
 }
 .a-landing-top {
-  position: fixed;
+  position: sticky;
+  top: 0;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -369,8 +370,7 @@ p.a-landing-subtitle {
 }
 
 .a-sections * .a-section-title::after {
-  position: sticky;
-  top: 0;
+  position: absolute;
   content: "";
   background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
   height: 4px;
