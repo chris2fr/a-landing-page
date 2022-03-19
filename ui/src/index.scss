@@ -146,7 +146,7 @@ a.a-landing-logo {
   font-size: calc(1.275rem + 0.3vw);
   box-sizing: border-box;
 }
-ul.a-landing-navmenu {
+.a-landing-navmenu {
   gap: 0.5rem;
   justify-self: end;
 }
@@ -177,7 +177,7 @@ div.a-landing-colophon {
   clear: both;
   content: "";
 }
- .a-header-heading * .section-title h2 {
+ .a-header-heading * .a-section-title h2 {
   -webkit-margin-after: .3em;
   margin-block-end: .3em;
   font-size: clamp(3.5rem,1rem + 6vw,6rem);
@@ -200,6 +200,8 @@ p.a-landing-subtitle {
 .a-sections * p.a-landing-subtitle {
   font-size: clamp(1.5rem, 1rem + 0.5vw, 2.5rem);
 }
+
+
 
 .a-landing-top * p.a-landing-subtitle {
   font-size: clamp(2rem, 1rem + 2vw, 3rem);
@@ -296,14 +298,18 @@ p.a-landing-subtitle {
 //   margin-bottom: 10px;
 // }
 */
-.a-sections * .section-title * h2 {
+.a-sections * .a-section-title {
+  padding: 4rem; // TODO Fix
+}
+
+.a-sections * .a-section-title * h2 {
   text-align:center;
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
+  //margin-top: 10px;
+  //margin-bottom: 15px;
+  //padding-bottom: 15px;
   text-transform: uppercase;
-  margin: 0 0 20px 0;
+  //margin: 0 0 20px 0;
   font-weight: 800;
   line-height: 1.2;
   display: block;
@@ -313,16 +319,16 @@ p.a-landing-subtitle {
   // margin-inline-start: 0px;
   // margin-inline-end: 0px;
 }
-.a-sections * div.section-title {
+.a-sections * div.a-section-title {
   display: block;
 }
-.a-sections * .section-title {
-  margin-bottom: 70px;
+.a-sections * .a-section-title {
+  //margin-bottom: 70px;
 }
-.a-sections * .section-title h2::after,
-.a-sections * .section-title h2::before,
-.a-sections * .section-title h3::after,
-.a-sections * .section-title h4::after {
+.a-sections * .a-section-title h2::after,
+.a-sections * .a-section-title h2::before,
+.a-sections * .a-section-title h3::after,
+.a-sections * .a-section-title h4::after {
   position: absolute;
   content: "";
   background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
@@ -505,7 +511,7 @@ ul.a-landing-page-down-nav li {
   text-align: center;
   padding: 0.5rem;
 }
-// .a-header-heading * .section-title {
+// .a-header-heading * .a-section-title {
 //   -webkit-margin-after: .3em;
 //   margin-block-end: .3em;
 //   font-size: clamp(3.5rem,1rem + 6vw,6rem);
