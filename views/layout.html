@@ -10,13 +10,14 @@
 {% block extraHead %}
 {{ super() }}
 {{ data.page.javascriptHeadExtra }}
+{% render aLandingNav.newScript() %}
 {% endblock %}
 
 {% block beforeMain %}
 <div id="protonContainer">
   <canvas id="protonCanvas"></canvas>
 </div>
-{% render aLandingNav.aLandingNav(data) %}
+{% render aLandingNav.newHTML(data) %}
 {% endblock %}
 
 {% block afterMain %}

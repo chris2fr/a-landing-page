@@ -5,5 +5,6 @@ module.exports = {
   'a-landing-section-widget': {},
   'a-landing-colx2-widget': {},
   'a-landing-colx3-widget': {},
-  'a-landing-inside-page': {}
+  'a-landing-inside-page': {},
+  'helper': {}
 };

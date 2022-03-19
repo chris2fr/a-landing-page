@@ -11,10 +11,11 @@
 {% block extraHead %}
 {{ super() }}
 {{ data.page.javascriptHeadExtra }}
+{% render aLandingNav.newScript() %}
 {% endblock %}
 
 {% block beforeMain %}
-{% render aLandingNav.aLandingNav(data) %}
+{% render aLandingNav.newHTML(data) %}
 {% endblock %}
 
 {% block afterMain %}
