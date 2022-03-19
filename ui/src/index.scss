@@ -559,3 +559,58 @@ ul.a-landing-page-down-nav li {
 .a-header-heading {
   color: white;
 }
+
+.a-landing-nav {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-areas: "logo tablist" 
+                       "logo submenu";
+  background-color: white;
+  justify-items: center;
+}
+.a-landing-nav-logo {
+  background: white;
+  white-space: nowrap;
+  grid-area: logo;
+  align-self: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: calc(1rem + 1vw);
+  text-decoration: none;
+}
+.a-landing-nav-tablist {
+  list-style: none;
+  background: white;
+  display: flex;
+  grid-area: tablist;
+}
+// .a-landing-menu {
+//   font-weight: bold;
+//   padding-top: 13px;
+//   text-align: center;
+//   background: #343436;
+//   color: #fff;
+//   border-radius: 30px;
+//   height: 100px;
+// }
+// .a-landing-nav-link.active {
+//   // background: #fff;
+//   // color: #000;
+// }
+// .a-landing-nav-link {
+//   //  font-weight: bold;
+//   //  padding-top: 1rem;
+//   //  text-align: center;
+//   //  background: #343436;
+//   //  color: #fff;
+//   //  border-radius: 0.5rem;
+//   //  height: 4rem;
+// }
+.a-landing-submenu-area {
+
+  grid-area: submenu;
+  background: white;
+}
+.a-landing-nav-submenu {
+
+}

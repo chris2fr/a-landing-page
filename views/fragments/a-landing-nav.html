@@ -2,149 +2,80 @@
 <script>
 function openTab(tabName) {
   var i;
-  var x = document.getElementsByClassName("a-landing-nav-submenu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  var activeSubmenu;
+  activeSubmenu = document.getElementById(tabName);
+  if (activeSubmenu.style.display !== 'none') {
+    activeSubmenu.style.display = "none";
+  } else {
+    var x = document.getElementsByClassName("a-landing-nav-submenu");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
   }
-  document.getElementById(tabName).style.display="block";
+  return true;
 }
 </script>
 {% endfragment%}
 
 {% fragment newHTML(data) %}
 {% set homePage = apos.helper.findHomePage(data.page) %}
-<a class="a-landing-logo" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
-<nav class="a-landing-tabbed-nav">
-  {{ apos.log(homePage.slug)}}
+
+<nav class="a-landing-nav">
+  <a class="a-landing-nav-logo" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
+  <div class="a-landing-nav-tablist" role="tablist">
     {% for uppage in homePage.limitedAncestors %}
-        <a class="a-landing-nav-tab" href="{{ uppage._url }}">{{ uppage.menuTitle }}</a>
+
+      <a href="{{ uppage._url }}" class="a-landing-nav-link active">{{ uppage.menuTitle }}</a>
+
     {% endfor %}
-  <a class="a-landing-menu" href="#" onclick="javascript:openTab('a-landing-submenu-enclosed')">{{ apos.helper.getMenuTitle(data.page) }}</a>
+
+    <a class="a-landing-nav-link active" href="#" onclick="javascript:openTab('a-landing-submenu-enclosed')">{{ apos.helper.getMenuTitle(data.page) }}</a>
+
     {% if data.page.header.items[0].navHeading %}
+
       <a href="#{{data.page.header.items[0].identifier}}" 
-        class="a-landing-nav-tab">{{data.page.header.items[0].navHeading }}</a>
+        class="a-landing-nav-link">{{data.page.header.items[0].navHeading }}</a>
+
     {% endif %}
     {% for section in data.page.sections.items %}
       {% if section.navHeading %}
+
         <a href="#{{section.identifier}}" 
-          class="a-landing-nav-tab">{{ section.navHeading }}</a></li>
+          class="a-landing-nav-link">{{ section.navHeading }}</a>
+
       {% endif %}
     {% endfor %}
     {% if not data.user %}
-      <a href="/login" class="a-landing-menu">Login</a>
+
+      <a href="/login" class="a-landing-nav-link">Login</a>
+
     {% endif %}
-  <a class="a-landing-menu" href="#" onclick="javascript:openTab('a-landing-submenu-language')"><svg style="height:1em;" 
+
+  <a class="a-landing-nav-link" href="#" onclick="javascript:openTab('a-landing-submenu-language');" ><svg style="height:1em;" 
     data-icon="language" role="img"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
     <path fill="currentColor"
       d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z">
     </path>
   </svg></a>
+
+  </div>
   <div class="a-landing-submenu-area">
-    <div class="a-landing-nav-submenu" id="a-landing-submenu-enclosed" style="display: none;">
+    <div class="a-landing-nav-submenu" id="a-landing-submenu-enclosed">
       {% for downpage in data.page._children %}
-          <a class="a-landing-menu" href="{{ downpage._url }}">{{ apos.helper.getMenuTitle(downpage) }}</a>
+          <a class="a-landing-nav-link" href="{{ downpage._url }}">{{ apos.helper.getMenuTitle(downpage) }}</a>
       {% endfor %}
     </div>
     <div class="a-landing-nav-submenu" id="a-landing-submenu-language" style="display: none;">
       {% for locale in data.localizations %}
       {% if data.locale == locale.locale %}
-        <a class="a-landing-menu a-landing-menu-active" href="{{ locale._url }}">{{ locale.label }}</a>
+        <a class="a-landing-nav-link a-landing-nav-link.active" href="{{ locale._url }}">{{ locale.label }}</a>
       {% else %}
-        <a class="a-landing-menu" href="{{ locale._url }}">{{ locale.label }}</a>
+        <a class="a-landing-nav-link" href="{{ locale._url }}">{{ locale.label }}</a>
       {% endif %}
     {% endfor %}
     </div>
   </div>
 </nav>
 {% endfragment%}
-
-{% fragment aLandingNav(data) %}
-{% set homePage = apos.helper.findHomePage(data) %}
-<nav class="a-landing-top">
-  <div class="a-landing-logo">
-  <a href="{{ homePage._url }}"> 
-    {% if homePage.siteTitle %}
-      {{ homePage.siteTitle }}
-    {% else %}
-      {{ homePage.title }}
-    {% endif %}
-  </a>
-  <a href="#" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu');if(navDiv.style.display==='none'){navDiv.style.display='flex'}else{navDiv.style.display='none'};">[=]</a>
-</div>
-  <div class="a-landing-navmenu" id="a-landing-navmenu">
-  <ul class="a-nav a-nav-pills">
-  {# Hard break at homeNav #}
-  {% if not data.page.breadcrumbIsRoot %}
-  {% set start0 = 0 %}
-  {% for uppage in data.page._ancestors %}
-    {% if uppage.breadcrumbIsRoot %}
-      {% set start0 = loop.index0 %}
-    {% endif %}
-  {% endfor %}
-  {% for uppage in data.page._ancestors %}
-    {% if loop.index0 >= start0 %}
-      <li class="a-nav-item">
-        <a  class="a-nav-link" href="{{ uppage._url }}">{% if uppage.menuTitle %}{{ uppage.menuTitle }}{% else %}{{ uppage.title }}{% endif %}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-  {% endif %}
-  {% if data.page.menuTitle %}
-    <li class="a-nav-item">
-      <a class="a-nav-link active" href="#">{{ data.page.menuTitle }}</a>
-    </li>
-  {% endif %}
-  </ul>
-  <ul class="a-nav a-nav-pills"  id="a-landing-navmenu-anchors">
-  {% if data.page.header.items[0].navHeading %}
-    <li class="a-nav-item"><a href="#{{data.page.header.items[0].identifier}}" 
-      class="a-nav-link" aria-current="page">({{data.page.header.items[0].navHeading }})</a></li>
-  {% endif %}
-  {% for section in data.page.sections.items %}
-    {% if section.navHeading %}
-      <li class="a-nav-item"><a href="#{{section.identifier}}" 
-        class="a-nav-link">({{ section.navHeading }})</a></li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-  <ul class="a-nav a-nav-pills" >
-    <li class="a-nav-item"><a href="#" class="a-nav-link" onClick="javascript:var navDivChildren = document.getElementById('a-landing-navmenu-children');var navDivAnchors = document.getElementById('a-landing-navmenu-anchors');if(navDivChildren.style.display==='none'){navDivAnchors.style.display='none';navDivChildren.style.display='flex';}else{navDivChildren.style.display='none';navDivAnchors.style.display='flex';};" id="menu-toggle">[&lt;=&gt;]</a></li>
-  </ul>
-  <ul class="a-nav a-nav-pills" id="a-landing-navmenu-children" style="display: none;">
-  {% for downpage in data.page._children %}
-    {% if downpage.menuTitle %}
-    <li class="a-nav-item">
-      <a  class="a-nav-link" href="{{ downpage._url }}">{{ downpage.menuTitle }}</a>
-    </li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-  <ul  class="a-nav a-nav-pills">
-    {% if not data.user %}
-    <li class="a-nav-item">
-      <a href="/login" class="a-nav-link"> [ Login ] </a>
-    </li>
-    {% endif %}
-    <li class="a-nav-item">
-    <a class="a-nav-link " href="#" onClick="javascript:var navDivLang = document.getElementById('a-landing-navmenu-language');if(navDivLang.style.display==='none'){navDivLang.style.display='flex';}else{navDivLang.style.display='none';};"><svg style="height:1em;" 
-        data-icon="language" role="img"
-        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-        <path fill="currentColor"
-          d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z">
-        </path>
-      </svg></a>
-    </li>
-  </ul>
-  <ul  class="a-nav a-nav-pills" id="a-landing-navmenu-language" style="display: none;"> 
-      {% for locale in data.localizations %}
-        {% if data.locale == locale.locale %}
-          <li class="a-nav-item" ><a class="a-nav-link active" href="{{ locale._url }}">{{ locale.label }}</a></li>
-        {% else %}
-          <li class="a-nav-item" ><a class="a-nav-link" href="{{ locale._url }}">{{ locale.label }}</a></li>
-        {% endif %}
-      {% endfor %}
-  </ul>
-
-</nav>
-{% endfragment %}
