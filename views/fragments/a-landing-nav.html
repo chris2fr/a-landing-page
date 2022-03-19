@@ -19,7 +19,7 @@
       {{ homePage.title }}
     {% endif %}
   </a>
-  <a href="#" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu');if(navDiv.style.display==='none'){navDiv.style.display='block'}else{navDiv.style.display='none'};">[=]</a>
+  <a href="#" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu');if(navDiv.style.display==='none'){navDiv.style.display='flex'}else{navDiv.style.display='none'};">[=>]</a>
 </div>
   <div class="a-landing-navmenu" id="a-landing-navmenu">
   <ul class="a-nav a-nav-pills">
@@ -39,9 +39,11 @@
   {% endfor %}
   {% if data.page.menuTitle %}
     <li class="a-nav-item">
-      <a class="a-nav-link active" href="#">{{ data.page.menuTitle }}</a>
+      <a class="a-nav-link active" href="#" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu-anchors');if(navDiv.style.display==='none'){navDiv.style.display='flex'}else{navDiv.style.display='none'};document.getElementById('a-landing-navmenu-children').style.display='none';" id="anchors-toggle">{{ data.page.menuTitle }}</a>
     </li>
   {% endif %}
+  </ul>
+  <ul class="a-nav a-nav-pills"  id="a-landing-navmenu-anchors">
   {% if data.page.header.items[0].navHeading %}
     <li class="a-nav-item"><a href="#{{data.page.header.items[0].identifier}}" 
       class="a-nav-link" aria-current="page">({{data.page.header.items[0].navHeading }})</a></li>
@@ -52,6 +54,11 @@
         class="a-nav-link">({{ section.navHeading }})</a></li>
     {% endif %}
   {% endfor %}
+  </ul>
+  <ul class="a-nav a-nav-pills" >
+    <li class="a-nav-item"><a href="#" class="a-nav-link" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu-children');if(navDiv.style.display==='none'){navDiv.style.display='flex'}else{navDiv.style.display='none'};document.getElementById('a-landing-navmenu-anchors').style.display='none';" id="menu-children-toggle">[=>]</a></li>
+  </ul>
+  <ul class="a-nav a-nav-pills" id="a-landing-navmenu-children" style="display: none;">
   {% for downpage in data.page._children %}
     {% if downpage.menuTitle %}
     <li class="a-nav-item">

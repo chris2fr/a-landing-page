@@ -154,13 +154,18 @@ div.a-landing-logo > a {
   background: white;
   text-decoration: none;
   white-space: nowrap;
-  padding-right: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .a-landing-navmenu {
   gap: 0.5rem;
   justify-self: end;
   background-color: white;
+  display: flex;
+  gap: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 div.a-landing-hero {
   text-align: center;
@@ -300,8 +305,6 @@ p.a-landing-subtitle {
 }
 .a-nav {
   margin-block-start: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -309,6 +312,8 @@ p.a-landing-subtitle {
   list-style: none;
   gap: 0.5rem;
   background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
   color: #fff;
