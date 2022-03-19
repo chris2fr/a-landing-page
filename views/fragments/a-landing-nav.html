@@ -39,7 +39,7 @@
   {% endfor %}
   {% if data.page.menuTitle %}
     <li class="a-nav-item">
-      <a class="a-nav-link active" href="#" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu-anchors');if(navDiv.style.display==='none'){navDiv.style.display='flex'}else{navDiv.style.display='none'};document.getElementById('a-landing-navmenu-children').style.display='none';" id="anchors-toggle">{{ data.page.menuTitle }}</a>
+      <a class="a-nav-link active" href="#">{{ data.page.menuTitle }}</a>
     </li>
   {% endif %}
   </ul>
@@ -56,7 +56,7 @@
   {% endfor %}
   </ul>
   <ul class="a-nav a-nav-pills" >
-    <li class="a-nav-item"><a href="#" class="a-nav-link" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu-children');if(navDiv.style.display==='none'){navDiv.style.display='flex'}else{navDiv.style.display='none'};document.getElementById('a-landing-navmenu-anchors').style.display='none';" id="menu-children-toggle">[=>]</a></li>
+    <li class="a-nav-item"><a href="#" class="a-nav-link" onClick="javascript:var navDivChildren = document.getElementById('a-landing-navmenu-children');var navDivAnchors = document.getElementById('a-landing-navmenu-anchors');if(navDivChildren.style.display==='none'){navDivAnchors.style.display='none';navDivChildren.style.display='flex';}else{navDivChildren.style.display='none';navDivAnchors.style.display='flex';};" id="menu-toggle">[&lt;=&gt;]</a></li>
   </ul>
   <ul class="a-nav a-nav-pills" id="a-landing-navmenu-children" style="display: none;">
   {% for downpage in data.page._children %}
