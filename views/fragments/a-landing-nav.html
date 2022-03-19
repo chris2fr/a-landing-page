@@ -24,6 +24,7 @@
   <div class="a-landing-navmenu" id="a-landing-navmenu">
   <ul class="a-nav a-nav-pills">
   {# Hard break at homeNav #}
+  {% if not data.page.breadcrumbIsRoot %}
   {% set start0 = 0 %}
   {% for uppage in data.page._ancestors %}
     {% if uppage.breadcrumbIsRoot %}
@@ -37,6 +38,7 @@
       </li>
     {% endif %}
   {% endfor %}
+  {% endif %}
   {% if data.page.menuTitle %}
     <li class="a-nav-item">
       <a class="a-nav-link active" href="#">{{ data.page.menuTitle }}</a>

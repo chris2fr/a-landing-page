@@ -19,11 +19,13 @@
 
 {% block afterMain %}
   {% set homePage = data.home %}
+  {% if not data.page.breadcrumbIsRoot %}
   {% for uppage in data.page._ancestors %}
-    {% if uppage.homeNav %}
+    {% if uppage.breadcrumbIsRoot %}
       {% set homePage = uppage %}
     {% endif %}
   {% endfor %}
+  {% endif %}
   <footer class="a-landing-footer a-landing-section a-landing-section-footer a-landing-colors-8">
     {% if homePage and homePage.footer %}
       {% area homePage, 'footer' %}
