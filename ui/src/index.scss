@@ -122,10 +122,11 @@ hr {
   position: sticky;
   top: 0;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: min-content auto;
   align-items: center;
   padding: 0.5rem; // TODO render variable
-  background-color: white;
+  //background-color: white;
+  background: transparent;
   // position: -webkit-sticky;
   // position: sticky;
   width: 100%;
@@ -138,14 +139,28 @@ hr {
   }
 }
 
-a.a-landing-logo {
+div.a-landing-logo > a {
   text-decoration: none;
   font-size: calc(1.275rem + 0.3vw);
-  box-sizing: border-box;
+  white-space: nowrap;
+  //padding-right: 2rem;
+  line-height: 1.5rem;
 }
+
+.a-landing-logo {
+  font-size: calc(1.275rem + 0.3vw);
+  align-self: start;
+  box-sizing: border-box;
+  background: white;
+  text-decoration: none;
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
 .a-landing-navmenu {
   gap: 0.5rem;
   justify-self: end;
+  background-color: white;
 }
 div.a-landing-hero {
   text-align: center;
@@ -293,19 +308,13 @@ p.a-landing-subtitle {
   margin-bottom: 0;
   list-style: none;
   gap: 0.5rem;
+  background-color: white;
 }
 .a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
   color: #fff;
   background-color: #0d6efd;
 }
-.a-navbar-brand {
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  text-decoration: none;
-  white-space: nowrap;
-}
+
 /* Proton Configuratin */
 #protonCanvas {
   position: absolute;

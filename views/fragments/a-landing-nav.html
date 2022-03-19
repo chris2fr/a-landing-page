@@ -1,5 +1,6 @@
 {% fragment aLandingNav(data) %}
 <nav class="a-landing-top">
+  <div class="a-landing-logo">
   {# Hard break at breadcrumbIsRoot #}
   {% if data.page.breadcrumbIsRoot %}
     {% set homePage = data.page %}
@@ -11,16 +12,16 @@
       {% endif %}
     {% endfor %}
   {% endif %}
-  <a href="{{ homePage._url }}" class="a-landing-logo a-navbar-brand">
-    <span style="font-size: calc(1.275rem + 0.3vw);">
-      {% if homePage.siteTitle %}
-        {{ homePage.siteTitle }}
-      {% else %}
-        {{ homePage.title }}
-      {% endif %}
-    </span>
+  <a href="{{ homePage._url }}"> 
+    {% if homePage.siteTitle %}
+      {{ homePage.siteTitle }}
+    {% else %}
+      {{ homePage.title }}
+    {% endif %}
   </a>
-  <div class="a-landing-navmenu">
+  <a href="#" onClick="javascript:var navDiv = document.getElementById('a-landing-navmenu');if(navDiv.style.display==='none'){navDiv.style.display='block'}else{navDiv.style.display='none'};">[=]</a>
+</div>
+  <div class="a-landing-navmenu" id="a-landing-navmenu">
   <ul class="a-nav a-nav-pills">
   {# Hard break at homeNav #}
   {% set start0 = 0 %}
