@@ -33,7 +33,10 @@ module.exports = {
         options: {
           widgets: {
             '@apostrophecms/video': {},
-            '@apostrophecms/image': {},
+            '@apostrophecms/image': {
+              className: "a-landing-section-image"
+            },
+            'a-landing-image': {},
             '@apostrophecms/rich-text': {},
             'a-landing-colx2': {},
             'a-landing-colx3': {},

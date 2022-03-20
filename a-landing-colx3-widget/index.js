@@ -19,7 +19,6 @@ module.exports = {
             'two-column': {},
             'three-column': {},
             '@apostrophecms/html': {}
-
           }
         }
       },
