@@ -11,9 +11,9 @@ module.exports = {
           return;
         }
         var thisIsHome = page;
-        // if (page._ancestors.length > 0) {
-        //   thisIsHome = page._ancestors[page._ancestors.length - 1];
-        // }
+        if (page._ancestors.length > 0) {
+          thisIsHome = page._ancestors[page._ancestors.length - 1];
+        }
         thisIsHome.limitedAncestors = [];
         if (!page.isBreadcrumbRoot) {
           for (var i = 0; i < page._ancestors.length; i++) {
@@ -24,6 +24,8 @@ module.exports = {
               thisIsHome.limitedAncestors.push(page._ancestors[i]);
             }
           }
+        } else {
+          thisIsHome = page; 
         }
 
         if (!thisIsHome.siteTitle) {

@@ -72,13 +72,21 @@ module.exports = {
       }
     },
     group: {
+      utility: {
+        label:"A Landing",
+        fields: [
+          'title',
+          'menuTitle',
+          'slug',
+          'visibility',
+          'inBreadcrumbRoot',
+          'siteTitle'
+        ]
+      },
       basics: {
         label: 'Header',
         fields: [
-          'siteTitle',
-          'header',
-          'menuTitle',
-          'isBreadcrumbRoot'
+          'header'
         ]
       },
       sections: {
