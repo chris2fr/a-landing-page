@@ -79,7 +79,7 @@ module.exports = {
           'menuTitle',
           'slug',
           'visibility',
-          'inBreadcrumbRoot',
+          'isBreadcrumbRoot',
           'siteTitle'
         ]
       },

@@ -21,11 +21,9 @@
       <div style="margin: 1.5rem; padding:1.5rem;">
         <ul class="a-landing-page-down-nav">
           {% for downpage in data.page._children %}
-          {% if not downpage.isBreadcrumbRoot %}
             <li>
               <a href="{{ downpage._url }}">{{ downpage.title }}</a>
             </li>
-            {% endif %}
           {% endfor %}
         </ul>
       </div>
