@@ -1,13 +1,6 @@
 @use "sass:map";
-:root{
-  --bs-dark-rgb:black;
-  --bs-bg-opacity: 1;
-  --bs-light-rgb: white;
-  --bs-text-opacity: 1;
-}
-$bgcolor: #fff;
-$hrcolor: #1e7a46;
-$herocolor: #777;
+@import 'custom';
+
 $lgvbgcolors: (
   1: transparent,
   2: #f6f6f6,
@@ -45,23 +38,20 @@ html {
   font-size: 16px;
   line-height: 1.2;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+
 canvas {
   display: block;
   vertical-align: bottom;
   background: #777;
+  color: white;
   height: 200vh;
 }
 
 main.a-landing-page {
-  background: $herocolor;
+  background: var(--cadet-blue-crayola);
   max-width: unset;
   width: 100%;
   // max-width: 800px;
@@ -108,7 +98,7 @@ hr {
   width: 70px;
   text-align: center;
   position: relative;
-  background: $hrcolor;
+  background: var(--color-brand-tertiary);
   margin-bottom: 20px;
   border: 0;
 }
@@ -125,7 +115,7 @@ hr {
   grid-template-columns: min-content auto;
   align-items: center;
   padding: 0.5rem; // TODO render variable
-  //background-color: white;
+  //background-color: var(--color-canvas);
   background: transparent;
   // position: -webkit-sticky;
   // position: sticky;
@@ -151,7 +141,7 @@ div.a-landing-logo > a {
   font-size: calc(1.275rem + 0.3vw);
   align-self: start;
   box-sizing: border-box;
-  background: white;
+  background: var(--color-canvas);
   text-decoration: none;
   white-space: nowrap;
   padding: 1rem;
@@ -161,7 +151,7 @@ div.a-landing-logo > a {
 .a-landing-navmenu {
   gap: 1rem;
   justify-self: end;
-  background-color: white;
+  background-color: var(--color-canvas);
   display: flex;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -204,7 +194,7 @@ div.a-landing-colophon {
   font-weight: bold;
 }
 .a-header-heading * .a-section-title h2 {
-  color: #fff;
+  color: var(--color-canvas);
   font-size: clamp(3.5rem,1rem + 6vw,6rem);
 }
 
@@ -278,7 +268,7 @@ p.a-landing-subtitle {
   justify-content: center;
   font-weight: bold;
   font-size: large;
-  background: white;
+  background: var(--color-canvas);
   border-radius: 0.5rem;
   opacity: 75%;
 }
@@ -297,7 +287,7 @@ p.a-landing-subtitle {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 .a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
-  color: #fff;
+  color: var(--color-canvas);
   background-color: #0d6efd;
 }
 .a-nav-link {
@@ -312,11 +302,11 @@ ul.a-nav {
     list-style: none;
   gap: 1rem;
   font-size: large;
-  background-color: white;
+  background-color: var(--color-canvas);
   border-radius: 0.5rem;
 }
 .a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
-  color: #fff;
+  color: var(--color-canvas);
   background-color: #0d6efd;
 }
 
@@ -401,7 +391,7 @@ ul.a-nav {
 }
 
 .a-landing-colors-0 {
-  background: map.get($lgvbgcolors, 1);
+  background: var(--color-canvas);
   color: map.get($lgvcolors, 1);
 }
 
@@ -459,7 +449,7 @@ div.two_col__column div.apos-area div.bp-rich-text {
 .btn-custom {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-canvas);
   background-color: #5ca9fb;
   background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
   padding: 14px 34px;
@@ -476,7 +466,7 @@ div.two_col__column div.apos-area div.bp-rich-text {
 .btn-custom.focus,
 .btn-custom:active,
 .btn-custom.active {
-  color: #fff;
+  color: var(--color-canvas);
   background-image: none;
   background-color: #6372ff;
 }
@@ -484,7 +474,7 @@ a.button:link,
 a.button:active,
 a.button:visited,
 a.button {
-  color: white;
+  color: var(--color-canvas);
 }
 .btn:active,
 .btn.active {
@@ -545,7 +535,7 @@ a:focus,
   }
 }
 ul.a-landing-page-down-nav li {
-  background: white;
+  background: var(--color-canvas);
   border-radius: 0.5rem;
   text-align: center;
   padding: 0.5rem;
@@ -557,7 +547,7 @@ ul.a-landing-page-down-nav li {
 //   font-weight: bold;
 // }
 .a-header-heading {
-  color: white;
+  color: var(--color-canvas);
 }
 
 .a-landing-nav {
@@ -565,52 +555,73 @@ ul.a-landing-page-down-nav li {
   grid-template-columns: min-content auto;
   grid-template-areas: "logo tablist" 
                        "logo submenu";
-  background-color: white;
+  background-color: var(--color-canvas);
   justify-items: center;
+  padding: 0rem 0.5rem;
+  position: sticky;
+  top: 0;
+  align-items: end;
 }
 .a-landing-nav-logo {
-  background: white;
+  background: var(--color-canvas);
   white-space: nowrap;
   grid-area: logo;
   align-self: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
   font-size: calc(1rem + 1vw);
   text-decoration: none;
+  padding: 1rem;
 }
 .a-landing-nav-tablist {
   list-style: none;
-  background: white;
+  background: var(--color-canvas);
   display: flex;
   grid-area: tablist;
+  column-gap: 0.5rem;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+
 }
 // .a-landing-menu {
 //   font-weight: bold;
 //   padding-top: 13px;
 //   text-align: center;
 //   background: #343436;
-//   color: #fff;
+//   color: var(--color-canvas);
 //   border-radius: 30px;
 //   height: 100px;
 // }
-// .a-landing-nav-link.active {
-//   // background: #fff;
-//   // color: #000;
-// }
-// .a-landing-nav-link {
-//   //  font-weight: bold;
-//   //  padding-top: 1rem;
-//   //  text-align: center;
-//   //  background: #343436;
-//   //  color: #fff;
-//   //  border-radius: 0.5rem;
-//   //  height: 4rem;
-// }
+.a-landing-nav-link.active {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background: var(--color-canvas-inverted);
+  color: var(--color-text-inverted);
+  //font-weight: bold;
+}
+.a-landing-nav-link {
+    // font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
 .a-landing-submenu-area {
-
   grid-area: submenu;
-  background: white;
+  border-radius: .5rem .5rem 0 0;
+  background: var(--color-canvas-inverted);
+  color: var(--color-text-inverted);
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .a-landing-nav-submenu {
-
+  text-align: center;
+  width: max-content;
+  margin: auto;
+  position: absolute;
+  bottom: 0.25em;
+}
+.a-landing-nav-submenu a {
+  color: var(--color-link-inverted);
+  text-decoration: none;
 }

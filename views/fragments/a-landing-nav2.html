@@ -23,13 +23,13 @@
 
 <nav class="a-landing-menus">
   <div class="a-landing-menus-logo">
-    {# Hard break at breadcrumbIsRoot #}
-    {% if data.page.breadcrumbIsRoot %}
+    {# Hard break at isBreadcrumbRoot #}
+    {% if data.page.isBreadcrumbRoot %}
       {% set homePage = data.page %}
     {% else %}
       {% set homePage = data.home %}
       {% for uppage in data.page._ancestors %}
-        {% if uppage.breadcrumbIsRoot %}
+        {% if uppage.isBreadcrumbRoot %}
           {% set homePage = uppage %}
         {% endif %}
       {% endfor %}
@@ -46,10 +46,10 @@
   <div id="up" class="a-nav-tab">
     <ul>
     {# Hard break at homeNav #}
-    {% if not data.page.breadcrumbIsRoot %}
+    {% if not data.page.isBreadcrumbRoot %}
     {% set start0 = 0 %}
     {% for uppage in data.page._ancestors %}
-      {% if uppage.breadcrumbIsRoot %}
+      {% if uppage.isBreadcrumbRoot %}
         {% set start0 = loop.index0 %}
       {% endif %}
     {% endfor %}

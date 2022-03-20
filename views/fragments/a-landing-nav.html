@@ -1,17 +1,24 @@
 {% fragment newScript() %}
 <script>
 function openTab(tabName) {
-  var i;
-  var activeSubmenu;
+  var i, x, activeSubmenu;
   activeSubmenu = document.getElementById(tabName);
   if (activeSubmenu.style.display !== 'none') {
     activeSubmenu.style.display = "none";
+    document.getElementById(tabName.concat("-tab")).classList.remove("active");
+    document.getElementById("a-landing-submenu-area").style.display = "none";
   } else {
-    var x = document.getElementsByClassName("a-landing-nav-submenu");
+    x = document.getElementsByClassName("a-landing-nav-submenu");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
+    x = document.getElementsByClassName("a-landing-nav-link active");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.remove("active");
+    }
     document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName.concat("-tab")).classList.add("active");
+    document.getElementById("a-landing-submenu-area").style.display = "block";
   }
   return true;
 }
@@ -25,12 +32,10 @@ function openTab(tabName) {
   <a class="a-landing-nav-logo" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
   <div class="a-landing-nav-tablist" role="tablist">
     {% for uppage in homePage.limitedAncestors %}
-
-      <a href="{{ uppage._url }}" class="a-landing-nav-link active">{{ uppage.menuTitle }}</a>
-
+      <a href="{{ uppage._url }}" class="a-landing-nav-link">{{ uppage.menuTitle }}</a>
     {% endfor %}
 
-    <a class="a-landing-nav-link active" href="#" onclick="javascript:openTab('a-landing-submenu-enclosed')">{{ apos.helper.getMenuTitle(data.page) }}</a>
+    <a class="a-landing-nav-link active" href="#" onclick="javascript:openTab('a-landing-submenu-enclosed')" id="a-landing-submenu-enclosed-tab">{{ apos.helper.getMenuTitle(data.page) }}</a>
 
     {% if data.page.header.items[0].navHeading %}
 
@@ -52,7 +57,7 @@ function openTab(tabName) {
 
     {% endif %}
 
-  <a class="a-landing-nav-link" href="#" onclick="javascript:openTab('a-landing-submenu-language');" ><svg style="height:1em;" 
+  <a class="a-landing-nav-link" href="#" onclick="javascript:openTab('a-landing-submenu-language');" id="a-landing-submenu-language-tab" ><svg style="height:1em;" 
     data-icon="language" role="img"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
     <path fill="currentColor"
@@ -61,7 +66,7 @@ function openTab(tabName) {
   </svg></a>
 
   </div>
-  <div class="a-landing-submenu-area">
+  <div class="a-landing-submenu-area" id="a-landing-submenu-area">
     <div class="a-landing-nav-submenu" id="a-landing-submenu-enclosed">
       {% for downpage in data.page._children %}
           <a class="a-landing-nav-link" href="{{ downpage._url }}">{{ apos.helper.getMenuTitle(downpage) }}</a>

@@ -10,19 +10,18 @@ module.exports = {
         if (!page) {
           return;
         }
-        let thisIsHome = page;
+        var thisIsHome = page;
         // if (page._ancestors.length > 0) {
         //   thisIsHome = page._ancestors[page._ancestors.length - 1];
         // }
         thisIsHome.limitedAncestors = [];
-
-        if (!page.breadcrumbIsRoot) {
+        if (!page.isBreadcrumbRoot) {
           for (var i = 0; i < page._ancestors.length; i++) {
-            if (page._ancestors[i].breadcrumbIsRoot) {
-              thisIsHome.limitedAncestors = [];
+            if (page._ancestors[i].isBreadcrumbRoot) {
               thisIsHome = page._ancestors[i];
+              thisIsHome.limitedAncestors = [page._ancestors[i]];
             } else {
-              thisIsHome.limitedAncestors.push(page._ancestors[i])
+              thisIsHome.limitedAncestors.push(page._ancestors[i]);
             }
           }
         }

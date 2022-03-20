@@ -17,7 +17,7 @@ module.exports = {
         label: 'Javascript at end of Header (GAnalytics or Plausible.io)',
         type: 'string'
       },
-      breadcrumbIsRoot: {
+      isBreadcrumbRoot: {
         label: 'Is this the top of the local navigation (breadcrumbs) ? ',
         type: 'boolean'
       },
@@ -77,7 +77,7 @@ module.exports = {
           'siteTitle',
           'header',
           'menuTitle',
-          'breadcrumbIsRoot'
+          'isBreadcrumbRoot'
         ]
       },
       sections: {

@@ -20,9 +20,9 @@
 
 {% block afterMain %}
   {% set homePage = data.home %}
-  {% if not data.page.breadcrumbIsRoot %}
+  {% if not data.page.isBreadcrumbRoot %}
   {% for uppage in data.page._ancestors %}
-    {% if uppage.breadcrumbIsRoot %}
+    {% if uppage.isBreadcrumbRoot %}
       {% set homePage = uppage %}
     {% endif %}
   {% endfor %}
