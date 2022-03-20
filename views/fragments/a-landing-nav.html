@@ -35,22 +35,13 @@ function openTab(tabName) {
       <a href="{{ uppage._url }}" class="a-landing-nav-link">{{ uppage.menuTitle }}</a>
     {% endfor %}
 
-    <a class="a-landing-nav-link active" href="#" onclick="javascript:openTab('a-landing-submenu-enclosed')" id="a-landing-submenu-enclosed-tab">{{ apos.helper.getMenuTitle(data.page) }}</a>
+    <a class="a-landing-nav-link active" href="#" onclick="javascript:openTab('a-landing-submenu-anchors')" id="a-landing-submenu-anchors-tab">{{ apos.helper.getMenuTitle(data.page) }}</a>
 
-    {% if data.page.header.items[0].navHeading %}
-
-      <a href="#{{data.page.header.items[0].identifier}}" 
-        class="a-landing-nav-link">{{data.page.header.items[0].navHeading }}</a>
-
-    {% endif %}
-    {% for section in data.page.sections.items %}
-      {% if section.navHeading %}
-
-        <a href="#{{section.identifier}}" 
-          class="a-landing-nav-link">{{ section.navHeading }}</a>
-
-      {% endif %}
+    {% for downpage in data.page._children %}
+      <a class="a-landing-nav-link" href="{{ downpage._url }}">{{ apos.helper.getMenuTitle(downpage) }}</a>
     {% endfor %}
+
+
     {% if not data.user %}
 
       <a href="/login" class="a-landing-nav-link">Login</a>
@@ -67,10 +58,26 @@ function openTab(tabName) {
 
   </div>
   <div class="a-landing-submenu-area" id="a-landing-submenu-area">
-    <div class="a-landing-nav-submenu" id="a-landing-submenu-enclosed">
+    <div class="a-landing-nav-submenu" id="a-landing-submenu-enclosed" style="display: none;">
       {% for downpage in data.page._children %}
           <a class="a-landing-nav-link" href="{{ downpage._url }}">{{ apos.helper.getMenuTitle(downpage) }}</a>
       {% endfor %}
+    </div>
+    <div class="a-landing-nav-submenu" id="a-landing-submenu-anchors">
+      {% if data.page.header.items[0].navHeading %}
+
+      <a href="#{{data.page.header.items[0].identifier}}" 
+        class="a-landing-nav-link">{{data.page.header.items[0].navHeading }}</a>
+
+    {% endif %}
+    {% for section in data.page.sections.items %}
+      {% if section.navHeading %}
+
+        <a href="#{{section.identifier}}" 
+          class="a-landing-nav-link">{{ section.navHeading }}</a>
+
+      {% endif %}
+    {% endfor %}
     </div>
     <div class="a-landing-nav-submenu" id="a-landing-submenu-language" style="display: none;">
       {% for locale in data.localizations %}

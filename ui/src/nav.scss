@@ -73,7 +73,7 @@
   grid-template-columns: min-content auto;
   grid-template-areas: "logo empty-white"
                        "logo tablist" 
-                       "logo submenu";
+                       "submenu submenu";
   background-color: var(--color-canvas);
   justify-items: center;
   // padding: 0rem 0.5rem;
