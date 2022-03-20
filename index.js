@@ -65,6 +65,7 @@ module.exports = {
             '@apostrophecms/rich-text': {},
             'a-landing-colx2': {},
             'a-landing-colx3': {},
+            'a-landing-image': {},
             '@apostrophecms/html': {}
           }
         }

@@ -18,7 +18,8 @@ module.exports = {
             '@apostrophecms/video': {},
             'two-column': {},
             'three-column': {},
-            '@apostrophecms/html': {}
+            '@apostrophecms/html': {},
+            'a-landing-image': {}
           }
         }
       },
@@ -33,7 +34,8 @@ module.exports = {
             '@apostrophecms/video': {},
             'two-column': {},
             'three-column': {},
-            '@apostrophecms/html': {}
+            '@apostrophecms/html': {},
+            'a-landing-image': {}
 
           }
         }
@@ -50,7 +52,8 @@ module.exports = {
             '@apostrophecms/video': {},
             'two-column': {},
             'three-column': {},
-            '@apostrophecms/html': {}
+            '@apostrophecms/html': {},
+            'a-landing-image': {}
 
           }
         }
