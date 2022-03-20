@@ -553,7 +553,8 @@ ul.a-landing-page-down-nav li {
 .a-landing-nav {
   display: grid;
   grid-template-columns: min-content auto;
-  grid-template-areas: "logo tablist" 
+  grid-template-areas: "logo empty-white"
+                       "logo tablist" 
                        "logo submenu";
   background-color: var(--color-canvas);
   justify-items: center;
@@ -570,6 +571,7 @@ ul.a-landing-page-down-nav li {
   font-size: calc(1rem + 1vw);
   text-decoration: none;
   padding: 1rem;
+  border-radius: 0.25rem 0.25rem 0 0.25rem;
 }
 .a-landing-nav-tablist {
   list-style: none;
@@ -581,7 +583,7 @@ ul.a-landing-page-down-nav li {
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 0.25rem;
-
+  align-self: stretch;
 }
 // .a-landing-menu {
 //   font-weight: bold;
@@ -610,16 +612,20 @@ ul.a-landing-page-down-nav li {
   border-radius: .5rem .5rem 0 0;
   background: var(--color-canvas-inverted);
   color: var(--color-text-inverted);
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // position: absolute;
 }
 .a-landing-nav-submenu {
   text-align: center;
-  width: max-content;
+  width: 100%;
   margin: auto;
-  position: absolute;
-  bottom: 0.25em;
+  justify-content: center;
+  // position: absolute;
+  // bottom: 0.25em;
+  display:flex;
+  flex-wrap: wrap;
+  align-self: stretch;
 }
 .a-landing-nav-submenu a {
   color: var(--color-link-inverted);
