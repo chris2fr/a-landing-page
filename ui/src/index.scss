@@ -637,6 +637,7 @@ ul.a-landing-page-down-nav li {
   display:flex;
   flex-wrap: wrap;
   align-self: stretch;
+  justify-content: space-around;
 }
 .a-landing-nav-submenu a {
   color: var(--color-link-inverted);
