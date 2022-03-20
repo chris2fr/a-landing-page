@@ -1,0 +1,121 @@
+.a-landing-hero-title {
+  color: var(--color-canvas);
+}
+nav.a-landing-page {
+  min-height: 80vh;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main.a-landing-page {
+  background: var(--cadet-blue-crayola);
+  max-width: unset;
+  width: 100%;
+  // max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+  display: block;
+  box-sizing: border-box;
+}
+.a-landing-hero-title * .a-section-title h2 {
+  color: var(--color-canvas);
+  font-size: clamp(3.5rem,1rem + 6vw,6rem);
+}
+
+p.a-landing-subtitle {
+  text-align: center;
+  font-weight: unset;
+  font-style: italic;
+  margin-block-end: 0.3ex;
+  font-size: calc(1.3rem + 1vw);
+ 
+  margin-top: 0.2rem;
+}
+.a-landing-hero-title * p.a-landing-subtitle {
+  font-size: calc(1.2rem + 1.1vw);
+}
+.a-landing-hero-title * .a-landing-section-content p {
+  font-size: 1.4rem;
+}
+
+/*
+// #section-header h1 {
+//   font-family: "Raleway", sans-serif;
+//   font-size: clamp(3.5rem, 1rem + 6vw, 6rem);
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   margin-bottom: 10px;
+// }
+*/
+.a-sections * .a-section-title {
+  padding: 2rem; // TODO Fix
+  margin: 2rem;
+}
+
+.a-sections * .a-section-title * h2 {
+  text-align:center;
+  position: relative;
+  //margin-top: 10px;
+  //margin-bottom: 15px;
+  //padding-bottom: 15px;
+  text-transform: uppercase;
+  //margin: 0 0 20px 0;
+  font-weight: 800;
+  line-height: 1.2;
+  display: block;
+  // font-size: 1.5em;
+  // margin-block-start: 0.83em;
+  // margin-block-end: 0.83em;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+}
+.a-sections * div.a-section-title {
+  display: block;
+}
+.a-sections * .a-section-title {
+  //margin-bottom: 70px;
+}
+
+.a-sections * .a-section-title::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  height: 4px;
+  width: 60px;
+  margin-left: -30px;
+  left: 50%;
+}
+
+/* Down Nav */
+.a-landing-page-down-nav {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+@media (min-width: 40rem) {
+  .a-landing-page-down-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 80rem) {
+  .a-landing-page-down-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 120rem) {
+  .a-landing-page-down-nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+ul.a-landing-page-down-nav li {
+  background: var(--color-canvas);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}

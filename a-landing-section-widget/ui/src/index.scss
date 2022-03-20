@@ -1,0 +1,110 @@
+@use "sass:map";
+$lgvbgcolors: (
+  1: transparent,
+  2: #f6f6f6,
+  3: #e5e5e5,
+  4: linear-gradient(90deg, #6372ff, #5ca9fb),
+  5: #f6f6f6,
+  6: white,
+  7: #f6f6f6,
+  8: linear-gradient(90deg, #6372ff, #5ca9fb),
+  9: white,
+);
+$lgvcolors: (
+  1: white,
+  2: #333,
+  3: black,
+  4: white,
+  5: black,
+  6: #888,
+  7: #888,
+  8: white,
+  9: #888,
+);
+// MAYBE EXTRANEOUS
+#section-header {
+  color: map.get($lgvcolors, 1);
+  text-align: center;
+  // width: 70%;
+  // margin-left: 15%;
+}
+// MAYBE EXTRANEOUS
+#section-header p {
+  color: map.get($lgvcolors, 1);
+  // font-size: 22px;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.a-section-title {
+  margin: 0.67em 0;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.a-section-title h2 {
+  // -webkit-margin-after: .3em;
+  // margin-block-end: .3em;
+  font-size: calc(1.7rem + 1.5vw);
+  text-align: center;
+  display: block;
+  line-height: 1.2;
+  margin: unset;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.a-landing-section {
+  padding: 5rem 2rem 3rem;
+}
+.a-landing-section-content {
+  padding: 5rem 0 3rem;
+}
+.a-landing-colors-0 {
+background: var(--color-canvas);
+color: map.get($lgvcolors, 1);
+}
+.a-landing-colors-1 {
+background-image: initial;
+background-position-x: initial;
+background-position-y: initial;
+background-size: initial;
+background-repeat-x: initial;
+background-repeat-y: initial;
+background-attachment: initial;
+background-origin: initial;
+background-clip: initial;
+background: map.get($lgvbgcolors, 2);
+color: map.get($lgvcolors, 2);
+}
+.a-landing-colors-2 {
+background: map.get($lgvbgcolors, 3);
+color: map.get($lgvcolors, 3);
+}
+.a-landing-colors-3,
+.a-landing-colors-3 a {
+background: map.get($lgvbgcolors, 4);
+color: map.get($lgvcolors, 4);
+}
+.a-landing-colors-4 {
+background: map.get($lgvbgcolors, 5);
+color: map.get($lgvcolors, 5);
+}
+.a-landing-colors-5 {
+/* background: transparent; */
+background: map.get($lgvbgcolors, 6);
+color: map.get($lgvcolors, 6);
+}
+.a-landing-colors-6 {
+background: map.get($lgvbgcolors, 7);
+color: map.get($lgvcolors, 7);
+}
+.a-landing-colors-7 {
+background: map.get($lgvbgcolors, 8);
+color: map.get($lgvcolors, 8);
+}
+.a-landing-colors-8 {
+/* background: transparent; */
+background: map.get($lgvbgcolors, 9);
+color: map.get($lgvcolors, 9);
+}
