@@ -78,16 +78,13 @@ function openTab(tabName) {
       {% set subtabpages = data.page._children %}
     {% endif %}
   {% endif %}
+  {#}
   {% if subtabpages.length > 0 %}
     <div class="a-landing-nav-subtabs">
-    {% for page in subtabpages %}
-    {% if page.menuTitle %}
-      <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug == data.page.slug or (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
-      {% endif %}
-    {% endfor %}
+    
     </div>
   {% endif %}
-
+{#}
 
 
   </div>
@@ -124,7 +121,13 @@ function openTab(tabName) {
   {% endfor %}
 </div>
   {% endif %}
+
   <div class="a-landing-nav-submenu">
+    {% for page in subtabpages %}
+    {% if page.menuTitle %}
+      <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug == data.page.slug or (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+      {% endif %}
+    {% endfor %}
   {% if not data.user %}
     <a href="/login" class="a-landing-nav-link active">Login</a>
   {% endif %}
