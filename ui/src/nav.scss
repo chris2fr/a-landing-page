@@ -4,8 +4,6 @@
   grid-template-areas: "logo empty-white"
                        "logo tablist" 
                        "subtabs subtabs"
-                       "submenu submenu"
-                       "subsubmenu subsubmenu";
   // background-color: var(--color-canvas);
   justify-items: center;
   position: sticky;
@@ -19,8 +17,6 @@
   "logo"
   "tablist"
   "subtabs"
-  "submenu" 
-  "subsubmenu";
   position: unset;
   grid-template-columns: unset;
   }
@@ -88,7 +84,6 @@ a.a-landing-nav-link {
 }
 
 .a-landing-submenu-area {
-  grid-area: submenu;
   background: var(--color-canvas-inverted);
   color: var(--color-text-inverted);
   width: 100%;
