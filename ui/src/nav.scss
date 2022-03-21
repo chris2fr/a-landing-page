@@ -71,7 +71,7 @@ a.a-landing-nav-logo-inner.active {
 .a-landing-nav-link {
   // font-weight: bold;
   background: var(--color-canvas);
-  color: var(--color-text-primary);
+  color: var(--color-text-link);
   padding: 0.5rem;
   text-align: center;
   text-decoration: none;
@@ -80,7 +80,7 @@ a.a-landing-nav-logo-inner.active {
 }
 .a-landing-nav-link.active {
   background: var(--color-canvas-inverted);
-  color: var(--color-text-inverted);
+  color: var(--color-text-link-inverted);
   //font-weight: bold;
 }
 
