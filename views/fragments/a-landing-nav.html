@@ -125,7 +125,7 @@ function openTab(tabName) {
   <div class="a-landing-nav-submenu">
     {% for page in subtabpages %}
     {% if page.menuTitle %}
-      <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug == data.page.slug or (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+      <a href="{{ page._url }}" class="a-landing-nav-link{% if 1 or page.slug == data.page.slug or (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
       {% endif %}
     {% endfor %}
   {% if not data.user %}
