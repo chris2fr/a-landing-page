@@ -68,7 +68,8 @@ a.a-landing-nav-logo-inner.active {
   //background: white;
   align-items: flex-end;
 }
-.a-landing-nav-link {
+.a-landing-nav-link,
+a.a-landing-nav-link {
   // font-weight: bold;
   background: var(--color-canvas);
   color: var(--color-text-link);
