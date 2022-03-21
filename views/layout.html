@@ -14,10 +14,10 @@
 {% endblock %}
 
 {% block beforeMain %}
+{% render aLandingNav.newHTML(data) %}
 <div id="protonContainer">
   <canvas id="protonCanvas"></canvas>
 </div>
-{% render aLandingNav.newHTML(data) %}
 {% endblock %}
 
 {% block afterMain %}
