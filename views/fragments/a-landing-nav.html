@@ -1,5 +1,6 @@
 {% fragment newScript() %}
 <script>
+  /*
 function openTab(tabName) {
   var i, x, activeSubmenu;
   activeSubmenu = document.getElementById(tabName);
@@ -22,6 +23,7 @@ function openTab(tabName) {
   }
   return true;
 }
+*/
 </script>
 {% endfragment%}
 
@@ -67,8 +69,12 @@ function openTab(tabName) {
   </div>
   {# TODO: Code this bit better #}
   {% set subtabpages = [] %}
+  {% set suborsubsub = "sub" %}
+  {% if homePage.limitedAncestors.length > 1 %}
+    {% set suborsubsub = "subsub" %}  
+  {% endif %}
   {% if homePage.limitedAncestors.length > 0  %}
-     {% set subtabpages = homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._children %}
+     {% set subtabpages = homePage.limitedAncestors[1]._children %}
      {% if homePage.limitedAncestors.length == 1  %}
       {% set subtabpages = data.page._children %}
     {% endif %}
@@ -84,7 +90,7 @@ function openTab(tabName) {
   {% endif %}
 
 
-  <div class="a-landing-submenu-area" id="a-landing-submenu-area">
+  <div class="a-landing-submenu-area" id="a-landing-submenu-area"  style="grid-area:{{suborsubsub}}menu;">
     {#}
     <div class="a-landing-nav-submenu" id="a-landing-submenu-enclosed" style="display: none;">
       {% for downpage in data.page._children %}
@@ -105,6 +111,19 @@ function openTab(tabName) {
           class="a-landing-nav-link active">{{ section.navHeading }}</a>
       {% endif %}
     {% endfor %}
+    {% if homePage.limitedAncestors.length > 3 %}
+    <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
+    <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
+    class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>    
+    {% endif %}
+    {% if homePage.limitedAncestors.length > 1 %}
+    {% for childPage in data.page._children %}
+    {% if childPage.menuTitle %}
+    <a href="{{childPage._url}}" 
+    class="a-landing-nav-link">{{childPage.menuTitle}}</a>    
+    {% endif %}
+    {% endfor %}
+    {% endif %}
     {% if not data.user %}
       <a href="/login" class="a-landing-nav-link">Login</a>
     {% endif %}

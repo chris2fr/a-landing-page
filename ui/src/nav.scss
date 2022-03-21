@@ -3,8 +3,9 @@
   grid-template-columns: min-content auto;
   grid-template-areas: "logo empty-white"
                        "logo tablist" 
+                       "submenu submenu"
                        "subtabs subtabs"
-                       "submenu submenu";
+                       "subsubmenu subsubmenu";
   // background-color: var(--color-canvas);
   justify-items: center;
   position: sticky;
@@ -73,7 +74,6 @@ a.a-landing-nav-logo-inner {
 
 .a-landing-submenu-area {
   grid-area: submenu;
-  border-radius: 0 .5rem 0 0;
   background: var(--color-canvas-inverted);
   color: var(--color-text-inverted);
   width: 100%;
@@ -120,9 +120,10 @@ a.a-landing-nav-logo-inner {
   .a-landing-nav {
   grid-template-areas: 
   "logo"
-  "tablist" 
+  "tablist"
+  "submenu" 
   "subtabs"
-  "submenu";
+  "subsubmenu";
   position: unset;
   grid-template-columns: unset;
   }
