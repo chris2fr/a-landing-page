@@ -3,8 +3,8 @@
   grid-template-columns: min-content auto;
   grid-template-areas: "logo empty-white"
                        "logo tablist" 
-                       "submenu submenu"
                        "subtabs subtabs"
+                       "submenu submenu"
                        "subsubmenu subsubmenu";
   // background-color: var(--color-canvas);
   justify-items: center;
