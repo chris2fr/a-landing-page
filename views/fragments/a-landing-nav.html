@@ -33,7 +33,7 @@ function openTab(tabName) {
 
 <nav class="a-landing-nav">
   <div class="a-landing-nav-logo-outer">
-  <a  class="a-landing-nav-logo-inner" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a></div>
+  <a  class="a-landing-nav-logo-inner{% if homePage.slug == data.page.slug %} active{% endif %}" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a></div>
   <!-- <div class="empty-white"></div> -->
   <div class="a-landing-nav-tablist" role="tablist">
     {# #}

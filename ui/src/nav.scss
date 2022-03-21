@@ -28,6 +28,11 @@
   border-radius: 0.5rem;
   line-height: 1.6em;
 }
+.a-landing-nav-logo-inner.active,
+a.a-landing-nav-logo-inner.active {
+  background: var(--color-canva);
+  color: var(--color-text);
+}
 a.a-landing-nav-logo-inner {
   text-decoration: none;
   background: var(--color-canvas-inverted);
