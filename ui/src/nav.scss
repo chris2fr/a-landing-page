@@ -13,7 +13,18 @@
   align-items: end;
   // background-color: var(--color-canvas-inverted);
 }
-
+@media (max-width: 40rem) {
+  .a-landing-nav {
+  grid-template-areas: 
+  "logo"
+  "tablist"
+  "subtabs"
+  "submenu" 
+  "subsubmenu";
+  position: unset;
+  grid-template-columns: unset;
+  }
+}
 .a-landing-nav-logo-outer {
   grid-area: logo;
 }
@@ -114,15 +125,4 @@ a.a-landing-nav-logo-inner.active {
   grid-area: empty-white;
 }
 
-@media (max-width: 40rem) {
-  .a-landing-nav {
-  grid-template-areas: 
-  "logo"
-  "tablist"
-  "submenu" 
-  "subtabs"
-  "subsubmenu";
-  position: unset;
-  grid-template-columns: unset;
-  }
-}
+
