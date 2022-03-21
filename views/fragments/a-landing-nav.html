@@ -99,11 +99,10 @@ function openTab(tabName) {
     </div>
     {#}
     <div class="a-landing-nav-submenu" id="a-landing-submenu-anchors">
+      <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
       {% if data.page.header.items[0].navHeading %}
-
       <a href="#{{data.page.header.items[0].identifier}}" 
         class="a-landing-nav-link active">{{data.page.header.items[0].navHeading }}</a>
-
     {% endif %}
     {% for section in data.page.sections.items %}
       {% if section.navHeading %}
@@ -112,7 +111,6 @@ function openTab(tabName) {
       {% endif %}
     {% endfor %}
     {% if homePage.limitedAncestors.length > 3 %}
-    <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
     <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
     class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>    
     {% endif %}
