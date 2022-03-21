@@ -25,9 +25,9 @@ a.a-landing-nav-logo-inner {
   font-size: calc(1.275rem + 0.3vw);
   color: var(--color-text-link);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0 2rem 0 0.5rem;
   border-radius: 0.5rem;
-  line-height: 1.6em;
+  line-height: 2em;
 }
 .a-landing-nav-logo-inner.active,
 a.a-landing-nav-logo-inner.active {
@@ -42,7 +42,7 @@ a.a-landing-nav-logo-inner.active {
   grid-area: tablist;
   column-gap: 0.5rem;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 0.25rem;
   align-self: stretch;
@@ -87,9 +87,9 @@ a.a-landing-nav-logo-inner.active {
   grid-area: subtabs;
   column-gap: 0.5rem;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 0.25rem;
+  //padding-top: 0.25rem;
   align-self: stretch;
   border-style: solid none solid none;
   border-width: 2px;
