@@ -7,7 +7,7 @@
   // background-color: var(--color-canvas);
   justify-items: center;
   //position: sticky;
-  top: 0;
+  //top: 0;
   align-items: end;
   background-color: var(--color-canvas);
 }
@@ -91,6 +91,7 @@ a.a-landing-nav-link {
   color: var(--color-text-inverted);
   width: 100%;
   position: sticky;
+  top: 0;
 }
 .a-landing-nav-subtabs {
   list-style: none;
