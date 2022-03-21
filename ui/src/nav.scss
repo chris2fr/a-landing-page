@@ -17,7 +17,8 @@
 .a-landing-nav-logo-outer {
   grid-area: logo;
 }
-.a-landing-nav-logo-inner {
+.a-landing-nav-logo-inner,
+a.a-landing-nav-logo-inner {
   background: var(--color-canvas);
   white-space: nowrap;
   align-self: center;
@@ -100,14 +101,10 @@ a.a-landing-nav-logo-inner {
 }
 
 .a-landing-nav-submenu {
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
   display:flex;
   flex-wrap: wrap;
   align-self: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 // .a-landing-nav-submenu a {
 //   color: var(--color-link-inverted);
