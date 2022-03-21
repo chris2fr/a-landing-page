@@ -87,7 +87,7 @@ a.a-landing-nav-logo-inner.active {
   grid-area: subtabs;
   column-gap: 0.5rem;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   //padding-top: 0.25rem;
   align-self: stretch;
