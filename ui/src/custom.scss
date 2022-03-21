@@ -41,6 +41,7 @@ $gradient-radial: radial-gradient(#6b6f9cff, #ffffffff, #a7b4bbff, #c8c9cbff, #3
 /* CSS HSL */
 --dark-blue-gray: hsla(235, 20%, 52%, 1);
 --white: hsla(0, 0%, 100%, 1);
+--black: #000000;
 --cadet-blue-crayola: hsla(201, 13%, 69%, 1);
 --silver-sand: hsla(220, 3%, 79%, 1);
 --verdigris: hsla(178, 49%, 47%, 1);
@@ -51,6 +52,7 @@ $gradient-radial: radial-gradient(#6b6f9cff, #ffffffff, #a7b4bbff, #c8c9cbff, #3
 --color-brand-primary: var(--dark-blue-gray);
 --color-brand-secondary: var(--cadet-blue-crayola);
 --color-brand-tertiary: var(--verdigris);
+--color-text: var(--black);
 --color-text-primary: var(--black);
 --color-text-secondary: hsla(201, 13%, 35%, 1);
 --color-text-inverted: var(--white);

@@ -12,7 +12,8 @@ module.exports = {
         }
         var thisIsHome = page;
         if (page._ancestors.length > 0) {
-          thisIsHome = page._ancestors[page._ancestors.length - 1];
+        //   thisIsHome = page._ancestors[page._ancestors.length - 1];
+          thisIsHome = page._ancestors[0];
         }
         thisIsHome.limitedAncestors = [];
         if (!page.isBreadcrumbRoot) {
