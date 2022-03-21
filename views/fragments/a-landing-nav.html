@@ -111,25 +111,20 @@ function openTab(tabName) {
   class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>   
 </div> 
   {% endif %}
-  <div class="a-landing-nav-submenu"> 
-  {% if homePage.limitedAncestors.length > 1 %}
-   <a href="#{{data.page.header.items[0].identifier}}" 
-    class="a-landing-nav-link active">{{data.page.header.items[1].navHeading }}</a> ...
-  {% for childPage in data.page._children %}
-  {% if childPage.menuTitle %}
-  <a href="{{childPage._url}}" 
-  class="a-landing-nav-link active">{{childPage.menuTitle}}</a>    
-  {% endif %}
-  {% endfor %}
-</div>
-  {% endif %}
+  
 
   <div class="a-landing-nav-submenu">
+    {% if homePage.limitedAncestors.length > 0  %}
+    {% if homePage.limitedAncestors.length > 1  %}
+    <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
+  class="a-landing-nav-link active">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>  
+    {% endif %}
     {% for page in subtabpages %}
     {% if page.menuTitle %}
-      <a href="{{ page._url }}" class="a-landing-nav-link{% if 1 or page.slug == data.page.slug or (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+      <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug != data.page.slug and (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug != page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
       {% endif %}
     {% endfor %}
+    {% endif %}
   {% if not data.user %}
     <a href="/login" class="a-landing-nav-link active">Login</a>
   {% endif %}
