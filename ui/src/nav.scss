@@ -36,7 +36,7 @@ a.a-landing-nav-logo-inner.active {
 }
 
 .a-landing-nav-tablist {
-  list-style: none;
+  //list-style: none;
   // background: var(--color-canvas);
   display: flex;
   grid-area: tablist;
@@ -44,14 +44,14 @@ a.a-landing-nav-logo-inner.active {
   width: 100%;
   justify-content: flex-end;
   flex-wrap: wrap;
-  padding-top: 0.25rem;
+  //padding-top: 0.25rem;
   align-self: stretch;
   // border-style: none none solid none;
   // border-right-style: solid;
   // border-color: var(--color-canvas-inverted);
-  border-radius: 0 0 0 0.5rem;
+  //border-radius: 0 0 0 0.5rem;
   // border-color: var(--color-canvas-inverted);
-  border-style: none none solid;
+  //border-style: none none solid;
   width: 100%;
   height: 100%;
   //background: white;
@@ -82,7 +82,7 @@ a.a-landing-nav-logo-inner.active {
 }
 .a-landing-nav-subtabs {
   list-style: none;
-  background: var(--color-canvas);
+  //background: var(--color-canvas);
   display: flex;
   grid-area: subtabs;
   column-gap: 0.5rem;
@@ -91,9 +91,9 @@ a.a-landing-nav-logo-inner.active {
   flex-wrap: wrap;
   //padding-top: 0.25rem;
   align-self: stretch;
-  border-style: solid none solid none;
-  border-width: 2px;
-  border-color: var(--color-canvas-inverted);
+  // border-style: solid none solid none;
+  // border-width: 2px;
+  // border-color: var(--color-canvas-inverted);
 }
 
 .a-landing-nav-submenu {
