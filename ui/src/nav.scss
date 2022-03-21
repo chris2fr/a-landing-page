@@ -14,8 +14,6 @@
 }
 
 .a-landing-nav-logo-outer {
-  //background: var(--color-canvas);
-  // color: var(--color-text-primary);
   grid-area: logo;
 }
 .a-landing-nav-logo-inner {
@@ -25,11 +23,11 @@
   font-size: calc(1.275rem + 0.3vw);
   color: var(--color-text-inverted);
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   line-height: 1.6em;
 }
-.a-landing-nav-logo-inner a {
+a.a-landing-nav-logo-inner {
   text-decoration: none;
   background: var(--color-canvas-inverted);
   color: var(--color-text-inverted);
