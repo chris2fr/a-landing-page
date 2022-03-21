@@ -113,7 +113,7 @@ function openTab(tabName) {
   {% endif %}
   
 
-  
+  <div class="a-landing-nav-submenu">
     {% if homePage.limitedAncestors.length > 0  %}
     <div class="a-landing-nav-submenu">
     {% if homePage.limitedAncestors.length > 1  %}
@@ -125,7 +125,7 @@ function openTab(tabName) {
       <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug != data.page.slug and (homePage.limitedAncestors.length > 1 or homePage.limitedAncestors[2].slug != page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
       {% endif %}
     {% endfor %}
-  </div>
+    </div>
     {% endif %}
     <div class="a-landing-nav-submenu">
   {% if not data.user %}
@@ -138,6 +138,7 @@ function openTab(tabName) {
     <a class="a-landing-nav-link active" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
   {% endif %}
 {% endfor %}
+</div>
 </div>
 </div>
 </div>
