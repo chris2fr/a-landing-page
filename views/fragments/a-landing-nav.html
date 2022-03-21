@@ -100,6 +100,7 @@ function openTab(tabName) {
     {#}
     <div class="a-landing-nav-submenu" id="a-landing-submenu-anchors">
       <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
+      <div class="a-landing-nav-submenu">
       {% if data.page.header.items[0].navHeading %}
       <a href="#{{data.page.header.items[0].identifier}}" 
         class="a-landing-nav-link active">{{data.page.header.items[0].navHeading }}</a>
@@ -110,18 +111,24 @@ function openTab(tabName) {
           class="a-landing-nav-link active">{{ section.navHeading }}</a>
       {% endif %}
     {% endfor %}
+    </div>
     {% if homePage.limitedAncestors.length > 3 %}
+    <div class="a-landing-nav-submenu">
     <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
-    class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>    
+    class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>   
+  </div> 
     {% endif %}
     {% if homePage.limitedAncestors.length > 1 %}
+    <div class="a-landing-nav-submenu">
     {% for childPage in data.page._children %}
     {% if childPage.menuTitle %}
     <a href="{{childPage._url}}" 
     class="a-landing-nav-link active">{{childPage.menuTitle}}</a>    
     {% endif %}
     {% endfor %}
+  </div>
     {% endif %}
+    <div class="a-landing-nav-submenu">
     {% if not data.user %}
       <a href="/login" class="a-landing-nav-link active">Login</a>
     {% endif %}
@@ -132,6 +139,7 @@ function openTab(tabName) {
       <a class="a-landing-nav-link active" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
     {% endif %}
   {% endfor %}
+</div>
     </div>
     {#}
     <div class="a-landing-nav-submenu" id="a-landing-submenu-language" style="display: none;">
