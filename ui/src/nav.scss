@@ -3,10 +3,10 @@
   grid-template-columns: min-content auto;
   grid-template-areas: "logo empty-white"
                        "logo tablist" 
-                       "subtabs subtabs"
+                       "subtabs subtabs";
   // background-color: var(--color-canvas);
   justify-items: center;
-  position: sticky;
+  //position: sticky;
   top: 0;
   align-items: end;
   background-color: var(--color-canvas);
@@ -19,6 +19,9 @@
   "subtabs"
   position: unset;
   grid-template-columns: unset;
+  }
+  .a-landing-submenu-area {
+    position: unset;
   }
 }
 .a-landing-nav-logo-outer {
@@ -87,6 +90,7 @@ a.a-landing-nav-link {
   background: var(--color-canvas-inverted);
   color: var(--color-text-inverted);
   width: 100%;
+  position: sticky;
 }
 .a-landing-nav-subtabs {
   list-style: none;
