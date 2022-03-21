@@ -18,11 +18,11 @@
   grid-area: logo;
 }
 .a-landing-nav-logo-inner {
-  background: var(--color-canvas-inverted);
+  background: var(--color-canvas);
   white-space: nowrap;
   align-self: center;
   font-size: calc(1.275rem + 0.3vw);
-  color: var(--color-text-inverted);
+  color: var(--color-text);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -30,8 +30,8 @@
 }
 .a-landing-nav-logo-inner.active,
 a.a-landing-nav-logo-inner.active {
-  background: var(--color-canva);
-  color: var(--color-text);
+  background: var(--color-canvas-inverted);
+  color: var(--color-text-inverted);
 }
 a.a-landing-nav-logo-inner {
   text-decoration: none;
