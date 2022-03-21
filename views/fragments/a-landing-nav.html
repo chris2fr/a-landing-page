@@ -123,7 +123,7 @@ function openTab(tabName) {
     {% endfor %}
     {% endif %}
     {% if not data.user %}
-      <a href="/login" class="a-landing-nav-link">Login</a>
+      <a href="/login" class="a-landing-nav-link active">Login</a>
     {% endif %}
   {% for locale in data.localizations %}
     {% if data.locale == locale.locale %}
