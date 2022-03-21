@@ -27,7 +27,12 @@
   text-decoration: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  list-height: 1.6em;
+  line-height: 1.6em;
+}
+.a-landing-nav-logo-inner a {
+  text-decoration: none;
+  background: var(--color-canvas-inverted);
+  color: var(--color-text-inverted);
 }
 .a-landing-nav-tablist {
   list-style: none;
