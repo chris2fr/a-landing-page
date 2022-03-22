@@ -5,24 +5,24 @@
 $lgvbgcolors: (
   1: transparent,
   2: #f6f6f6,
-  3: #e5e5e5,
-  4: linear-gradient(90deg, #6372ff, #5ca9fb),
-  5: #f6f6f6,
-  6: white,
-  7: #f6f6f6,
-  8: linear-gradient(90deg, #6372ff, #5ca9fb),
-  9: white,
+  3: transparent,
+  4: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%),
+  5: transparent,
+  6: #f6f6f6,
+  7: white,
+  8: transparent,
+  9: linear-gradient(90deg, #6372ff, #5ca9fb)
 );
 $lgvcolors: (
   1: white,
-  2: #333,
-  3: black,
+  2: #333333,
+  3: #333333,
   4: white,
-  5: black,
-  6: #888,
-  7: #888,
-  8: white,
-  9: #888,
+  5: #333333,
+  6: #333333,
+  7: #333333,
+  8: #333333,
+  9: white,
 );
 $lgvpcolors: (
   1: white,
