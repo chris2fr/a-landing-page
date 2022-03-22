@@ -141,31 +141,40 @@ $lgvpcolors: (
   background: map.get($lgvbgcolors, 9);
   color: map.get($lgvcolors, 9);
   }  
-.a-landing-colors-0 p {
+.a-landing-colors-0 p,
+.a-landing-colors-0 li {
   color: map.get($lgvpcolors, 1);
 }
-.a-landing-colors-1 p {
+.a-landing-colors-1 p,
+.a-landing-colors-1 li {
   color: map.get($lgvpcolors, 2);
 }
-.a-landing-colors-2 p {
+.a-landing-colors-2 p,
+.a-landing-colors-2 li {
   color: map.get($lgvpcolors, 3);
 }
-.a-landing-colors-3 p {
+.a-landing-colors-3 p,
+.a-landing-colors-3 li {
   color: map.get($lgvpcolors, 4);
 }
-.a-landing-colors-4 p {
+.a-landing-colors-4 p,
+.a-landing-colors-4 li {
   color: map.get($lgvpcolors, 5);
 }
-.a-landing-colors-5 p {
+.a-landing-colors-5 p,
+.a-landing-colors-5 li {
   color: map.get($lgvpcolors, 6);
 }
-.a-landing-colors-6 p {
+.a-landing-colors-6 p,
+.a-landing-colors-6 li {
   color: map.get($lgvpcolors, 7);
 }
-.a-landing-colors-7 p {
+.a-landing-colors-7 p,
+.a-landing-colors-7 li {
   color: map.get($lgvpcolors, 8);
 }
-.a-landing-colors-8 p {
+.a-landing-colors-8 p,
+.a-landing-colors-8 li {
   color: map.get($lgvpcolors, 9);
 }
 .a-landing-colors-0 h {
@@ -194,4 +203,33 @@ $lgvpcolors: (
 }
 .a-landing-colors-8 h {
   color: map.get($lgvhcolors, 9);
+}
+
+// .a-landing-section-content ul {
+//   list-style: none;
+//   display: block;
+//   list-style-type: disc;
+//   margin-block-start: 1em;
+//   margin-block-end: 1em;
+//   margin-inline-start: 0px;
+//   margin-inline-end: 0px;
+//   padding-inline-start: 40px;
+// }
+// .a-landing-section-content li {
+//   margin-bottom: 6px;
+//   margin-left: 6px;
+//   list-style: none;
+//   padding: 0;
+// }
+// .a-landing-section-content li::before {
+//   content: '\f00c';
+//   font-family: 'FontAwesome';
+//   color: #5ca9fb;
+//   font-size: 11px;
+//   font-weight: 300;
+//   padding-right: 8px;
+// }
+
+.a-landing-section-content li {
+
 }
