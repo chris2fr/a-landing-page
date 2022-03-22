@@ -1,7 +1,16 @@
 .a-landing-hero-title {
   color: var(--color-canvas);
 }
-header.a-landing-page {
+.a-landing-page,
+.a-landing-page-inside-page {
+  line-height: unset;
+}
+.a-landing-page p,
+.a-landing-page-inside-page p {
+  font-size: large;
+}
+header.a-landing-page,
+.a-landing-page-inside-page {
   min-height: 80vh;
   flex-direction: column;
   align-items: center;
