@@ -10,7 +10,7 @@ header.a-landing-page {
   justify-content: space-around;
 }
 main.a-landing-page {
-  background: var(--cadet-blue-crayola);
+  // background: var(--cadet-blue-crayola);
   max-width: unset;
   width: 100%;
   // max-width: 800px;
@@ -19,6 +19,7 @@ main.a-landing-page {
   flex-grow: 1;
   display: block;
   box-sizing: border-box;
+  background: var(--color-canvas);
 }
 .a-landing-hero-title * .a-section-title h2 {
   color: var(--color-canvas);
