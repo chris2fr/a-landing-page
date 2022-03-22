@@ -24,6 +24,17 @@ $lgvcolors: (
   8: #333333,
   9: white,
 );
+$lgvhcolors: (
+  1: white,
+  2: #333333,
+  3: #333333,
+  4: white,
+  5: #333333,
+  6: #333333,
+  7: #333333,
+  8: #333333,
+  9: white,
+);
 $lgvpcolors: (
   1: white,
   2: #777,
@@ -32,8 +43,8 @@ $lgvpcolors: (
   5: #777,
   6: #777,
   7: #777,
-  8: rgba(255,255,255,0.75),
-  9: #777,
+  8: #777,
+  9: rgba(255,255,255,0.75)
 );
 // MAYBE EXTRANEOUS
 #section-header {
@@ -156,4 +167,31 @@ $lgvpcolors: (
 }
 .a-landing-colors-8 p {
   color: map.get($lgvpcolors, 9);
+}
+.a-landing-colors-0 h {
+  color: map.get($lgvhcolors, 1);
+}
+.a-landing-colors-1 h {
+  color: map.get($lgvhcolors, 2);
+}
+.a-landing-colors-2 h {
+  color: map.get($lgvhcolors, 3);
+}
+.a-landing-colors-3 h {
+  color: map.get($lgvhcolors, 4);
+}
+.a-landing-colors-4 h {
+  color: map.get($lgvhcolors, 5);
+}
+.a-landing-colors-5 h {
+  color: map.get($lgvhcolors, 6);
+}
+.a-landing-colors-6 h {
+  color: map.get($lgvhcolors, 7);
+}
+.a-landing-colors-7 h {
+  color: map.get($lgvhcolors, 8);
+}
+.a-landing-colors-8 h {
+  color: map.get($lgvhcolors, 9);
 }
