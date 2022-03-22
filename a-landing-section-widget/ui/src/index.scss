@@ -1,4 +1,7 @@
 @use "sass:map";
+
+@import 'unbootstrap';
+
 $lgvbgcolors: (
   1: transparent,
   2: #f6f6f6,
@@ -20,6 +23,17 @@ $lgvcolors: (
   7: #888,
   8: white,
   9: #888,
+);
+$lgvpcolors: (
+  1: white,
+  2: #777,
+  3: #777,
+  4: rgba(255,255,255,0.75),
+  5: #777,
+  6: #777,
+  7: #777,
+  8: rgba(255,255,255,0.75),
+  9: #777,
 );
 // MAYBE EXTRANEOUS
 #section-header {
@@ -76,6 +90,33 @@ background-origin: initial;
 background-clip: initial;
 background: map.get($lgvbgcolors, 2);
 color: map.get($lgvcolors, 2);
+}
+.a-landing-colors-1 p {
+  color: map.get($lgvpcolors, 1);
+}
+.a-landing-colors-2 p {
+  color: map.get($lgvpcolors, 2);
+}
+.a-landing-colors-3 p {
+  color: map.get($lgvpcolors, 3);
+}
+.a-landing-colors-4 p {
+  color: map.get($lgvpcolors, 4);
+}
+.a-landing-colors-5 p {
+  color: map.get($lgvpcolors, 5);
+}
+.a-landing-colors-6 p {
+  color: map.get($lgvpcolors, 6);
+}
+.a-landing-colors-7 p {
+  color: map.get($lgvpcolors, 7);
+}
+.a-landing-colors-8 p {
+  color: map.get($lgvpcolors, 8);
+}
+.a-landing-colors-9 p {
+  color: map.get($lgvpcolors, 9);
 }
 .a-landing-colors-2 {
 background: map.get($lgvbgcolors, 3);

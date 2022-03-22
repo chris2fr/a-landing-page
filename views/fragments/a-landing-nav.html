@@ -73,8 +73,8 @@ function openTab(tabName) {
     {% set suborsubsub = "subsub" %}  
   {% endif %}
   {% if homePage.limitedAncestors.length > 0  %}
-     {% set subtabpages = homePage.limitedAncestors[1]._children %}
-     {% if homePage.limitedAncestors.length == 1  %}
+    {% set subtabpages = homePage.limitedAncestors[1]._children %}
+    {% if homePage.limitedAncestors.length == 1  %}
       {% set subtabpages = data.page._children %}
     {% endif %}
   {% endif %}
@@ -84,65 +84,59 @@ function openTab(tabName) {
     
     </div>
   {% endif %}
-{#}
-
-
+  {#}
   </div>
 </nav>
-
 <div class="a-landing-submenu-area">
   <div class="a-landing-nav-submenu" id="a-landing-submenu-anchors">
     <div class="a-landing-nav-submenu">
     {% if homePage.limitedAncestors.length > 1  %}
-    <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
-  class="a-landing-nav-link active">{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}} :</a> 
+      <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
+        class="a-landing-nav-link active">{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}} :</a> 
     {% endif %}
-    <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
-  </div>
+      <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
+    </div>
     <div class="a-landing-nav-submenu">
     {% if data.page.header.items[0].navHeading %}
-    <a href="#{{data.page.header.items[0].identifier}}" 
-      class="a-landing-nav-link active">{{data.page.header.items[0].navHeading }}</a>
-  {% endif %}
-  {% for section in data.page.sections.items %}
-    {% if section.navHeading %}
-      <a href="#{{section.identifier}}" 
-        class="a-landing-nav-link active">{{ section.navHeading }}</a>
+      <a href="#{{data.page.header.items[0].identifier}}" 
+        class="a-landing-nav-link active">{{data.page.header.items[0].navHeading }}</a>
     {% endif %}
-  {% endfor %}
-  </div>
-  {% if homePage.limitedAncestors.length > 3 %}
-  <div class="a-landing-nav-submenu">
-  <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
-  class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>   
-</div> 
-  {% endif %}
-  
-
-  <div class="a-landing-nav-submenu">
-    {% if homePage.limitedAncestors.length > 0  %}
-    <div class="a-landing-nav-submenu">
-  
-    {% for page in subtabpages %}
-    {% if page.menuTitle %}
-      <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug != data.page.slug and (homePage.limitedAncestors.length > 1 or homePage.limitedAncestors[2].slug != page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+    {% for section in data.page.sections.items %}
+      {% if section.navHeading %}
+        <a href="#{{section.identifier}}" 
+          class="a-landing-nav-link active">{{ section.navHeading }}</a>
       {% endif %}
     {% endfor %}
     </div>
+    {% if homePage.limitedAncestors.length > 3 %}
+    <div class="a-landing-nav-submenu">
+      <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
+        class="a-landing-nav-link">../{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}}</a>   
+    </div> 
     {% endif %}
     <div class="a-landing-nav-submenu">
-  {% if not data.user %}
-    <a href="/login" class="a-landing-nav-link active">Login</a>
-  {% endif %}
-{% for locale in data.localizations %}
-  {% if data.locale == locale.locale %}
-    <a class="a-landing-nav-link active" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
-  {% else %}
-    <a class="a-landing-nav-link active" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
-  {% endif %}
-{% endfor %}
-</div>
-</div>
-</div>
+    {% if homePage.limitedAncestors.length > 0  %}
+      <div class="a-landing-nav-submenu">
+      {% for page in subtabpages %}
+        {% if page.menuTitle %}
+          <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug != data.page.slug and (homePage.limitedAncestors.length > 1 or homePage.limitedAncestors[2].slug != page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+        {% endif %}
+      {% endfor %}
+      </div>
+    {% endif %}
+      <div class="a-landing-nav-submenu">
+    {% if not data.user %}
+      <a href="/login" class="a-landing-nav-link active">Login</a>
+    {% endif %}
+    {% for locale in data.localizations %}
+      {% if data.locale == locale.locale %}
+        <a class="a-landing-nav-link active" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
+      {% else %}
+        <a class="a-landing-nav-link active" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
+      {% endif %}
+    {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 {% endfragment%}
