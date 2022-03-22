@@ -86,12 +86,15 @@ a.a-landing-nav-link {
   //font-weight: bold;
 }
 
-.a-landing-submenu-area {
+.a-landing-submenu-area,
+.a-landing-subsubmenu-area {
   //background: var(--color-canvas-inverted);
   //color: var(--color-text-inverted);
   width: 100%;
-  position: sticky;
   top: 0;
+}
+.a-landing-submenu-area {
+  position: sticky;
 }
 .a-landing-nav-subtabs {
   list-style: none;
@@ -115,6 +118,11 @@ a.a-landing-nav-link {
   align-self: stretch;
   justify-content: space-between;
 }
+
+.a-landing-subsubmenu-area .a-landing-nav-submenu {
+  justify-content: start;
+}
+
 // .a-landing-nav-submenu a {
 //   color: var(--color-link-inverted);
 //   text-decoration: none;

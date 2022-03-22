@@ -50,7 +50,7 @@ $gradient-radial: radial-gradient(#6b6f9cff, #ffffffff, #a7b4bbff, #c8c9cbff, #3
 // --color-canvas: var(--white);
 --color-canvas: #f6f6f6;
 //--color-canvas-inverted: var(--dark-blue-gray);
---color-canvas-inverted: #333333;
+--color-canvas-inverted: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
 // --color-brand-primary: var(--dark-blue-gray);
 // --color-brand-secondary: var(--cadet-blue-crayola);
 // --color-brand-tertiary: var(--verdigris);
@@ -70,7 +70,7 @@ $gradient-radial: radial-gradient(#6b6f9cff, #ffffffff, #a7b4bbff, #c8c9cbff, #3
 --color-text-inverted: var(--white);
 --color-text-link: rgb(99, 114, 255);
 // -color-text-link: var(--verdigris);
---color-text-link-inverted: rgb(92, 169, 251);
+--color-text-link-inverted: var(--white);
 --color-headings: #333333;
 --color-headings-inverted: var(--white);
 // --color-text-ok:
