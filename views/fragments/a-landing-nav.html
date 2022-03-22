@@ -103,7 +103,7 @@ function openTab(tabName) {
     {#}
     <div class="a-landing-nav-submenu">
       <a href="#" class="a-landing-nav-link active">
-      {% if homePage.limitedAncestors.length > 0  %}
+      {% if homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle %}
          {{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}} :
       {% endif %}
       {{ data.page.title }}
