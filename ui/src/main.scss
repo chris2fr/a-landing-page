@@ -9,7 +9,8 @@ header.a-landing-page {
   flex-direction: column;
   justify-content: space-around;
 }
-main.a-landing-page {
+main.a-landing-page,
+main.a-landing-page-inside-page {
   // background: var(--cadet-blue-crayola);
   max-width: unset;
   width: 100%;
