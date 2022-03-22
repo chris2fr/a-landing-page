@@ -10,6 +10,7 @@
   //top: 0;
   align-items: end;
   //background-color: var(--color-canvas);
+  margin-bottom: 1rem;
 }
 @media (max-width: 40rem) {
   .a-landing-nav {
@@ -37,7 +38,7 @@ a.a-landing-nav-logo-inner {
   align-self: center;
   font-size: calc(1.275rem + 0.3vw);
   text-decoration: none;
-  padding: 1rem 2rem 1rem 0.5rem;
+  padding: 1rem;
   border-radius: 0.5em;
   line-height: 2em;
 }
@@ -117,6 +118,7 @@ a.a-landing-nav-link {
   flex-wrap: wrap;
   align-self: stretch;
   justify-content: space-between;
+  gap: 0.25rem;
 }
 
 .a-landing-subsubmenu-area .a-landing-nav-submenu {
