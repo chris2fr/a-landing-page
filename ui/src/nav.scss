@@ -10,7 +10,6 @@
   //top: 0;
   align-items: end;
   //background-color: var(--color-canvas);
-  margin-bottom: 1rem;
   margin-top: 1rem;
 }
 @media (max-width: 40rem) {
@@ -93,7 +92,8 @@ a.a-landing-nav-link {
   //background: var(--color-canvas-inverted);
   //color: var(--color-text-inverted);
   width: 100%;
-  top: 0;
+  margin-top: 1rem;
+  top: 1rem;
 }
 .a-landing-submenu-area {
   position: sticky;
