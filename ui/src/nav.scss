@@ -29,8 +29,8 @@
 }
 .a-landing-nav-logo-inner,
 a.a-landing-nav-logo-inner {
-  background: var(--color-canvas-inverted);
-  color: var(--color-text-link-inverted);
+  background: var(--color-canvas);
+  color: var(--color-text-link);
   //background: var(--color-canvas);
   //color: var(--color-text-link);
   white-space: nowrap;
@@ -43,8 +43,8 @@ a.a-landing-nav-logo-inner {
 }
 .a-landing-nav-logo-inner.active,
 a.a-landing-nav-logo-inner.active {
-  background: var(--color-canvas);
-  color: var(--color-text-link);
+  background: var(--color-canvas-inverted);
+  color: var(--color-text-link-inverted);
 }
 
 .a-landing-nav-tablist {
