@@ -4,14 +4,14 @@
 
 $lgvbgcolors: (
   1: transparent,
-  2: #f6f6f6,
-  3: transparent,
+  2: #777777,
+  3: #f6f6f6,
   4: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%),
-  5: transparent,
+  5: #777777,
   6: #f6f6f6,
-  7: white,
-  8: transparent,
-  9: linear-gradient(90deg, #6372ff, #5ca9fb)
+  7: #777777,
+  8: linear-gradient(90deg, #6372ff, #5ca9fb),
+  9: #f6f6f6
 );
 $lgvcolors: (
   1: white,
@@ -21,8 +21,8 @@ $lgvcolors: (
   5: #333333,
   6: #333333,
   7: #333333,
-  8: #333333,
-  9: white,
+  8: white,
+  9: #333333
 );
 $lgvhcolors: (
   1: white,
@@ -32,8 +32,8 @@ $lgvhcolors: (
   5: #333333,
   6: #333333,
   7: #333333,
-  8: #333333,
-  9: white,
+  8: white,
+  9: #333333
 );
 $lgvpcolors: (
   1: white,
@@ -43,8 +43,8 @@ $lgvpcolors: (
   5: #777,
   6: #777,
   7: #777,
-  8: #777,
-  9: rgba(255,255,255,0.75)
+  8: rgba(255,255,255,0.75),
+  9: #777
 );
 // MAYBE EXTRANEOUS
 #section-header {
