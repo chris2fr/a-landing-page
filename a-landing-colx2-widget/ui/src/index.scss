@@ -1,12 +1,12 @@
 .a-landing-col-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .a-landing-col-2 * img {
   object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
 }
 

@@ -18,6 +18,14 @@ module.exports = {
             'a-landing-image': {}
           }
         }
+      },
+      width: {
+        type: 'integer',
+        label: 'Width (REM)',
+        min: 0,
+        max: 200,
+        def: 30,
+        help: 'Length of column in normalized character REM widths (default 30)'
       }
     }
   }
