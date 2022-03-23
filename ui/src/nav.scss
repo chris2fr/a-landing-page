@@ -87,14 +87,14 @@ a.a-landing-nav-link {
   //font-weight: bold;
 }
 .a-landing-nav-link.current {
-  background: var(--color-canvas);
+  background: unset;
   color: unset;
   //font-weight: bold;
 }
 
 .a-landing-submenu-area,
 .a-landing-subsubmenu-area {
-  background: var(--color-canvasx);
+  background: var(--color-canvas);
   //color: var(--color-text-inverted);
   width: 100%;
   margin-top: 1rem;
