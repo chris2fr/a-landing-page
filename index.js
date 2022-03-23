@@ -66,7 +66,8 @@ module.exports = {
             'a-landing-colx2': {},
             'a-landing-colx3': {},
             'a-landing-image': {},
-            '@apostrophecms/html': {}
+            '@apostrophecms/html': {},
+            'a-landing-col-flow': {}
           }
         }
       }

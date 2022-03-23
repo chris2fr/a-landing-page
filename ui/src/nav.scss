@@ -87,7 +87,7 @@ a.a-landing-nav-link {
   //font-weight: bold;
 }
 .a-landing-nav-link.current {
-  background: unset;
+  background: var(--color-canvas);
   color: unset;
   //font-weight: bold;
 }

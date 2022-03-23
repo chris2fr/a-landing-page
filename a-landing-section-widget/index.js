@@ -40,7 +40,8 @@ module.exports = {
             '@apostrophecms/rich-text': {},
             'a-landing-colx2': {},
             'a-landing-colx3': {},
-            '@apostrophecms/html': {}
+            '@apostrophecms/html': {},
+            'a-landing-col-flow': {}
           }
         }
       }
