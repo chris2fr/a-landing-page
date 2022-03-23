@@ -7,5 +7,6 @@ module.exports = {
   'a-landing-colx3-widget': {},
   'a-landing-inside-page': {},
   'a-landing-image-widget': {},
-  'helper': {}
+  'helper': {},
+  'a-landing-col-flow-widget':{}
 };

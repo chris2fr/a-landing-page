@@ -86,10 +86,15 @@ a.a-landing-nav-link {
   color: var(--color-text-link-inverted);
   //font-weight: bold;
 }
+.a-landing-nav-link.current {
+  background: unset;
+  color: unset;
+  //font-weight: bold;
+}
 
 .a-landing-submenu-area,
 .a-landing-subsubmenu-area {
-  //background: var(--color-canvas-inverted);
+  background: var(--color-canvasx#);
   //color: var(--color-text-inverted);
   width: 100%;
   margin-top: 1rem;
