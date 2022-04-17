@@ -82,7 +82,8 @@ a.a-landing-nav-link {
   border-radius: 0.5rem;
 }
 .a-landing-nav-link.active,
-.a-landing-nav-link:hover
+.a-landing-nav-link:hover,
+.a-landing-nav-link:active
  {
   background: var(--color-canvas-inverted);
   color: var(--color-text-link-inverted);
