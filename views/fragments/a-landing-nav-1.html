@@ -18,10 +18,10 @@
       {% if not data.user %}
         <a href="https://www.lesgrandsvoisins.com/login" class="a-landing-nav-link">Login</a>
       {% endif %}
-      <a href="https://com.lesgrandsvoisins.com" class="a-landing-nav-link">com.</a>
-      <a href="https://mail.lesgrandsvoisins.com" class="a-landing-nav-link">mail.</a>
-      <a href="https://visio.chapril.org/lesgrandsvoisins" class="a-landing-nav-link">visio.</a>
-      <a href="https://wiki.lesgrandsvoisins.com" class="a-landing-nav-link">wiki.</a>
+      <a href="https://com.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">com.</a>
+      <a href="https://mail.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">mail.</a>
+      <a href="https://visio.chapril.org/lesgrandsvoisins" class="a-landing-nav-link" target="_blank">visio.</a>
+      <a href="https://wiki.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">wiki.</a>
       {% for locale in data.localizations %}
         {% if data.locale == locale.locale %}
           <a class="a-landing-nav-link" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
