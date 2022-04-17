@@ -4,20 +4,24 @@
 {% fragment newHTML(data) %}
 {% set homePage = apos.helper.findHomePage(data.page) %}
 <nav class="">
-  <div class="" style="display:flex; justify-content:space-between; background: white;">
+  <div class="" style="display:flex; justify-content:space-between; background: white; flex-wrap: wrap;">
     <a  class="a-landing-nav-logo-inner active{% if homePage.slug == data.page.slug %}{% endif %}" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
     <div class="a-landing-nav-submenu" style="height:fit-content;align-self:center;">
       {% for section in data.page.sections.items %}
         {% if section.navHeading %}
           <a href="#{{section.identifier}}" 
-            class="a-landing-nav-link active">{{ section.navHeading }}</a>
+            class="a-landing-nav-link">{{ section.navHeading }}</a>
         {% endif %}
       {% endfor %}
     </div>
     <div class="a-landing-nav-submenu" style="height:fit-content;align-self:center;">
       {% if not data.user %}
-        <a href="/login" class="a-landing-nav-link">Login</a>
+        <a href="https://www.lesgrandsvoisins.com/login" class="a-landing-nav-link">Login</a>
       {% endif %}
+      <a href="https://com.lesgrandsvoisins.com" class="a-landing-nav-link">com.</a>
+      <a href="https://mail.lesgrandsvoisins.com" class="a-landing-nav-link">mail.</a>
+      <a href="https://visio.chapril.org/lesgrandsvoisins" class="a-landing-nav-link">visio.</a>
+      <a href="https://wiki.lesgrandsvoisins.com" class="a-landing-nav-link">wiki.</a>
       {% for locale in data.localizations %}
         {% if data.locale == locale.locale %}
           <a class="a-landing-nav-link" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
