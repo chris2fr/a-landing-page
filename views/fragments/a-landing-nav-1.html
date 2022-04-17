@@ -4,9 +4,9 @@
 {% fragment newHTML(data) %}
 {% set homePage = apos.helper.findHomePage(data.page) %}
 <nav class="">
-  <div class="a-landing-submenu-area">
+  <div class="" style="display:flex; justify-content:space-between; background: white;">
     <a  class="a-landing-nav-logo-inner active{% if homePage.slug == data.page.slug %}{% endif %}" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
-    <div class="a-landing-nav-submenu">
+    <div class="a-landing-nav-submenu" style="height:fit-content;align-self:center;">
       {% for section in data.page.sections.items %}
         {% if section.navHeading %}
           <a href="#{{section.identifier}}" 
@@ -14,7 +14,7 @@
         {% endif %}
       {% endfor %}
     </div>
-    <div class="a-landing-nav-submenu">
+    <div class="a-landing-nav-submenu" style="height:fit-content;align-self:center;">
       {% if not data.user %}
         <a href="/login" class="a-landing-nav-link">Login</a>
       {% endif %}
