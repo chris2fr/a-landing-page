@@ -1,10 +1,13 @@
 {% extends data.outerLayout %}
 
+{{!-- 
 {% if data.page.menuStyle == 1 %}
 {% import 'fragments/a-landing-nav-1.html' as aLandingNav %}
 {% else %}
 {% import 'fragments/a-landing-nav.html' as aLandingNav %}
 {% endif %}
+--}}
+{% import 'fragments/a-landing-nav-1.html' as aLandingNav %}
 
 {% block startHead %}
 {{ super() }}
