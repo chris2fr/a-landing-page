@@ -25,6 +25,12 @@ module.exports = {
         label: 'A Short title for Menus',
         type: 'string'
       },
+      menuStyle: {
+        label: 'Menu Style, 1 or 2',
+        type: 'integer',
+        max: 2,
+        min: 1
+      },
       header: {
         type: 'area',
         label: 'Header Content',
