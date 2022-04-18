@@ -15,13 +15,13 @@
       {% endfor %}
     </div>
     <div class="a-landing-nav-submenu" style="height:fit-content;align-self:center;">
-      {% if not data.user %}
-        <a href="https://www.lesgrandsvoisins.com/login" class="a-landing-nav-link">Login</a>
-      {% endif %}
       <a href="https://com.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">com.</a>
       <a href="https://mail.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">mail.</a>
       <a href="https://visio.chapril.org/lesgrandsvoisins" class="a-landing-nav-link" target="_blank">visio.</a>
       <a href="https://wiki.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">wiki.</a>
+      {% if not data.user %}
+        <a href="/login" class="a-landing-nav-link">Login</a>
+      {% endif %}
       {% for locale in data.localizations %}
         {% if data.locale == locale.locale %}
           <a class="a-landing-nav-link" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
