@@ -1,17 +1,5 @@
-{% if data.widget.heading or data.widget.content %}
-<div class="a-landing-section uncontainer a-landing-colors-{{ data.widget.style }} {{ data.widget.identifier }}" id="{{ data.widget.identifier }}">
-  {% if data.widget.heading %}
-    <div class="a-section-title">
-      <h2>{{ data.widget.heading }}</h2>
-      {% if data.widget.subHeading %}
-      <p class="a-landing-subtitle">{{ data.widget.subHeading}}</p>
-      {% endif %}
-    </div>
-  {% endif %}
-  {% if data.widget.content %}
+<div class="a-landing-section uncontainer" id="{{ data.widget.identifier }}">
     <div class="a-landing-section-content">
       {% area data.widget, 'content' %}
     </div>
-  {% endif %}
 </div>
-{% endif %}

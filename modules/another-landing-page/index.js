@@ -35,7 +35,7 @@ module.exports = {
         fields: [
           'title',
           'header',
-          'main',
+          'sections',
           'footer'
         ]
       }

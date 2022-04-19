@@ -9,6 +9,10 @@ module.exports = {
         label: 'Section Menu Heading',
         type: 'string'
       },
+      identifier: {
+        label: 'Section identifier',
+        type: 'slug'
+      },
       content: {
         type: 'area',
         label: 'Section Content',
