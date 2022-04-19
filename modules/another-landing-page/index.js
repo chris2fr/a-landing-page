@@ -55,6 +55,7 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
+          'arbitraryLinks',
           'header',
           'sections',
           'footer'
