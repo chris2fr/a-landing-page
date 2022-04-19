@@ -1,5 +1,5 @@
 require('apostrophe')({
-  shortName: 'lesgrandsvoisins',
+  shortName: 'a-landing-page',
   nestedModuleSubdirs: true,
   modules: {
     // Apostrophe module configuration
@@ -33,7 +33,7 @@ require('apostrophe')({
     '@apostrophecms/seo': {},
     '@apostrophecms/sitemap': {
             options: {
-            baseUrl:"https://www.lesgrandsvoisins.com"
+            baseUrl:"https://www.lesgv.com"
             }
     },
     '@apostrophecms/redirect': {},
