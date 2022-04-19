@@ -1,7 +1,7 @@
 {
   "name": "lesgrandsvoisins",
   "version": "1.0.0",
-  "description": "Apostrophe 3 Boilerplate Site",
+  "description": "www.lesgrandsvoivins.com on Apostrophe CMS",
   "main": "app.js",
   "scripts": {
     "start": "node app",
