@@ -80,3 +80,15 @@ a {
 	line-height: 1.4em;
 	font-size: 1.4em;
 }
+
+.another-landing-nav-logo-inner, a.another-landing-nav-logo-inner {
+	background: var(--color-canvas);
+	color: var(--color-text-link);
+	white-space: nowrap;
+	align-self: center;
+	font-size: calc(1.275rem + 0.3vw);
+	text-decoration: none;
+	padding: 1rem;
+	border-radius: 0.5em;
+	line-height: 2em;
+}
