@@ -42,7 +42,6 @@ module.exports = {
         },
         if: {
           $or: [
-            { cols: '33-33-33' },
             { cols: '50-50' },
             { cols: '40-40' }
           ]
