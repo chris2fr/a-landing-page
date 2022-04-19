@@ -62,8 +62,8 @@ $lgvpcolors: (
   font-weight: bold;
   text-transform: uppercase;
 }
-main.another-landing-page header h2,
-main.another-landing-page .a-landing-section h2 {
+header.another-landing-page h2,
+.a-landing-section h2 {
 	font-size: calc(1.7rem + 1.5vw);
 	text-align: center;
 	display: block;
@@ -72,7 +72,7 @@ main.another-landing-page .a-landing-section h2 {
 	text-transform: uppercase;
 }
 
-main.another-landing-page span.section-subheading {
+span.section-subheading {
 	text-align: center;
 	font-weight: unset;
 	font-style: italic;
@@ -82,7 +82,7 @@ main.another-landing-page span.section-subheading {
 	margin-top: 0.2rem;
 }
 
-main.another-landing-page span.section.subheading::after {
+span.section.subheading::after {
 	position: absolute;
 	content: "";
 	background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
