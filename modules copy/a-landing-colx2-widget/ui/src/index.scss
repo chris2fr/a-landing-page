@@ -1,0 +1,17 @@
+.a-landing-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.a-landing-col-2 * img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media(max-width:30rem) {
+  .a-landing-col-2 {
+    grid-template-columns: 1fr;
+  }
+}

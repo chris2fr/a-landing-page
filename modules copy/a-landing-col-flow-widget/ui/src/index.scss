@@ -1,0 +1,35 @@
+
+
+
+
+
+
+.a-landing-col-flow p {
+  margin-block-start: 0;
+}
+
+
+.a-landing-col-flow {
+  //display: grid;
+  //grid-template-columns: 1fr 1fr;
+  //gap: 1rem;
+  column-width: 30rem;
+  column-gap: 2em;
+  column-rule: 1px solid #ccc;
+}
+
+
+
+/*
+.a-landing-col-2 * img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media(max-width:30rem) {
+  .a-landing-col-2 {
+    grid-template-columns: 1fr;
+  }
+}
+*/

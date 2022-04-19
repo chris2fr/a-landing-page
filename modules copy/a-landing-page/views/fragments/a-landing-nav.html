@@ -1,0 +1,162 @@
+{% fragment newScript() %}
+<script>
+  /*
+function openTab(tabName) {
+  var i, x, activeSubmenu;
+  activeSubmenu = document.getElementById(tabName);
+  if (activeSubmenu.style.display !== 'none') {
+    activeSubmenu.style.display = "none";
+    document.getElementById(tabName.concat("-tab")).classList.remove("active");
+    document.getElementById("a-landing-submenu-area").style.display = "none";
+  } else {
+    x = document.getElementsByClassName("a-landing-nav-submenu");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x = document.getElementsByClassName("a-landing-nav-link active");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.remove("active");
+    }
+    document.getElementById(tabName).style.display = "flex";
+    document.getElementById(tabName.concat("-tab")).classList.add("active");
+    document.getElementById("a-landing-submenu-area").style.display = "block";
+  }
+  return true;
+}
+*/
+</script>
+{% endfragment%}
+
+{% fragment newHTML(data) %}
+
+{% set homePage = apos.helper.findHomePage(data.page) %}
+<nav class="a-landing-nav">
+  <div class="a-landing-nav-logo-outer">
+  <a  class="a-landing-nav-logo-inner active{% if homePage.slug == data.page.slug %}{% endif %}" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
+</div>
+  <!-- <div class="empty-white"></div> -->
+  <div class="a-landing-nav-tablist" role="tablist">
+    {# #}
+    {% for page in homePage._children %}
+      {% if page.menuTitle %}
+        <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug == data.page.slug or (homePage.limitedAncestors.length > 0 and homePage.limitedAncestors[1].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+      {% endif %}
+    {% endfor %}
+
+
+    {#}
+    {% for uppage in homePage.limitedAncestors %}
+      <a href="{{ uppage._url }}" class="a-landing-nav-link">{{ uppage.menuTitle }}</a>
+    {% endfor %}
+    
+    <a class="a-landing-nav-link active" href="#" onclick="javascript:openTab('a-landing-submenu-anchors')" id="a-landing-submenu-anchors-tab">{{ apos.helper.getMenuTitle(data.page) }}</a>
+
+    {% for downpage in data.page._children %}
+      <a class="a-landing-nav-link" href="{{ downpage._url }}">{{ apos.helper.getMenuTitle(downpage) }}</a>
+    {% endfor %}
+    {#}
+
+
+{#}
+  <a class="a-landing-nav-link" href="#" onclick="javascript:openTab('a-landing-submenu-language');" id="a-landing-submenu-language-tab" ><svg style="height:1em;" 
+    data-icon="language" role="img"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor"
+      d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z">
+    </path>
+  </svg></a>
+{#}
+  </div>
+  {# TODO: Code this bit better #}
+  {% set subtabpages = [] %}
+  {% set suborsubsub = "sub" %}
+  {% if homePage.limitedAncestors.length > 1 %}
+    {% set suborsubsub = "subsub" %}  
+  {% endif %}
+  {% if homePage.limitedAncestors.length > 0  %}
+    {% set subtabpages = homePage.limitedAncestors[1]._children %}
+    {% if homePage.limitedAncestors.length == 1  %}
+      {% set subtabpages = data.page._children %}
+    {% endif %}
+  {% endif %}
+  {#}
+  {% if subtabpages.length > 0 %}
+    <div class="a-landing-nav-subtabs">
+    
+    </div>
+  {% endif %}
+  {#}
+</nav>
+<div class="a-landing-submenu-area">
+    {#}
+    <div class="a-landing-nav-submenu">
+    {% if homePage.limitedAncestors.length > 0  %}
+    
+      <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
+        class="a-landing-nav-link">{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}} :</a> 
+        
+    {% endif %}
+      <a href="#" class="a-landing-nav-link active">{{ data.page.title }}</a>
+      
+    </div>
+    {#}
+  <div class="a-landing-nav-submenu">
+    <div class="a-landing-nav-submenu">
+    {# % if homePage.limitedAncestors.length >= 0  % #}
+      <a href="#" class="a-landing-nav-link current">
+      {% if homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle %}
+         {{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}} :
+      {% endif %}
+      {{ data.page.title }}
+      </a>
+    {# % endif % #}
+    {% if data.page.header.items[0].navHeading %}
+      <a href="#{{data.page.header.items[0].identifier}}" 
+        class="a-landing-nav-link active">{{data.page.header.items[0].navHeading }}</a>
+    {% endif %}
+    {% for section in data.page.sections.items %}
+      {% if section.navHeading %}
+        <a href="#{{section.identifier}}" 
+          class="a-landing-nav-link active">{{ section.navHeading }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="a-landing-nav-submenu">
+    {% if homePage.limitedAncestors.length > 0  %}
+      {% for page in subtabpages %}
+        {% if page.menuTitle %}
+          <a href="{{ page._url }}" class="a-landing-nav-link{% if page.slug == data.page.slug or (homePage.limitedAncestors.length > 1 and homePage.limitedAncestors[2].slug == page.slug)%} active{% endif %}">{{ page.menuTitle }}</a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+    <div class="a-landing-nav-submenu">
+    {% if not data.user %}
+      <a href="/login" class="a-landing-nav-link">Login</a>
+    {% endif %}
+    {% for locale in data.localizations %}
+      {% if data.locale == locale.locale %}
+        <a class="a-landing-nav-link" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
+      {% else %}
+        <a class="a-landing-nav-link" style="text-transform: uppercase;" href="{{ locale._url }}">{{ locale.locale }}</a>
+      {% endif %}
+    {% endfor %}
+      </div>
+  </div>
+</div>
+{% if homePage.limitedAncestors.length > 1  and data.page._children.length > 0 %}
+<div class="a-landing-subsubmenu-area">
+  {#}
+  <div class="a-landing-nav-submenu">
+    <a href="{{homePage.limitedAncestors[homePage.limitedAncestors.length - 1]._url}}" 
+      class="a-landing-nav-link"> : {{homePage.limitedAncestors[homePage.limitedAncestors.length - 1].menuTitle}} : </a>   
+  </div> 
+  {#}
+  {% for page in data.page._children %}
+  {% if page.menuTitle %}
+    <a href="{{ page._url }}" class="a-landing-nav-link">{{ page.menuTitle }}</a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endfragment%}

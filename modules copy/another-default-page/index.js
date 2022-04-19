@@ -1,24 +1,12 @@
 module.exports = {
   extend: '@apostrophecms/page-type',
   options: {
-    label: 'Another Landing Page',
-    pluralLabel: 'Another-Landing Pages'
+    label: 'Another Default Page',
+    pluralLabel: 'Another-Default Pages'
   },
   fields: {
     add: {
-      header:{
-        type: 'area',
-        options: {
-          widgets: require('../../lib/area').fullConfig
-        }
-      },
       main: {
-        type: 'area',
-        options: {
-          widgets: require('../../lib/area').fullConfig
-        }
-      },
-      footer: {
         type: 'area',
         options: {
           widgets: require('../../lib/area').fullConfig

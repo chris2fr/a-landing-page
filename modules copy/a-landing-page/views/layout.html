@@ -1,0 +1,39 @@
+{% extends data.outerLayout %}
+
+{% import 'fragments/a-landing-nav-1.html' as aLandingNav %}
+
+{% block startHead %}
+{{ super() }}
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+<style>{{ data.page.cssExtra }}</style>
+{% endblock %}
+
+{% block extraHead %}
+{{ super() }}
+{{ data.page.javascriptHeadExtra }}
+{% render aLandingNav.newScript() %}
+{% endblock %}
+
+{% block beforeMain %}
+{% render aLandingNav.newHTML(data) %}
+<div id="protonContainer">
+  <canvas id="protonCanvas"></canvas>
+</div>
+{% endblock %}
+
+{% block afterMain %}
+<footer class="a-landing-footer a-landing-section a-landing-section-footer landing-colors-8">
+  {% area data.page, 'footer' %}
+</footer>
+{# Close .bp-wrapper #}
+{% endblock %}
+
+{% block afterAposScripts %}
+<!--
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.32.0/tsparticles.min.js"></script>
+<script src="{{ apos.asset.url('//modules/a-landing-page/js/particular.js') }}" defer></script>
+  -->
+<script type="text/javascript" src="{{ apos.asset.url('/modules/a-landing-page/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ apos.asset.url('/modules/a-landing-page/js/proton.js') }}"></script>
+<script src="{{ apos.asset.url('/modules/a-landing-page/js/lgvprotonbg.js') }}" defer></script>
+{% endblock %}

@@ -1,0 +1,268 @@
+
+
+
+
+
+
+// .a-sections * h2 {
+//   text-align: center;
+//   text-transform: uppercase;
+//   margin: 0 0 20px 0;
+//   font-weight: 800;
+//   font-size: 2.5rem;
+//   position: relative;
+//   margin-top: 10px;
+//   margin-bottom: 15px;
+//   padding-bottom: 15px;
+//   line-height: 1.2;
+//   display: block;
+//   margin-block-start: 0.83em;
+//   margin-block-end: 0.83em;
+//   margin-inline-start: 0px;
+//   margin-inline-end: 0px;
+//   font-weight: bold;
+// }
+// .a-sections * h3 {
+//   font-size: 2rem;
+//   font-weight: 600;
+// }
+// .a-sections * h4 {
+//   font-size: 1.5rem;
+//   font-weight: 600;
+// }
+// .a-sections * h5 {
+//   text-transform: uppercase;
+//   font-weight: 700;
+//   line-height: 20px;
+// }
+
+
+/*  */
+
+.a-landing-top {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+  padding: 0.5rem; // TODO render variable
+  //background-color: var(--color-canvas);
+  background: transparent;
+  // position: -webkit-sticky;
+  // position: sticky;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media(max-width: 30rem) {
+  .a-landing-top {
+    grid-template-columns: auto;
+  }
+}
+
+// div.a-landing-logo > a {
+//   text-decoration: none;
+//   font-size: calc(1.275rem + 0.3vw);
+//   white-space: nowrap;
+//   //padding-right: 2rem;
+//   line-height: 1.5rem;
+// }
+
+// .a-landing-logo {
+//   font-size: calc(1.275rem + 0.3vw);
+//   align-self: start;
+//   box-sizing: border-box;
+//   background: var(--color-canvas);
+//   text-decoration: none;
+//   white-space: nowrap;
+//   padding: 1rem;
+//   border-radius: 0.5rem;
+// }
+
+.a-landing-navmenu {
+  gap: 1rem;
+  justify-self: end;
+  background-color: var(--color-canvas);
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+div.a-landing-hero {
+  text-align: center;
+}
+
+
+// .a-landing-top * p.a-landing-subtitle {
+//   font-size: clamp(2rem, 1rem + 2vw, 3rem);
+//   font-weight: 600;
+//   text-align: center;
+//   margin-top: 0;
+//   margin-bottom: .5rem;
+//   font-weight: 500;
+//   line-height: 1.2;
+// }
+.a-sections * p.a-landing-subtitle {
+  // font-size: calc(1.3rem + .6vw);
+  // //font-size: clamp(1.5rem, 1rem + 0.5vw, 2.5rem);
+  // margin-top: 0;
+  // margin-bottom: .5rem;
+  // font-weight: 500;
+  // line-height: 1.2;
+}
+
+
+
+.a-landing-hero-title * .a-section-title {
+}
+
+
+
+
+
+// .a-landing-section-content * p {
+//   // padding-top: 3rem;
+//   // padding-bottom: 3rem;
+//   padding-right: 1.5rem;
+//   padding-left: 1.5rem;
+//   margin-top: 2rem;
+//   margin-bottom: 2rem;
+//   margin-top: 0;
+//   margin-bottom: 1rem;
+//   box-sizing: border-box;
+//   display: block;
+// }
+// .a-landing-hero-title * .a-landing-section-content p {
+//   font-size:  calc(1.2rem + 0.8vw);
+// }
+// .a-sections * .a-landing-section-content p {
+//   font-size: larger;
+// }
+
+
+
+.a-homenav {
+  justify-content: center;
+  font-weight: bold;
+  font-size: large;
+  background: var(--color-canvas);
+  border-radius: 0.5rem;
+  opacity: 75%;
+}
+/* Replacing Bootstrap Slowly */
+.a-nav-pills .a-nav-link {
+  background: 0 0;
+  border: 0;
+  //border-radius: .25rem;
+}
+// .a-nav-link {
+//   display: block;
+//   // padding: .5rem 1rem;
+
+//   color: #0d6efd;
+//   text-decoration: none;
+//   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+// }
+.a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
+  color: var(--color-canvas);
+  background-color: #0d6efd;
+}
+.a-nav-link {
+  transition: none;
+}
+ul.a-nav {
+  margin-block-start: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+    list-style: none;
+  gap: 1rem;
+  font-size: large;
+  background-color: var(--color-canvas);
+  border-radius: 0.5rem;
+}
+.a-nav-pills .a-nav-link.active, .a-nav-pills .show>.a-nav-link {
+  color: var(--color-canvas);
+  background-color: #0d6efd;
+}
+
+
+
+
+/*
+Not sure if I should keep this below
+*/
+div.two_col__column div.apos-area div.bp-rich-text {
+  text-align: left;
+}
+/*  */
+.btn-custom {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-canvas);
+  background-color: #5ca9fb;
+  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  padding: 14px 34px;
+  letter-spacing: 1px;
+  margin: 0;
+  // font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+  border: 0;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom.active {
+  color: var(--color-canvas);
+  background-image: none;
+  background-color: #6372ff;
+}
+a.button:link,
+a.button:active,
+a.button:visited,
+a.button {
+  color: var(--color-canvas);
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+// .a-landing-hero-title * .a-section-title {
+//   -webkit-margin-after: .3em;
+//   margin-block-end: .3em;
+//   font-size: clamp(3.5rem,1rem + 6vw,6rem);
+//   font-weight: bold;
+// }

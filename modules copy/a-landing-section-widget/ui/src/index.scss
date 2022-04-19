@@ -1,0 +1,239 @@
+@use "sass:map";
+
+@import 'unbootstrap';
+
+$lgvbgcolors: (
+  1: transparent,
+  2: white,
+  3: #f6f6f6,
+  4: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%),
+  5: white,
+  6: #f6f6f6,
+  7: white,
+  8: linear-gradient(90deg, #6372ff, #5ca9fb),
+  9: #f6f6f6
+);
+$lgvcolors: (
+  1: white,
+  2: #333333,
+  3: #333333,
+  4: white,
+  5: #333333,
+  6: #333333,
+  7: #333333,
+  8: white,
+  9: #333333
+);
+$lgvhcolors: (
+  1: white,
+  2: #333333,
+  3: #333333,
+  4: white,
+  5: #333333,
+  6: #333333,
+  7: #333333,
+  8: white,
+  9: #333333
+);
+$lgvpcolors: (
+  1: white,
+  2: #777,
+  3: #777,
+  4: rgba(255,255,255,0.75),
+  5: #777,
+  6: #777,
+  7: #777,
+  8: rgba(255,255,255,0.75),
+  9: #777
+);
+// // MAYBE EXTRANEOUS
+// #section-header {
+//   color: map.get($lgvcolors, 1);
+//   text-align: center;
+//   // width: 70%;
+//   // margin-left: 15%;
+// }
+// // MAYBE EXTRANEOUS
+// #section-header p {
+//   color: map.get($lgvcolors, 1);
+//   // font-size: 22px;
+//   font-size: 2rem;
+//   font-weight: 300;
+//   line-height: 30px;
+//   margin: 0 auto;
+//   margin-bottom: 60px;
+// }
+.a-landing-section-content * p {
+  line-height: 1.4em;
+  font-size: large;
+}
+.a-section-title {
+   margin: 0.67em 0;
+   margin-bottom: 1rem;
+//   line-height: 1.2;
+}
+.a-section-title h2 {
+  // -webkit-margin-after: .3em;
+  // margin-block-end: .3em;
+  font-size: calc(1.7rem + 1.5vw);
+  text-align: center;
+  display: block;
+//  line-height: 1.2;
+  margin: unset;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+// .a-landing-section {
+//   padding: 5rem 2rem 3rem;
+// }
+// .a-landing-section-content {
+//   padding: 5rem 0 3rem;
+// }
+// .a-landing-colors-0 {
+// background: var(--color-canvas);
+// color: map.get($lgvcolors, 1);
+// }
+// .a-landing-colors-1 {
+// background-image: initial;
+// background-position-x: initial;
+// background-position-y: initial;
+// background-size: initial;
+// background-repeat-x: initial;
+// background-repeat-y: initial;
+// background-attachment: initial;
+// background-origin: initial;
+// background-clip: initial;
+// background: map.get($lgvbgcolors, 2);
+// color: map.get($lgvcolors, 2);
+// }
+ .a-landing-colors-0 {
+  background: map.get($lgvbgcolors, 1);
+  color: map.get($lgvcolors, 1);
+  }
+ .a-landing-colors-1 {
+  background: map.get($lgvbgcolors, 2);
+  color: map.get($lgvcolors, 2);
+  }
+  .a-landing-colors-2 {
+  background: map.get($lgvbgcolors, 3);
+  color: map.get($lgvcolors, 3);
+  }
+  .a-landing-colors-3,
+  .a-landing-colors-3 a {
+  background: map.get($lgvbgcolors, 4);
+  color: map.get($lgvcolors, 4);
+  }
+  .a-landing-colors-4 {
+  background: map.get($lgvbgcolors, 5);
+  color: map.get($lgvcolors, 5);
+  }
+  .a-landing-colors-5 {
+  /* background: transparent; */
+  background: map.get($lgvbgcolors, 6);
+  color: map.get($lgvcolors, 6);
+  }
+  .a-landing-colors-6 {
+  background: map.get($lgvbgcolors, 7);
+  color: map.get($lgvcolors, 7);
+  }
+  .a-landing-colors-7 {
+  background: map.get($lgvbgcolors, 8);
+  color: map.get($lgvcolors, 8);
+  }
+  .a-landing-colors-8 {
+  /* background: transparent; */
+  background: map.get($lgvbgcolors, 9);
+  color: map.get($lgvcolors, 9);
+  }  
+.a-landing-colors-0 p,
+.a-landing-colors-0 li {
+  color: map.get($lgvpcolors, 1);
+}
+.a-landing-colors-1 p,
+.a-landing-colors-1 li {
+  color: map.get($lgvpcolors, 2);
+}
+.a-landing-colors-2 p,
+.a-landing-colors-2 li {
+  color: map.get($lgvpcolors, 3);
+}
+.a-landing-colors-3 p,
+.a-landing-colors-3 li {
+  color: map.get($lgvpcolors, 4);
+}
+.a-landing-colors-4 p,
+.a-landing-colors-4 li {
+  color: map.get($lgvpcolors, 5);
+}
+.a-landing-colors-5 p,
+.a-landing-colors-5 li {
+  color: map.get($lgvpcolors, 6);
+}
+.a-landing-colors-6 p,
+.a-landing-colors-6 li {
+  color: map.get($lgvpcolors, 7);
+}
+.a-landing-colors-7 p,
+.a-landing-colors-7 li {
+  color: map.get($lgvpcolors, 8);
+}
+.a-landing-colors-8 p,
+.a-landing-colors-8 li {
+  color: map.get($lgvpcolors, 9);
+}
+.a-landing-colors-0 h {
+  color: map.get($lgvhcolors, 1);
+}
+.a-landing-colors-1 h {
+  color: map.get($lgvhcolors, 2);
+}
+.a-landing-colors-2 h {
+  color: map.get($lgvhcolors, 3);
+}
+.a-landing-colors-3 h {
+  color: map.get($lgvhcolors, 4);
+}
+.a-landing-colors-4 h {
+  color: map.get($lgvhcolors, 5);
+}
+.a-landing-colors-5 h {
+  color: map.get($lgvhcolors, 6);
+}
+.a-landing-colors-6 h {
+  color: map.get($lgvhcolors, 7);
+}
+.a-landing-colors-7 h {
+  color: map.get($lgvhcolors, 8);
+}
+.a-landing-colors-8 h {
+  color: map.get($lgvhcolors, 9);
+}
+
+// .a-landing-section-content ul {
+//   list-style: none;
+//   display: block;
+//   list-style-type: disc;
+//   margin-block-start: 1em;
+//   margin-block-end: 1em;
+//   margin-inline-start: 0px;
+//   margin-inline-end: 0px;
+//   padding-inline-start: 40px;
+// }
+// .a-landing-section-content li {
+//   margin-bottom: 6px;
+//   margin-left: 6px;
+//   list-style: none;
+//   padding: 0;
+// }
+// .a-landing-section-content li::before {
+//   content: '\f00c';
+//   font-family: 'FontAwesome';
+//   color: #5ca9fb;
+//   font-size: 11px;
+//   font-weight: 300;
+//   padding-right: 8px;
+// }
+
+.a-landing-section-content li {
+
+}

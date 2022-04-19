@@ -1,0 +1,22 @@
+{% extends "layout.html" %} 
+{% block main %}
+  <header class="a-landing-page another-landing-page">
+    <div class="clearfix a-landing-hero">
+      {% if true or data.page.header.title or data.page.header %}
+      <div id="section-header" class="a-landing-hero-title">
+        <div id="page-top" class="a-contanier a-particular-info a-landing-intro-text">
+          {% if data.page.header %}
+            {% area data.page, 'header' %}
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  <main class="a-landing-page a-sections another-landing-page">
+    {% area data.page, 'sections' %}
+  </main>
+  <footer class="a-landing-footer a-landing-section a-landing-section-footer landing-colors-8">
+    {% area data.page, 'footer' %}
+  </footer>
+{% endblock %}

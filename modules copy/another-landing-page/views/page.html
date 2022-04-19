@@ -1,0 +1,36 @@
+{% extends "layout.html" %} 
+{% block main %}
+  <header class="a-landing-page">
+    <div class="clearfix a-landing-hero">
+      {% if true or data.page.header.title or data.page.header %}
+      <div id="section-header" class="a-landing-hero-title">
+        <div id="page-top" class="a-contanier a-particular-info a-landing-intro-text">
+          {% if data.page.header.title %}
+            <h1 class="a-landing-h1">{{ data.page.header.title }}</h1>
+          {% endif %}
+          {% if data.page.header.subtitle %}
+            <p class="a-landing-subtitle">{{ data.page.header.subtitle }}</p>
+          {% endif %}
+          {% if data.page.header %}
+            {% area data.page, 'header' %}
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% if data.page._children|length()%}
+      <div style="margin: 1.5rem; padding:1.5rem;">
+        <ul class="a-landing-page-down-nav">
+          {% for downpage in data.page._children %}
+            <li>
+              <a href="{{ downpage._url }}">{{ downpage.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  <main class="a-landing-page a-sections">
+    {% area data.page, 'sections' %}
+  </main>
+{% endblock %}

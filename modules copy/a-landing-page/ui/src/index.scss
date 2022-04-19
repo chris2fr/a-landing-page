@@ -1,0 +1,62 @@
+@import 'custom';
+@import 'extraneous';
+@import 'main';
+@import 'nav';
+@import 'proton';
+
+
+
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  //font-weight: 400;
+  //width: 100%;
+  //height: 100%;
+  //font-size: 16px;
+  //line-height: 1.2;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+hr {
+  height: 2px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: var(--color-brand-tertiary);
+  margin-bottom: 20px;
+  border: 0;
+}
+a {
+  color: var(--color-text-link);
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.a-landing-footer {
+  //padding-top: 3rem;
+  //padding-bottom: 3rem;
+  text-align: left;
+  //padding: 1em;
+}
+div.a-landing-section-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  //padding: 1em;
+}
+div.a-landing-colophon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  ;
+}
