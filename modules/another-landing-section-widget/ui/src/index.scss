@@ -66,35 +66,35 @@ header.another-landing-page {
   background: map.get($lgvbgcolors, 1);
   color: map.get($lgvcolors, 1);
   }
-main div.a-landing-section::nth-child(1) {
+main.another-lancding-page div.a-landing-section:nth-of-type(1) {
   background: map.get($lgvbgcolors, 2);
   color: map.get($lgvcolors, 2);
   }
- main div.a-landing-section::nth-child(2) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(2) {
   background: map.get($lgvbgcolors, 3);
   color: map.get($lgvcolors, 3);
   }
- main div.a-landing-section::nth-child(3) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(3) {
   background: map.get($lgvbgcolors, 4);
   color: map.get($lgvcolors, 4);
   }
- main div.a-landing-section::nth-child(4) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(4) {
   background: map.get($lgvbgcolors, 5);
   color: map.get($lgvcolors, 5);
   }
- main div.a-landing-section::nth-child(5) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(5) {
   background: map.get($lgvbgcolors, 6);
   color: map.get($lgvcolors, 6);
   }
- main div.a-landing-section::nth-child(6) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(6) {
   background: map.get($lgvbgcolors, 7);
   color: map.get($lgvcolors, 7);
   }
- main div.a-landing-section::nth-child(7) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(7) {
   background: map.get($lgvbgcolors, 8);
   color: map.get($lgvcolors, 8);
   }
- main div.a-landing-section::nth-child(8) {
+ main.another-lancding-page div.a-landing-section:nth-of-type(8) {
   background: map.get($lgvbgcolors, 9);
   color: map.get($lgvcolors, 9);
   }  
@@ -110,85 +110,61 @@ footer.a-landing-section p,
 footer.a-landing-section li {
   color: map.get($lgvpcolors, 9);
 }
-main div.a-landing-section::nth-child(1) p,
-main div.a-landing-section::nth-child(1) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(1) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(1) li {
   color: map.get($lgvpcolors, 2);
 }
-main div.a-landing-section::nth-child(2) p,
-main div.a-landing-section::nth-child(2) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(2) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(2) li {
   color: map.get($lgvpcolors, 3);
 }
-main div.a-landing-section::nth-child(3) p,
-main div.a-landing-section::nth-child(3) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(3) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(3) li {
   color: map.get($lgvpcolors, 4);
 }
-main div.a-landing-section::nth-child(4) p,
-main div.a-landing-section::nth-child(4) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(4) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(4) li {
   color: map.get($lgvpcolors, 5);
 }
-main div.a-landing-section::nth-child(5) p,
-main div.a-landing-section::nth-child(5) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(5) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(5) li {
   color: map.get($lgvpcolors, 6);
 }
-main div.a-landing-section::nth-child(6) p,
-main div.a-landing-section::nth-child(6) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(6) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(6) li {
   color: map.get($lgvpcolors, 7);
 }
-main div.a-landing-section::nth-child(7) p,
-main div.a-landing-section::nth-child(7) li {
+main.another-lancding-page div.a-landing-section:nth-of-type(7) p,
+main.another-lancding-page div.a-landing-section:nth-of-type(7) li {
   color: map.get($lgvpcolors, 8);
 }
-header.a-landing-section h {
+header.another-landing-section h {
   color: map.get($lgvhcolors, 1);
 }
-footer.a-landing-section h {
+footer.another-landing-section h {
   color: map.get($lgvhcolors, 9);
 }
-main div.a-landing-section::nth-child(1) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(1) h {
   color: map.get($lgvhcolors, 2);
 }
-main div.a-landing-section::nth-child(2) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(2) h {
   color: map.get($lgvhcolors, 3);
 }
-main div.a-landing-section::nth-child(3) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(3) h {
   color: map.get($lgvhcolors, 4);
 }
-main div.a-landing-section::nth-child(4) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(4) h {
   color: map.get($lgvhcolors, 5);
 }
-main div.a-landing-section::nth-child(5) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(5) h {
   color: map.get($lgvhcolors, 6);
 }
-main div.a-landing-section::nth-child(6) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(6) h {
   color: map.get($lgvhcolors, 7);
 }
-main div.a-landing-section::nth-child(7) h {
+main.another-lancding-page div.a-landing-section:nth-of-type(7) h {
   color: map.get($lgvhcolors, 8);
 }
-// .a-landing-section-content ul {
-//   list-style: none;
-//   display: block;
-//   list-style-type: disc;
-//   margin-block-start: 1em;
-//   margin-block-end: 1em;
-//   margin-inline-start: 0px;
-//   margin-inline-end: 0px;
-//   padding-inline-start: 40px;
-// }
-// .a-landing-section-content li {
-//   margin-bottom: 6px;
-//   margin-left: 6px;
-//   list-style: none;
-//   padding: 0;
-// }
-// .a-landing-section-content li::before {
-//   content: '\f00c';
-//   font-family: 'FontAwesome';
-//   color: #5ca9fb;
-//   font-size: 11px;
-//   font-weight: 300;
-//   padding-right: 8px;
-// }
 
 .a-landing-section-content li {
 
