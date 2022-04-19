@@ -9,6 +9,6 @@
 {% if w.radius %}
   {% set styleString = styleString + 'border-radius: 20px;' %}
 {% endif %}
-<div class="widget container-widget" style="{{ styleString }}">
+<div class="widget container-widget {{ classes }}" style="{{ styleString }}{{ style }}">
   {% area w, 'content' %}
 </div>

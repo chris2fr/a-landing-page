@@ -1,3 +1,5 @@
+const { stringify } = require('querystring');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   icons: {
@@ -14,6 +16,23 @@ module.exports = {
         options: {
           widgets: require('../../lib/area').basicConfig
         }
+      },
+      classes: {
+        type: 'array',
+        label: 'Classes',
+        titleField: 'className',
+        fields: {
+          add: {
+            className: {
+              type: 'slug',
+              label: 'Class'
+            }
+          }
+        }
+      },
+      style: {
+        type: 'string',
+        label: 'Style Declarations'
       },
       backgroundColor: {
         type: 'color',
