@@ -5,20 +5,12 @@ module.exports = {
   options: {
     types: [
       {
-        name: 'lagrandepage',
-        label: 'La Grande Page'
+        name: 'another-landing-page',
+        label: 'another-landing-page'
       },
       {
-        name: 'default-page',
-        label: 'Default'
-      },
-      {
-        name: '@apostrophecms/home-page',
-        label: 'Home'
-      },
-      {
-        name: 'pagevoisine',
-        label: 'Page Voisine'
+        name: 'another-default-page',
+        label: 'another-default-page'
       },
       {
         name: 'a-landing-page',
@@ -27,7 +19,15 @@ module.exports = {
       {
         name: 'a-landing-inside-page',
         label: 'A Landing Inside Page'
-      }
+      },
+      {
+        name: 'default-page',
+        label: 'Initial Default'
+      },
+      {
+        name: '@apostrophecms/home-page',
+        label: 'Initial Home'
+      },
     ]
   }
 };
