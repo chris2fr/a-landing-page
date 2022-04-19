@@ -12,7 +12,7 @@ module.exports = {
           widgets: require('../../lib/area').fullConfig
         }
       },
-      main: {
+      sections: {
         type: 'area',
         label: 'Sections',
         options: {
