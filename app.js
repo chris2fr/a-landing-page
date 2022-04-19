@@ -22,10 +22,6 @@ require('apostrophe')({
         className: 'bp-image-widget'
       }
     },
-  '@apostrophecms/image': {
-    label: 'Image One-Sixth',
-    size: 'one-sixth'
-  },
     '@apostrophecms/video-widget': {
       options: {
         className: 'bp-video-widget'
