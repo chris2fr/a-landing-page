@@ -15,7 +15,9 @@ module.exports = {
       main: {
         type: 'area',
         options: {
-          widgets: require('../../lib/area').fullConfig
+          widgets: {
+            'another-landing-section': {}
+          }
         }
       },
       footer: {
