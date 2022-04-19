@@ -1,5 +1,10 @@
 {% extends data.outerLayout %}
 
+{% block startHead %}
+{{ super() }}
+<style>{{ data.page.arbitraryCSS }}</style>
+{% endblock %}
+
 {% block beforeMain %}
 <nav class="another-landing">
     <a  class="another-landing-nav-logo-inner" href="{{ homePage._url }}">{{ data.global.siteName }}</a>

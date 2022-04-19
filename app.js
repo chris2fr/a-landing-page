@@ -61,6 +61,10 @@ require('apostrophe')({
     '@apostrophecms/form-checkboxes-field-widget': {},
     '@apostrophecms/form-boolean-field-widget': {},
     '@apostrophecms/form-conditional-widget': {},
+    // The main event piece type module
+    '@apostrophecms/event': {},
+    // The event page module
+    '@apostrophecms/event-page': {},
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.

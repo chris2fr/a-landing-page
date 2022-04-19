@@ -48,6 +48,10 @@ module.exports = {
         options: {
           widgets: require('../../lib/area').fullConfig
         }
+      },
+      arbitraryCSS: {
+        type: 'string',
+        label: 'Arbitrary CSS'
       }
     },
     group: {

@@ -7,6 +7,11 @@ module.exports = {
       {
         name: 'another-landing-page',
         label: 'another-landing-page'
+      }, 
+      // Adding the event page type
+      {
+        name: '@apostrophecms/event',
+        label: 'Event Page'
       },
       {
         name: 'another-default-page',
