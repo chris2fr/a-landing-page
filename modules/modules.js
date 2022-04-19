@@ -8,5 +8,13 @@ module.exports = {
   'a-landing-inside-page': {},
   'a-landing-image-widget': {},
   'helper': {},
-  'a-landing-col-flow-widget':{}
+  'a-landing-col-flow-widget':{},
+  'another-default-page':{},
+  'another-landing-page':{},
+  'article-widget':{},
+  'button-widget':{},
+  'columns-widget':{},
+  'container-widget':{},
+  'cta-links-widget':{},
+  'localizations':{}
 };
