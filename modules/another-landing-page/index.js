@@ -30,7 +30,9 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
-          'main'
+          'header',
+          'main',
+          'footer'
         ]
       }
     }
