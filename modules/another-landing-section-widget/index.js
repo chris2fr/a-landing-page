@@ -23,7 +23,7 @@ module.exports = {
           },
           {
             label: '80%',
-            value: 'width:80%;'
+            value: 'width:80%;margin: 0 auto;'
           }
         ]
       },
