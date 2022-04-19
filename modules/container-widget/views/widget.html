@@ -6,6 +6,10 @@
 {% if w.borderColor %}
   {% set styleString = styleString + 'border: 10px solid ' + w.borderColor + ';' %}
 {% endif %}
+{% set classes = '' %}
+{% for c in w.classes %}
+  {% set classes = classes + c + " " %}
+{% endfor %}
 {% if w.radius %}
   {% set styleString = styleString + 'border-radius: 20px;' %}
 {% endif %}
