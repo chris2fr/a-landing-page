@@ -13,6 +13,20 @@ module.exports = {
         label: 'Section identifier',
         type: 'slug'
       },
+      width: {
+        label: 'Width',
+        type: 'radio',
+        choices: [
+          {
+            label: 'full-width',
+            value: 'width:100%;'
+          },
+          {
+            label: '80%',
+            value: 'width:80%;'
+          }
+        ]
+      },
       content: {
         type: 'area',
         label: 'Section Content',

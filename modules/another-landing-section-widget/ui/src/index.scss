@@ -195,7 +195,6 @@ main.another-landing-page div.a-landing-section:nth-of-type(6) h {
 main.another-landing-page div.a-landing-section:nth-of-type(7) h {
   color: map.get($lgvhcolors, 8);
 }
-
-.a-landing-section-content li {
-
+.a-landing-section {
+  padding: 1rem;
 }
