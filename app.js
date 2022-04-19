@@ -19,8 +19,7 @@ require('apostrophe')({
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget',
-        sizes: '() Unbounded, (max-width: 15rem;max-height: 15rem) 15 REM Box' 
+        className: 'bp-image-widget'
       }
     },
     '@apostrophecms/video-widget': {
