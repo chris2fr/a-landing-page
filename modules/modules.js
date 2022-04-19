@@ -13,6 +13,7 @@ module.exports = {
   'helper': {},
   'another-default-page':{},
   'another-landing-page':{},
+  'another-landing-section-widget': {},
   'article-widget':{},
   'button-widget':{},
   'columns-widget':{},
