@@ -52,6 +52,28 @@ module.exports = {
       arbitraryCSS: {
         type: 'string',
         label: 'Arbitrary CSS'
+      },
+      cssStyles: {
+        type: 'array',
+        label: 'CSS Styles for this page',
+        titleField: 'selector',
+        fields: {
+          add: {
+            selector: {
+              type: 'string',
+              label: 'CSS Selector'
+            },
+            rules: {
+              type: 'string',
+              label: 'CSS Rules'
+            },
+            activate: {
+              type: 'boolean',
+              label: 'Activate ?',
+              default: true
+            }
+          }
+        } 
       }
     },
     group: {

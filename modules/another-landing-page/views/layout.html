@@ -3,6 +3,14 @@
 {% block startHead %}
 {{ super() }}
 <style>{{ data.page.arbitraryCSS }}</style>
+
+<style>
+  {% for aCSS in data.page.cssStyles.items %}
+    {% if aCSS.activate %}
+    {{ aCSS.selector}} { {{aCSS.rules}} } 
+    {% endif %}
+  {% endfor %}
+</style>
 {% endblock %}
 
 {% block beforeMain %}
