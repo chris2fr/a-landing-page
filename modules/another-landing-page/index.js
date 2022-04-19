@@ -14,7 +14,9 @@ module.exports = {
       },
       main: {
         type: 'area',
+        label: 'Sections',
         options: {
+          max: 7,
           widgets: {
             'another-landing-section': {}
           }
