@@ -15,7 +15,8 @@
 
 {% block beforeMain %}
 <nav class="another-landing">
-    <a  class="another-landing-nav-logo-inner" href="{{ homePage._url }}">{{ data.global.siteName }}</a>
+  <div class="nav-menu-div">
+    <a class="another-landing-nav-logo-inner" href="{{ homePage._url }}">{{ data.global.siteName }}</a>
     <div class="another-landing-nav-submenu" style="height:fit-content;align-self:center;">
       {% for section in data.page.sections.items %}
         {% if section.navHeading %}
@@ -39,6 +40,7 @@
         {% endif %}
       {% endfor %}
     </div>
+  </div>
   </div>
 </nav>
 <div id="protonContainer">
