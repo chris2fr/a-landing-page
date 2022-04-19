@@ -5,7 +5,7 @@
 <style>{{ data.page.arbitraryCSS }}</style>
 
 <style>
-  {% for aCSS in data.page.cssStyles.items %}
+  {% for aCSS in data.page.cssStyles %}
     {% if aCSS.activate %}
     {{ aCSS.selector}} { {{aCSS.rules}} } 
     {% endif %}
