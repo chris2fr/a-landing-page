@@ -6,6 +6,27 @@ module.exports = {
   },
   fields: {
     add: {
+        arbitraryLinks: {
+        label: 'Arbitrary Links',
+        type: 'array',
+        titleField: 'displayText',
+        fields: {
+          add: {
+            displayText: {
+              type: 'string',
+              label: 'Text to Display'
+            },
+            url: {
+              type: 'string',
+              label: 'url'
+            },
+            sameWindow: {
+              type: 'boolean',
+              label: 'Open in Same Window?',
+            }
+          }
+        }
+      },
       header:{
         type: 'area',
         options: {

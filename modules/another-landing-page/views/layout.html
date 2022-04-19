@@ -2,7 +2,7 @@
 
 {% block beforeMain %}
 <nav class="another-landing">
-    <a  class="another-landing-nav-logo-inner" href="{{ homePage._url }}">{{ homePage.siteTitle }}</a>
+    <a  class="another-landing-nav-logo-inner" href="{{ homePage._url }}">{{ data.global.siteName }}</a>
     <div class="another-landing-nav-submenu" style="height:fit-content;align-self:center;">
       {% for section in data.page.sections.items %}
         {% if section.navHeading %}
@@ -11,12 +11,10 @@
         {% endif %}
       {% endfor %}
     </div>
-    <div class="another-landing-nav-submenu" style="">
-      <a href="https://com.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">com.</a>
-      <a href="https://mail.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">mail.</a>
-      <a href="https://visio.chapril.org/lesgrandsvoisins" class="a-landing-nav-link" target="_blank">visio.</a>
-      <a href="https://wiki.lesgrandsvoisins.com" class="a-landing-nav-link" target="_blank">wiki.</a>
-      <a href="/" class="a-landing-nav-link" target="_blank">www.</a>
+    <div class="another-landing-nav-submenu">
+      {% for link in data.page.arbitraryLinks %}
+          <a href="{{ link.url }}" class="a-landing-nav-link" {% if not link.sameWindow %} target="_blank" {% endif %}>{{ link.displayText }}</a>
+      {% endfor %}
       {% if not data.user %}
         <a href="/login" class="a-landing-nav-link">Login</a>
       {% endif %}
