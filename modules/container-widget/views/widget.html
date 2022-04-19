@@ -8,7 +8,7 @@
 {% endif %}
 {% set classes = '' %}
 {% for c in w.classes %}
-  {% set classes = classes + c.class + " " %}
+  {% set classes = classes + c.className + " " %}
 {% endfor %}
 {% if w.radius %}
   {% set styleString = styleString + 'border-radius: 20px;' %}
