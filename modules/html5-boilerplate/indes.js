@@ -5,8 +5,20 @@ module.exports = {
   },
   fields: {
     add: {
+      contents: {
+        type: 'string',
+        label: 'contents'
+      }
     }
   },
   group: {
+    utility: {
+      label:"A Landing",
+      fields: [
+        'title',
+        'slug',
+        'visibility'
+      ]
+    },
   }
 };
