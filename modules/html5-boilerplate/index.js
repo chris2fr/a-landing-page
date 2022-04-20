@@ -12,13 +12,5 @@ module.exports = {
     }
   },
   group: {
-    utility: {
-      label:"A Landing",
-      fields: [
-        'title',
-        'slug',
-        'visibility'
-      ]
-    },
   }
 };
