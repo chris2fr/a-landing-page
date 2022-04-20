@@ -4,12 +4,6 @@ module.exports = {
     label: 'HTML5 Boilerplate'
   },
   fields: {
-    add: {
-      contents: {
-        type: 'string',
-        label: 'contents'
-      }
-    }
   },
   group: {
   }
