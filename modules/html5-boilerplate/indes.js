@@ -5,8 +5,8 @@ module.exports = {
   },
   fields: {
     add: {
+    }
   },
   group: {
-    }
   }
 };
