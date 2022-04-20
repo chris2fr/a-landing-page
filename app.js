@@ -66,6 +66,7 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
     'lagrandepage': {},
-    'pagevoisine': {}
+    'pagevoisine': {},
+    'html5-boilerplate': {}
   }
 });
