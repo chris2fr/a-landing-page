@@ -67,6 +67,7 @@ require('apostrophe')({
     'default-page': {},
     'lagrandepage': {},
     'pagevoisine': {},
-    'html5-boilerplate': {}
+    'html5-boilerplate': {},
+    'bulma': {}
   }
 });
