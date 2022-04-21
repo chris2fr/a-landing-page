@@ -10,7 +10,6 @@ module.exports = {
         type: 'area',
         options: {
           widgets: require('./area').fullConfig,
-          class: 'section'
         }
       }
     },
