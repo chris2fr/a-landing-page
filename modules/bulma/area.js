@@ -3,7 +3,7 @@ const basicConfig = {
   '@apostrophecms/video': {},
   '@apostrophecms/html': {},
   '@apostrophecms/rich-text': {
-    className: 'section container',
+    class: 'section container',
     toolbar: [
       'styles',
       'bold',
@@ -26,27 +26,27 @@ const basicConfig = {
       {
         tag: 'h2',
         label: 'Heading 2 (H2)',
-        className: 'title'
+        class: 'title'
       },
       {
         tag: 'h3',
         label: 'Heading 3 (H3)',
-        className: 'title'
+        class: 'title'
       },
       {
         tag: 'h4',
         label: 'Heading 4 (H4)',
-        className: 'title'
+        class: 'title'
       },
       {
         tag: 'h5',
         label: 'Meta (H5)',
-        className: 'meta title'
+        class: 'meta title'
       },
       {
         tag: 'span',
         label: 'Section: Sub-Heading',
-        className: 'subtitle'
+        class: 'subtitle'
       }
     ]
   },
