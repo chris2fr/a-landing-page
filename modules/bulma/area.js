@@ -21,7 +21,8 @@ const basicConfig = {
       // you may also use a `class` property with these
       {
         tag: 'p',
-        label: 'Paragraph (P)'
+        label: 'Paragraph (P)',
+        class: 'normal-text'
       },
       {
         tag: 'h2',
@@ -44,7 +45,7 @@ const basicConfig = {
         class: 'meta title'
       },
       {
-        tag: 'span',
+        tag: 'p',
         label: 'Section: Sub-Heading',
         class: 'subtitle'
       }
