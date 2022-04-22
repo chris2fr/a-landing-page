@@ -1,0 +1,60 @@
+{% extends data.outerLayout %}
+
+{% block startHead %}
+  {{ super() }}
+  <meta charset="utf-8"/>
+  <meta name="color-scheme" content="light dark"/>
+{% endblock %}
+
+{% block standardHead %}
+  {{ super() }}
+ <!-- UIkit CSS -->
+<!link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.10/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.13.10/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.13.10/dist/js/uikit-icons.min.js"></script> 
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+{% endblock %}
+
+{% block apostropheMenu %}
+  {{ super() }}
+{% endblock %}
+
+{% block apostropheUserInterface  %}
+  {{ super() }}
+{% endblock %}
+
+{% block beforeMain %}
+  {{ super() }}
+{% endblock %}
+
+{% block mainAnchor %}
+  {{ super() }}
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
+{% endblock %}
+
+{% block afterMain %}
+  {{ super() }}
+{% endblock %}
+
+{% block extraBody %}
+  {{ super() }}
+{% endblock %}
+
+{% block afterAposScripts %}
+  {{ super() }}
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+-->
+{% endblock %}

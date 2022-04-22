@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  {{ super() }}
+  <section class="section">
+    {% area data.page, 'main' %}
+  </section>
+{% endblock %}

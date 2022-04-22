@@ -14,5 +14,7 @@ module.exports = {
   'container-widget':{},
   'cta-links-widget':{},
   'html5-boitlerplate':{},
-  'localizations':{}
+  'localizations':{},
+  'uikit':{},
+  'uikit-div-widget':{}
 };
