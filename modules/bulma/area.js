@@ -3,7 +3,7 @@ const basicConfig = {
   '@apostrophecms/video': {},
   '@apostrophecms/html': {},
   '@apostrophecms/rich-text': {
-    class: 'section container',
+    class: 'container',
     toolbar: [
       'styles',
       'bold',
@@ -43,14 +43,9 @@ const basicConfig = {
         tag: 'h5',
         label: 'Meta (H5)',
         class: 'meta title'
-      },
-      {
-        tag: 'p',
-        label: 'Section: Sub-Heading',
-        class: 'subtitle'
-      }
-    ]
+      }    ]
   },
+  'bulma-title-subtitle': {},
   columns: {},
   container: {},
   button: {}

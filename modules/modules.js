@@ -14,6 +14,7 @@ module.exports = {
   'another-default-page':{},
   'another-landing-page':{},
   'another-landing-section-widget': {},
+  'bulma-title-subtitle-widget': {},
   'article-widget':{},
   'button-widget':{},
   'columns-widget':{},
