@@ -26,18 +26,6 @@ module.exports = {
         label: 'another-default-page'
       },
       {
-        name: 'a-landing-page',
-        label: 'A Landing Page'
-      },
-      {
-        name: 'a-landing-inside-page',
-        label: 'A Landing Inside Page'
-      },
-      {
-        name: 'default-page',
-        label: 'Initial Default'
-      },
-      {
         name: '@apostrophecms/home-page',
         label: 'Initial Home'
       },
