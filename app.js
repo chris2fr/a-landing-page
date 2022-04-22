@@ -68,6 +68,7 @@ require('apostrophe')({
     'lagrandepage': {},
     'pagevoisine': {},
     'html5-boilerplate': {},
-    'bulma': {}
+    'bulma': {},
+    'bulma-title-subtitle': {}
   }
 });
