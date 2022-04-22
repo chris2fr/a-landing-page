@@ -28,8 +28,6 @@ require('apostrophe')({
       },
     },
     '@apostrophecms/html-widget': {},
-    'two-column-widget': {},
-    'three-column-widget': {},
     '@apostrophecms/seo': {},
     '@apostrophecms/sitemap': {
             options: {
@@ -37,16 +35,8 @@ require('apostrophe')({
             }
     },
     '@apostrophecms/redirect': {},
-    //'apostrophe-redirects': {},
-    //'apostrophe-dialog-box': {},
-    //'apostrophe-dialog-box-modal': {},
-    // optional index page for dialog boxes, useful if dialog styles conflict with apos modal styles
-    //'apostrophe-dialog-box-pages': {}
-    //'apostophecms/favicons': {},
     '@apostrophecms/open-graph': {},
-    // The main form module
     '@apostrophecms/form': {},
-    // The form widget module, allowing editors to add forms to content areas
     '@apostrophecms/form-widget': {},
     // Form field widgets, used by the main form module to build forms.
     '@apostrophecms/form-text-field-widget': {},
@@ -59,16 +49,13 @@ require('apostrophe')({
     '@apostrophecms/form-conditional-widget': {},
     // The main event piece type module
     '@apostrophecms/event': {},
-    // The event page module
     '@apostrophecms/event-page': {},
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.
-    'default-page': {},
-    'lagrandepage': {},
-    'pagevoisine': {},
     'html5-boilerplate': {},
     'bulma': {},
-    'bulma-title-subtitle': {}
+    'bulma-title-subtitle': {},
+    'a-landing-page': {}
   }
 });

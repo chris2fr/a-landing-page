@@ -1,7 +1,7 @@
 {
-  "name": "a-landing-page",
+  "name": "website-manager",
   "version": "1.0.0",
-  "description": "www.lesgrandsvoivins.com on Apostrophe CMS",
+  "description": "web.lesgrandsvoivins.com on Apostrophe CMS",
   "main": "app.js",
   "scripts": {
     "start": "node app",
