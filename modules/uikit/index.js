@@ -2,14 +2,16 @@ module.exports = {
   extend: '@apostrophecms/page-type',
   options: {
     label: 'UIKit Page',
-    pluralLable: 'UIKit Pages'
+    pluralLabel: 'UIKit Pages'
   },
   fields: {
     add: {
-      main: {
+      middlePart: {
         type: 'area',
         options: {
-          widgets: require('../../lib/area').uikitConfig,
+        widgets: {
+          'uikit-div': {}
+        }
         }
       }
     },
@@ -18,7 +20,7 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
-          'main'
+          'middlePart'
         ]
       }
     }

@@ -56,6 +56,8 @@ require('apostrophe')({
     'html5-boilerplate': {},
     'bulma': {},
     'bulma-title-subtitle': {},
-    'a-landing-page': {}
+    'a-landing-page': {},
+    'uikit':{},
+    'uikit-div-widget': {}
   }
 });

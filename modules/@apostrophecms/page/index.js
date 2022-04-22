@@ -5,6 +5,10 @@ module.exports = {
   options: {
     types: [
       {
+        name: 'uikit',
+        label: 'UIKit Template'
+      }, 
+      {
         name: 'another-landing-page',
         label: 'another-landing-page'
       }, 
