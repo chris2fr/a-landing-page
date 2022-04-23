@@ -13,7 +13,7 @@ module.exports = {
       insidePart: {
         type: 'area',
         options: {
-          widgets: require('../../../lib/area').basicConfig
+          widgets: require('../../../lib/area').uikitConfig
         }
       },
       className: {

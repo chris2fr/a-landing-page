@@ -9,9 +9,7 @@ module.exports = {
       middlePart: {
         type: 'area',
         options: {
-        widgets: {
-          'uikit-div': {}
-        }
+          widgets: require('../../lib/area').uikitConfig
         }
       }
     },
