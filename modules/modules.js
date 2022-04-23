@@ -16,5 +16,6 @@ module.exports = {
   'html5-boitlerplate':{},
   'localizations':{},
   'uikit':{},
+  'uikit-page01':{},
   'uikit-div-widget':{}
 };

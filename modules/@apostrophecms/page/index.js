@@ -9,6 +9,10 @@ module.exports = {
         label: 'UIKit Template'
       }, 
       {
+        name: 'uikit-page01',
+        label: 'UIKit Page 01'
+      }, 
+      {
         name: 'another-landing-page',
         label: 'another-landing-page'
       }, 
