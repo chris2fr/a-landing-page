@@ -1,6 +1,9 @@
-{% extends "../layout.html" %}
+{% extends data.outerLayout %}
+
 
 {% block main %}
+<div class="meatandpotatoes">
   {{ super() }}
     {% area data.page, 'middlePart' %}
+</div>
 {% endblock %}
