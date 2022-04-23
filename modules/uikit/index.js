@@ -1,3 +1,5 @@
+const uikitConfig = require('../../lib/area').uikitConfig;
+
 module.exports = {
   extend: '@apostrophecms/page-type',
   options: {

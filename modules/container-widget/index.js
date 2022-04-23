@@ -1,4 +1,4 @@
-const { stringify } = require('querystring');
+
 
 module.exports = {
   extend: '@apostrophecms/widget-type',
