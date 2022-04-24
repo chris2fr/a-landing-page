@@ -1,0 +1,6 @@
+<div class="{{ data.widget.outsidePartClasses.ukClasses | join(" ")}} {{ data.widget.outsideExtraClasses }}" style="{{ data.widget.outsideExtraStyle }}"> 
+  {% for insidePart in data.widgets.insideParts %}
+    <div class="{{ insidePart.ukClasses | join(" ")}} {{ insidePart.extraClasses }}" style="{{ insidePart.extraStyle }}"> 
+      {% area insidePart, 'main' %}
+  {% endfor }
+</div>

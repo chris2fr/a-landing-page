@@ -59,6 +59,7 @@ require('apostrophe')({
     'a-landing-page': {},
     'uikit':{},
     'uikit-page01':{},
-    'uikit-div-widget': {}
+    'uikit-div-widget': {},
+    'uikit-div-div-widget': {}
   }
 });
