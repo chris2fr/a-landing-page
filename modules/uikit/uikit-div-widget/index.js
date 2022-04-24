@@ -76,17 +76,24 @@ module.exports = {
           { value: 'uk-sticky', label: 'uk-sticky'},
           { value: 'uk-text-lead', label: 'uk-text-lead'},
           { value: 'uk-text-meta', label: 'uk-text-meta'},
-          { value: 'uk-width-1-2', label: 'uk-column-1-2'},
-          { value: 'uk-width-1-3', label: 'uk-column-1-3'},
-          { value: 'uk-width-2-3', label: 'uk-column-2-3'},
-          { value: 'uk-width-1-4', label: 'uk-column-1-4'},
-          { value: 'uk-width-3-4', label: 'uk-column-3-4'},
+          { value: 'uk-width-1-2', label: 'uk-width-1-2'},
+          { value: 'uk-width-1-3', label: 'uk-width-1-3'},
+          { value: 'uk-width-2-3', label: 'uk-width-2-3'},
+          { value: 'uk-width-1-4', label: 'uk-width-1-4'},
+          { value: 'uk-width-3-4', label: 'uk-width-3-4'},
           { value: 'uk-column-1-2', label: 'uk-column-1-2'},
           { value: 'uk-column-1-3', label: 'uk-column-1-3'},
           { value: 'uk-column-1-4', label: 'uk-column-1-4'},
+          { value: 'uk-child-width-1-2', label: 'uk-child-width-1-2'},
+          { value: 'uk-grid-collapse', label: 'uk-grid-collapse'},
+          { value: 'uk-text-center', label: 'uk-text-center'},
+          { value: '', label: ''}
         ]
       },
-
+      extraClasses: {
+        type: 'string',
+        label: 'Extra Classes'
+      },
       style: {
         type: 'string',
         label: 'Style Declarations'
