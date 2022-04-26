@@ -9,7 +9,7 @@ module.exports = {
       main: {
         type: 'area',
         options: {
-          widgets: require('../../lib/area').fullConfig
+          widgets: require('../../lib/area').basicConfig
         }
       }
     },

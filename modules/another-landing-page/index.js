@@ -30,7 +30,7 @@ module.exports = {
       header:{
         type: 'area',
         options: {
-          widgets: require('../../lib/area').fullConfig
+          widgets: require('../../lib/area').basicConfig
         }
       },
       sections: {
@@ -46,7 +46,7 @@ module.exports = {
       footer: {
         type: 'area',
         options: {
-          widgets: require('../../lib/area').fullConfig
+          widgets: require('../../lib/area').basicConfig
         }
       },
       arbitraryCSS: {
