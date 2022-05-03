@@ -54,8 +54,8 @@ require('apostrophe')({
     asset: {},
     // The project's first custom page type.
     'html5-boilerplate': {},
-    'bulma': {},
-    'bulma-title-subtitle': {},
+    'clean': {},
+    //'bulma-title-subtitle': {},
     'a-landing-page': {},
     'uikit':{},
     'uikit-page01':{},

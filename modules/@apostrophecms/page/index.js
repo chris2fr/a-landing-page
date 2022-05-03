@@ -16,11 +16,11 @@ module.exports = {
         name: 'another-landing-page',
         label: 'another-landing-page'
       }, 
-      /*
       {
-        name: 'Clean',
+        name: 'clean',
         label: 'Clean Template'
       }, 
+      /*
       {
         name: 'bulma',
         label: 'Bulma Template'
