@@ -1,0 +1,65 @@
+{% extends data.outerLayout %}
+
+{% block startHead %}
+  {{ super() }}
+  <meta charset="utf-8">
+{% endblock %}
+
+{% block standardHead %}
+  {{ super() }}
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+{% endblock %}
+
+{% block apostropheMenu %}
+  {{ super() }}
+{% endblock %}
+
+{% block apostropheUserInterface  %}
+  {{ super() }}
+{% endblock %}
+
+{% block beforeMain %}
+  {{ super() }}
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+  {% for link in data.page.arbitraryLinks %}
+      <li><a class="menu__item" href="{{ link.url }}" {% if not link.sameWindow %} target="_blank" {% endif %}>{{ link.displayText }}</a></li>
+  {% endfor %}      
+    </ul>
+  </div>
+{% endblock %}
+
+{% block mainAnchor %}
+  {{ super() }}
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
+{% endblock %}
+
+{% block afterMain %}
+  {{ super() }}
+{% endblock %}
+
+{% block extraBody %}
+  {{ super() }}
+{% endblock %}
+
+{% block afterAposScripts %}
+  {{ super() }}
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+-->
+{% endblock %}

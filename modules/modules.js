@@ -8,6 +8,7 @@ module.exports = {
   'article-widget':{},
   asset: {},
   'bulma': {},
+  'clean': {},
   'bulma-title-subtitle-widget': {},
   'button-widget':{},
   'columns-widget':{},

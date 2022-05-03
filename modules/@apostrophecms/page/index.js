@@ -17,6 +17,10 @@ module.exports = {
         label: 'another-landing-page'
       }, 
       {
+        name: 'Clean',
+        label: 'Clean Template'
+      }, 
+      {
         name: 'bulma',
         label: 'Bulma Template'
       }, 
