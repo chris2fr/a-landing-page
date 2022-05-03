@@ -31,7 +31,7 @@ module.exports = {
         type: 'area',
         label: 'Section Content',
         options: {
-          widgets: require('../../lib/area').basicConfig
+          widgets: require('../../lib/area').bloatedConfig
         }
       }
     }

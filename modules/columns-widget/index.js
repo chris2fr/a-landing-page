@@ -1,4 +1,4 @@
-const areaConfig = require('../../lib/area').basicConfig;
+const areaConfig = require('../../lib/area').bloatedConfig;
 
 module.exports = {
   extend: '@apostrophecms/widget-type',

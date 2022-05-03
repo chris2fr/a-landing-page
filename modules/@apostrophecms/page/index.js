@@ -18,6 +18,10 @@ module.exports = {
       }, 
       /*
       {
+        name: 'Clean',
+        label: 'Clean Template'
+      }, 
+      {
         name: 'bulma',
         label: 'Bulma Template'
       }, 

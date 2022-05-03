@@ -14,7 +14,7 @@ module.exports = {
       content: {
         type: 'area',
         options: {
-          widgets: require('../../lib/area').basicConfig
+          widgets: require('../../lib/area').bloatedConfig
         }
       },
       classes: {
