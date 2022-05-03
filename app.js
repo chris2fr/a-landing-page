@@ -54,6 +54,7 @@ require('apostrophe')({
     asset: {},
     // The project's first custom page type.
     'html5-boilerplate': {},
+    'clean': {},
     'bulma': {},
     'bulma-title-subtitle': {},
     'a-landing-page': {},
