@@ -17,13 +17,15 @@ module.exports = {
         label: 'another-landing-page'
       }, 
       {
-        name: 'Clean',
+        name: 'clean',
         label: 'Clean Template'
       }, 
+      /*
       {
         name: 'bulma',
         label: 'Bulma Template'
       }, 
+      */
       {
         name: 'html5-boilerplate',
         label: 'html5-boilerplate'

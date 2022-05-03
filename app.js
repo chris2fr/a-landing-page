@@ -55,8 +55,8 @@ require('apostrophe')({
     // The project's first custom page type.
     'html5-boilerplate': {},
     'clean': {},
-    'bulma': {},
-    'bulma-title-subtitle': {},
+    //'bulma': {},
+    //'bulma-title-subtitle': {},
     'a-landing-page': {},
     'uikit':{},
     'uikit-page01':{},
