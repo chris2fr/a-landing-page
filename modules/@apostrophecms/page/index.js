@@ -16,10 +16,12 @@ module.exports = {
         name: 'another-landing-page',
         label: 'another-landing-page'
       }, 
+      /*
       {
         name: 'bulma',
         label: 'Bulma Template'
       }, 
+      */
       {
         name: 'html5-boilerplate',
         label: 'html5-boilerplate'

@@ -7,8 +7,6 @@ module.exports = {
   'another-landing-section-widget': {},
   'article-widget':{},
   asset: {},
-  'bulma': {},
-  'bulma-title-subtitle-widget': {},
   'button-widget':{},
   'columns-widget':{},
   'container-widget':{},
