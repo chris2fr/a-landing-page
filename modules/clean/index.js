@@ -22,6 +22,10 @@ module.exports = {
               type: "string",
               label: "Text to Display",
             },
+            icon: {
+              type: "string",
+              label: 'Icon'
+            },
             url: {
               type: "string",
               label: "url",
