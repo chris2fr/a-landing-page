@@ -12,6 +12,7 @@
 
 {% block beforeMain %}
   {{ super() }}
+  {% if data.page.showApplications %}
     <div class="bento-menu-content">
       <label for="bentocheck">
       <div class="bento-menu-handle">
@@ -76,6 +77,7 @@
 </svg><br/>WWW: Portail </a></li>
     </ul>
   </div>
+  {% endif %}
 {% endblock %}
 
 {% block main %}

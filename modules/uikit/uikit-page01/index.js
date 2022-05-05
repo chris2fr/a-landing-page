@@ -11,6 +11,12 @@ module.exports = {
         options: {
           widgets: require('../../../lib/area').uikitConfig
         }
+      },
+      showApplicatons: {
+        type: 'boolean',
+        label: 'Show / Montrer AppGV',
+        def: true,
+        toggle: true
       }
     },
     group: {
@@ -18,7 +24,8 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
-          'middlePart'
+          'middlePart',
+          'showApplications'
         ]
       }
     }
