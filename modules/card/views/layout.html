@@ -1,0 +1,50 @@
+{% extends data.outerLayout %}
+
+{% block startHead %}
+  {{ super() }}
+  <meta charset="utf-8">
+{% endblock %}
+
+{% block standardHead %}
+  {{ super() }}
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> 
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+{% endblock %}
+
+{% block bodyClass %} {{ super() }} font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover {% endblock %}
+
+{% block apostropheMenu %}
+  {{ super() }}
+{% endblock %}
+
+{% block apostropheUserInterface  %}
+  {{ super() }}
+{% endblock %}
+
+{% block beforeMain %}
+  {{ super() }}
+{% endblock %}
+
+{% block mainAnchor %}
+  {{ super() }}
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
+{% endblock %}
+
+{% block afterMain %}
+  {{ super() }}
+{% endblock %}
+
+{% block extraBody %}
+  {{ super() }}
+{% endblock %}
+
+{% block afterAposScripts %}
+  {{ super() }}
+{% endblock %}
+

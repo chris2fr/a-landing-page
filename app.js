@@ -61,6 +61,7 @@ require('apostrophe')({
     'uikit':{},
     'uikit-page01':{},
     'uikit-div-widget': {},
-    'uikit-div-div-widget': {}
+    'uikit-div-div-widget': {},
+    'card':{}
   }
 });

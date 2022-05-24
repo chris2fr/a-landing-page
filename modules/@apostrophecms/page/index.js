@@ -43,6 +43,10 @@ module.exports = {
         name: '@apostrophecms/home-page',
         label: 'Initial Home'
       },
+      {
+        name: 'card',
+        label: 'Profil Card'
+      },
     ]
   }
 };

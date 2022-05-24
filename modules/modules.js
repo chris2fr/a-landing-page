@@ -18,5 +18,6 @@ module.exports = {
   'localizations':{},
   'uikit':{},
   'uikit-page01':{},
-  'uikit-div-widget':{}
+  'uikit-div-widget':{},
+  'card':{}
 };
