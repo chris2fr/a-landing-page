@@ -1,3 +1,4 @@
+export default () => {
   //Init tooltips
   tippy('.link',{
     placement: 'bottom'
@@ -5,7 +6,7 @@
 
   //Toggle mode
   const toggle = document.querySelector('.js-change-theme');
-  const body = document.querySelector('body');
+  const body = document.querySelector('body.card');
   const profile = document.getElementById('profile');
   
   
@@ -27,4 +28,4 @@
    
     }
   });
-  
+}
