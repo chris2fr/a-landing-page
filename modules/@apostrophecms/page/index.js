@@ -5,6 +5,10 @@ module.exports = {
   options: {
     types: [
       {
+        name: 'gv-page',
+        label: 'GV Page'
+      },
+      {
         name: 'uikit',
         label: 'UIKit Template'
       }, 
