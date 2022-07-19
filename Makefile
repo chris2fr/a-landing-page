@@ -1,7 +1,7 @@
 run:
 	set -e
 	git pull origin web
-	source sourceenv
+	source ./sourceenv
 	echo "3003" > data/port
 	#sed -i 's/lesgv\\.com/lesgrandsvoisins.com/g' app.js
 	#sed -i "s/shortName: 'a-landing-page/shortName: 'lesgrandsvoisins/g" app.js
