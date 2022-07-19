@@ -1,0 +1,21 @@
+{% extends data.outerLayout %}
+
+{% block beforeMain %}
+<div>
+  <header>
+    {# Page header code: logo, navigation, etc. #}
+  </header>
+  <main>
+{% endblock %}
+
+{% block main %}
+  {# Page body content. Pages templates normally override this. #}
+{% endblock %}
+
+{% block afterMain %}
+  </main>
+  <footer>
+    {# Page header code: contact information, secondary navigation, etc. #}
+  </footer>
+</div>
+{% endblock %}
